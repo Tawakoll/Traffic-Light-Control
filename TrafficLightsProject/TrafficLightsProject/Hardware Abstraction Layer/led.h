@@ -11,7 +11,7 @@
 
 /*includes of other header files needed*/
 
-#include "../gpio_driver/gpio.h"
+#include "../Microcontroller Abstraction Layer/gpio/gpio.h"
 
 /********************    functions prototypes    *************************/
 

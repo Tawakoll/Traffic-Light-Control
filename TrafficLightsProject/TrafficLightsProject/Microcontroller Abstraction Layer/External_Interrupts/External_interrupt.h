@@ -17,10 +17,7 @@
 /*enums*/
 typedef enum {INT_0,INT_1,INT_2}en_selectExInterrupt_t;
 typedef enum {FALLING,RISING,ANYCHANGE,LOWLEVEL}en_selectEdge_t;
-/************************************************************************/
-/*   Global pointer to function                                                                    */
-/************************************************************************/ 
-volatile void (*CallBackPtr) (void) = NULL ;	//it should be volatile since it is adjusted by ISR which is activated by hardware so we disable optimization
+
 	
 	/* configuration struct definition */
 typedef struct 

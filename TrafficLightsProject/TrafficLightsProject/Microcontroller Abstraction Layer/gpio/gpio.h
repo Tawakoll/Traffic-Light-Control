@@ -10,7 +10,7 @@
 #define GPIO_H_
 
 #include <avr/io.h>
-#include "../types.h"
+#include "D:\Traffic Lights Embedded Project\TrafficLightsProject\TrafficLightsProject\types.h"
 
 // all internal driver typedefs
 // all driver macros

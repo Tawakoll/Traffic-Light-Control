@@ -8,7 +8,7 @@
 
 
 // include .h to use macros and other common libraries included in the header file of the driver
-#include "../gpio_driver/gpio.h"
+#include "../gpio/gpio.h"
 
 // global variables
 

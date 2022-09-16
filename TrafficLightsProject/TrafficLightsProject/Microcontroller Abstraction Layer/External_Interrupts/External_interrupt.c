@@ -6,6 +6,37 @@
 */
 #include "External_interrupt.h"
 
+/************************************************************************/
+/*   Global pointer to function                                                                    */
+/************************************************************************/
+ volatile void (*CallBackPtr) (void) = NULL ;	//it should be volatile since it is adjusted by ISR which is activated by hardware so we disable optimization
+ISR(INT0_vect)
+{
+	if(CallBackPtr != NULL)
+	{
+		CallBackPtr();
+		
+	}
+}
+
+ISR(INT1_vect)
+{
+	if(CallBackPtr != NULL)
+	{
+		CallBackPtr();
+		
+	}
+}
+
+ISR(INT2_vect)
+{
+	if(CallBackPtr != NULL)
+	{
+		CallBackPtr();
+		
+	}
+}
+
 void ExternalInterrupt_init(ExInterrupt_ConfigStruct_t *configStruct)
 {
 	switch(configStruct->extInt)
@@ -13,7 +44,7 @@ void ExternalInterrupt_init(ExInterrupt_ConfigStruct_t *configStruct)
 		case INT_0 :
 		if(configStruct->edge==RISING)
 		{
-			MCUCR |= (1<<ISC01) | (1<<ISC00) ;//Set bits isc01 & isc00 for to select falling edge
+			MCUCR |= (1<<ISC01) | (1<<ISC00) ;//Set bits isc01 & isc00 for to select rising edge
 		}
 		else if(configStruct->edge==FALLING)
 		{
@@ -103,7 +134,7 @@ void ExternalInterrupt_init(ExInterrupt_ConfigStruct_t *configStruct)
 }
 void ExternalInterrupt_setCallBack( void (*FuncPtr) (void))
 {
-	FuncPtr=CallBackPtr;
+	CallBackPtr=FuncPtr;
 }
 
 void ExternalInterrupt_reset(en_selectExInterrupt_t exinterrupt)
@@ -132,30 +163,4 @@ void ExternalInterrupt_reset(en_selectExInterrupt_t exinterrupt)
 		//error handling
 	}
 	
-}
-ISR(INT0_vect)
-{
-	if(CallBackPtr != NULL)
-	{
-		CallBackPtr();
-		
-	}
-}
-
-ISR(INT1_vect)
-{
-	if(CallBackPtr != NULL)
-	{
-		CallBackPtr();
-		
-	}
-}
-
-ISR(INT2_vect)
-{
-	if(CallBackPtr != NULL)
-	{
-		CallBackPtr();
-		
-	}
 }
