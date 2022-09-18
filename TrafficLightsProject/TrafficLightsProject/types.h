@@ -10,6 +10,8 @@
 #ifndef TYPES_H_
 #define TYPES_H_
 //
+#define NULL ((void*) 0) //definition of null address
+
 //typedef unsigned char uint8_t;
 //typedef  char int8_t;
 //

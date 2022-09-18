@@ -9,11 +9,10 @@
 #ifndef EXTERNAL_INTERRUPT_H_
 #define EXTERNAL_INTERRUPT_H_
  
-#define NULL ((void *)0) //definition of null address
 
 #include <avr/interrupt.h> // to use ISR	 functions
 #include <avr/io.h> // to use interrupt registers
-
+#include "D:\Traffic Lights Embedded Project\TrafficLightsProject\TrafficLightsProject\types.h"
 /*enums*/
 typedef enum {INT_0,INT_1,INT_2}en_selectExInterrupt_t;
 typedef enum {FALLING,RISING,ANYCHANGE,LOWLEVEL}en_selectEdge_t;

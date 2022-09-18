@@ -37,8 +37,8 @@ typedef enum en_carsLightState_t {RED,GREEN,YELLOW}en_carsLightState_t;
 
 void APP_init(void);
 void APP_flow(void);
-
-
+void timerProcessing(void);
+void delayFiveSeconds(void);
 
 
 
