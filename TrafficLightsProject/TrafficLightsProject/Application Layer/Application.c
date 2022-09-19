@@ -15,17 +15,8 @@ uint8_t g_interruptCounter=0;
 en_mode_t trafficMode=CARS;// Initialize a traffic mode into cars first
 en_carsLightState_t carLedState= GREEN;
 void APP_InterruptProcessing(void){
-	
-	if(trafficMode==CARS)
-	{
-		trafficMode=PEDESTRIAN;
-		
-		
-	}
-	else
-	{
-		trafficMode=CARS;
-	}
+
+	pedestrianMode();
 	
 }
 
@@ -71,61 +62,14 @@ void APP_flow(void)
 {
 	APPLICATION_LOOP
 	{
-		AllLedsOFF(); // in the beginning of each loop turn off all LEDS
 		
-		switch(trafficMode)
-		{
-			case CARS: //in cars mode car green is on & pedestrian green on for 5 seconds then yellow blink on then all off
-			LED_on(CARS_PORT,CARS_GREEN_LED);
-			LED_on(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
-			carLedState= GREEN;
-			delayFiveSeconds();
+		carsMode();
+		//in cars mode car green is on & pedestrian green on for 5 seconds then yellow blink on then all off
 
-			
-			LED_on(CARS_PORT,CARS_YELOW_LED);
-			LED_on(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
-			carLedState=YELLOW;
-			delayFiveSeconds();
 
-			
-			AllLedsOFF();
-			
-			carLedState=RED;
-			LED_on(CARS_PORT,CARS_RED_LED);
-			LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
-			delayFiveSeconds();
-
-			
-			LED_on(CARS_PORT,CARS_GREEN_LED);
-			LED_on(CARS_PORT,CARS_RED_LED);
-			LED_on(CARS_PORT,CARS_YELOW_LED);
-			delayFiveSeconds();
-
-			
-			break;
-			
-			case PEDESTRIAN:
-			AllLedsOFF();
-			LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
-			LED_on(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
-			LED_on(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
-			delayFiveSeconds();
-			
-			AllLedsOFF();
-			delayFiveSeconds();
-
-			
-			break;
-			
-			default :
-			//error handling
-			break;
-			
-		}
-		
 	}
-	
-	
+
+
 }
 
 void delayFiveSeconds(void)
@@ -135,7 +79,7 @@ void delayFiveSeconds(void)
 	// and we need to count to 4883 which is required for 5 sec interrupt 8 bit timers 0,2
 	// will have a big number of interrupts to make it to 5 seconds which is not the best
 	
-
+	sei();
 	
 	// timer prescaler will be 1024 so we reach 5 seconds or 5000 ms in 4883 counts in OCRn
 	//(output compare register , n: for any timer)
@@ -144,25 +88,21 @@ void delayFiveSeconds(void)
 	TIMER_init(&timerConfiguration); // send the init function the config struct we defined above
 	//timer TCNTn Register start counting right after we select the prescaler bits
 	//which happen last thing in the TIMER_init function
-	while(g_interruptCounter<1)
+	while(g_interruptCounter != 1)
 	{
 		// waiting for interrupt to occur hence waiting the desired 5 seconds
 
 	}
+	g_interruptCounter=0;
 
 	TIMER_reset(timer1);
 	
 }
 void timerProcessing(void)
 {
-	if(g_interruptCounter==1)
-	{
-		g_interruptCounter=0;
-	}
-	else{
-		g_interruptCounter++;
-		
-	}
+
+	
+	g_interruptCounter++;
 	
 
 	//when we enter this function means an ovf or CTC interrupt occured
@@ -171,4 +111,65 @@ void timerProcessing(void)
 	
 	
 	
+}
+
+void pedestrianMode(void)
+{
+
+	
+	AllLedsOFF();
+	if(carLedState==RED)
+	{
+		LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
+		LED_on(CARS_PORT,CARS_RED_LED);
+		delayFiveSeconds();
+	}
+	else if(carLedState==GREEN || carLedState==YELLOW)
+	{
+		LED_on(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
+		LED_on(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
+
+		LED_on(CARS_PORT,CARS_YELOW_LED);
+		delayFiveSeconds();
+		AllLedsOFF();
+
+		LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
+		LED_on(CARS_PORT,CARS_RED_LED);
+		delayFiveSeconds();
+	}
+	AllLedsOFF();
+	LED_on(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
+LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
+	LED_on(CARS_PORT,CARS_YELOW_LED);
+	delayFiveSeconds();
+	
+	reti();
+	//cli();
+
+}
+void carsMode(void)
+{
+	AllLedsOFF();
+	
+	LED_on(CARS_PORT,CARS_GREEN_LED);
+	LED_on(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
+	carLedState= GREEN;
+	delayFiveSeconds();
+
+	
+	LED_on(CARS_PORT,CARS_YELOW_LED);
+	LED_on(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
+	carLedState=YELLOW;
+	delayFiveSeconds();
+
+	
+	AllLedsOFF();
+	
+	
+	carLedState=RED;
+	LED_on(CARS_PORT,CARS_RED_LED);
+	LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
+	delayFiveSeconds();
+
+	AllLedsOFF();
 }

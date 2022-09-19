@@ -39,6 +39,10 @@ void APP_init(void);
 void APP_flow(void);
 void timerProcessing(void);
 void delayFiveSeconds(void);
+void delayOneSecond(void);
+
+void pedestrianMode(void);
+void carsMode(void);
 
 
 
