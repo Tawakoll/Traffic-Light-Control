@@ -98,7 +98,7 @@ void delayFiveSeconds(void)
 	
 	// timer prescaler will be 1024 so we reach 5 seconds or 5000 ms in 4883 counts in OCRn
 	//(output compare register , n: for any timer)
-	st_timerConfig_t timerConfiguration ={0,489,N_1024,timer1,CTC,ENABLE};
+	st_timerConfig_t timerConfiguration ={0,4883,N_1024,timer1,CTC,ENABLE};
 	TIMER_setCallback(timerProcessing);
 	TIMER_init(&timerConfiguration); // send the init function the config struct we defined above
 	//timer TCNTn Register start counting right after we select the prescaler bits
