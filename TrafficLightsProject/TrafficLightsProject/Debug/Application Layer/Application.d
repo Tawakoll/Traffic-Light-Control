@@ -17,7 +17,8 @@ Application Layer/Application.d Application Layer/Application.o: \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
  ../Application\ Layer/../Microcontroller\ Abstraction\ Layer\Timer\timer.h \
  ../Application\ Layer/../Hardware\ Abstraction\ Layer\led.h \
- ../Application\ Layer/../Hardware\ Abstraction\ Layer\../Microcontroller\ Abstraction\ Layer/gpio/gpio.h
+ ../Application\ Layer/../Hardware\ Abstraction\ Layer\../Microcontroller\ Abstraction\ Layer/gpio/gpio.h \
+ ../Application\ Layer/../Hardware\ Abstraction\ Layer\../Microcontroller\ Abstraction\ Layer\Timer\timer.h
 
 ../Application\ Layer/Application.h:
 
@@ -56,3 +57,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../Application\ Layer/../Hardware\ Abstraction\ Layer\led.h:
 
 ../Application\ Layer/../Hardware\ Abstraction\ Layer\../Microcontroller\ Abstraction\ Layer/gpio/gpio.h:
+
+../Application\ Layer/../Hardware\ Abstraction\ Layer\../Microcontroller\ Abstraction\ Layer\Timer\timer.h:

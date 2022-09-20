@@ -16,8 +16,10 @@ en_mode_t trafficMode=CARS;// Initialize a traffic mode into cars first
 en_carsLightState_t carLedState= GREEN;
 void APP_InterruptProcessing(void){
 
-	pedestrianMode();
+	//pedestrianMode();
+	trafficMode=PEDESTRIAN;
 	
+
 }
 
 void AllLedsOFF(void)
@@ -62,9 +64,22 @@ void APP_flow(void)
 {
 	APPLICATION_LOOP
 	{
+		switch(trafficMode)
+		{
+			case CARS:
+			carsMode();
+			//in cars mode car green is on & pedestrian green on for 5 seconds then yellow blink on then all off
+			break;
+			
+			
+			
+			case PEDESTRIAN :
+			
+			pedestrianMode();
+			break;
+			
+		}
 		
-		carsMode();
-		//in cars mode car green is on & pedestrian green on for 5 seconds then yellow blink on then all off
 
 
 	}
@@ -88,7 +103,7 @@ void delayFiveSeconds(void)
 	TIMER_init(&timerConfiguration); // send the init function the config struct we defined above
 	//timer TCNTn Register start counting right after we select the prescaler bits
 	//which happen last thing in the TIMER_init function
-	while(g_interruptCounter != 1)
+	while(g_interruptCounter != 1 )
 	{
 		// waiting for interrupt to occur hence waiting the desired 5 seconds
 
@@ -127,9 +142,9 @@ void pedestrianMode(void)
 	else if(carLedState==GREEN || carLedState==YELLOW)
 	{
 		LED_on(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
-		LED_on(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
+		LED_blink_halfSecond(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
 
-		LED_on(CARS_PORT,CARS_YELOW_LED);
+		LED_blink_halfSecond(CARS_PORT,CARS_YELOW_LED);
 		delayFiveSeconds();
 		AllLedsOFF();
 
@@ -138,11 +153,11 @@ void pedestrianMode(void)
 		delayFiveSeconds();
 	}
 	AllLedsOFF();
-	LED_on(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
-LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
-	LED_on(CARS_PORT,CARS_YELOW_LED);
+	LED_blink_halfSecond(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
+	LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
+	LED_blink_halfSecond(CARS_PORT,CARS_YELOW_LED);
 	delayFiveSeconds();
-	
+	trafficMode=CARS;
 	reti();
 	//cli();
 
@@ -154,17 +169,30 @@ void carsMode(void)
 	LED_on(CARS_PORT,CARS_GREEN_LED);
 	LED_on(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
 	carLedState= GREEN;
+	if(trafficMode==PEDESTRIAN)
+	{
+		return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already runing so the program implements the pedestrian scenario in the next iteration
+		// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+	}
 	delayFiveSeconds();
-
+	if(trafficMode==PEDESTRIAN)
+	{
+		return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already runing so the program implements the pedestrian scenario in the next iteration
+		// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+	}
 	
-	LED_on(CARS_PORT,CARS_YELOW_LED);
-	LED_on(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
+	LED_blink_halfSecond(CARS_PORT,CARS_YELOW_LED);
+	LED_blink_halfSecond(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
 	carLedState=YELLOW;
 	delayFiveSeconds();
 
 	
 	AllLedsOFF();
-	
+	if(trafficMode==PEDESTRIAN)
+	{
+		return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already runing so the program implements the pedestrian scenario in the next iteration
+		// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+	}
 	
 	carLedState=RED;
 	LED_on(CARS_PORT,CARS_RED_LED);

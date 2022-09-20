@@ -12,12 +12,15 @@
 /*includes of other header files needed*/
 
 #include "../Microcontroller Abstraction Layer/gpio/gpio.h"
+#include "../Microcontroller Abstraction Layer\Timer\timer.h"
 
 /********************    functions prototypes    *************************/
 
 void LED_init(uint8_t ledPort, uint8_t ledPin);
 void LED_on(uint8_t ledPort, uint8_t ledPin);
 void LED_off(uint8_t ledPort, uint8_t ledPin);
-void LED_blink(uint8_t ledPort, uint8_t ledPin,uint32_t blinkTime);
+void LED_blink_halfSecond(uint8_t ledPort, uint8_t ledPin);
+void delayHalfSecond(void);
+void Led_timerProcessing(void);
 
 #endif /* LED_H_ */
