@@ -29,6 +29,8 @@
 
 #define APPLICATION_LOOP for(;;)
 
+
+
 //Enums to represent states or running modes in the application
 typedef enum en_mode_t {PEDESTRIAN,CARS}en_mode_t;
 typedef enum en_carsLightState_t {RED,GREEN,YELLOW}en_carsLightState_t;
@@ -38,12 +40,12 @@ typedef enum en_carsLightState_t {RED,GREEN,YELLOW}en_carsLightState_t;
 void APP_init(void);
 void APP_flow(void);
 void timerProcessing(void);
-void delayFiveSeconds(void);
+void delayHalfSecond(void);
 
-
+void APP_InterruptProcessing(void);
 void pedestrianMode(void);
 void carsMode(void);
 
-
+void AllLedsOFF(void);
 
 #endif /* APPLICATION_H_ */

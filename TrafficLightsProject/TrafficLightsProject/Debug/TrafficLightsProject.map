@@ -17,6 +17,8 @@ Discarded input sections
  .text          0x00000000        0x0 Hardware Abstraction Layer/led.o
  .data          0x00000000        0x0 Hardware Abstraction Layer/led.o
  .bss           0x00000000        0x0 Hardware Abstraction Layer/led.o
+ .bss.g_interruptCounterLed
+                0x00000000        0x1 Hardware Abstraction Layer/led.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -218,7 +220,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xa88
+.text           0x00000000      0xab0
  *(.vectors)
  .vectors       0x00000000       0x54 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -303,92 +305,86 @@ END GROUP
  .text.APP_init
                 0x000000d6       0x66 Application Layer/Application.o
                 0x000000d6                APP_init
- .text.delayFiveSeconds
+ .text.delayHalfSecond
                 0x0000013c       0x5a Application Layer/Application.o
-                0x0000013c                delayFiveSeconds
+                0x0000013c                delayHalfSecond
  .text.pedestrianMode
-                0x00000196       0x86 Application Layer/Application.o
+                0x00000196       0xb4 Application Layer/Application.o
                 0x00000196                pedestrianMode
  .text.carsMode
-                0x0000021c       0x72 Application Layer/Application.o
-                0x0000021c                carsMode
+                0x0000024a       0xe0 Application Layer/Application.o
+                0x0000024a                carsMode
  .text.APP_flow
-                0x0000028e       0x18 Application Layer/Application.o
-                0x0000028e                APP_flow
- .text.Led_timerProcessing
-                0x000002a6        0xc Hardware Abstraction Layer/led.o
-                0x000002a6                Led_timerProcessing
+                0x0000032a       0x18 Application Layer/Application.o
+                0x0000032a                APP_flow
  .text.LED_init
-                0x000002b2        0xe Hardware Abstraction Layer/led.o
-                0x000002b2                LED_init
- .text.LED_on   0x000002c0        0xe Hardware Abstraction Layer/led.o
-                0x000002c0                LED_on
- .text.LED_off  0x000002ce        0xe Hardware Abstraction Layer/led.o
-                0x000002ce                LED_off
- .text.delayHalfSecond
-                0x000002dc       0x5a Hardware Abstraction Layer/led.o
-                0x000002dc                delayHalfSecond
- .text.LED_blink_halfSecond
-                0x00000336       0x1a Hardware Abstraction Layer/led.o
-                0x00000336                LED_blink_halfSecond
- .text.main     0x00000350        0xe main.o
-                0x00000350                main
+                0x00000342        0xe Hardware Abstraction Layer/led.o
+                0x00000342                LED_init
+ .text.LED_on   0x00000350        0xe Hardware Abstraction Layer/led.o
+                0x00000350                LED_on
+ .text.LED_off  0x0000035e        0xe Hardware Abstraction Layer/led.o
+                0x0000035e                LED_off
+ .text.LED_blink
+                0x0000036c        0xc Hardware Abstraction Layer/led.o
+                0x0000036c                LED_blink
+ .text.main     0x00000378        0xe main.o
+                0x00000378                main
  .text.__vector_1
-                0x0000035e       0x52 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
-                0x0000035e                __vector_1
+                0x00000386       0x52 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+                0x00000386                __vector_1
  .text.__vector_2
-                0x000003b0       0x52 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
-                0x000003b0                __vector_2
+                0x000003d8       0x52 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+                0x000003d8                __vector_2
  .text.__vector_3
-                0x00000402       0x52 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
-                0x00000402                __vector_3
+                0x0000042a       0x52 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+                0x0000042a                __vector_3
  .text.ExternalInterrupt_init
-                0x00000454       0x7c Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
-                0x00000454                ExternalInterrupt_init
+                0x0000047c       0x7c Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+                0x0000047c                ExternalInterrupt_init
  .text.ExternalInterrupt_setCallBack
-                0x000004d0        0xa Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
-                0x000004d0                ExternalInterrupt_setCallBack
+                0x000004f8        0xa Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+                0x000004f8                ExternalInterrupt_setCallBack
  .text.GPIO_init
-                0x000004da      0x10e Microcontroller Abstraction Layer/gpio/gpio.o
-                0x000004da                GPIO_init
+                0x00000502      0x10e Microcontroller Abstraction Layer/gpio/gpio.o
+                0x00000502                GPIO_init
  .text.GPIO_write
-                0x000005e8      0x10e Microcontroller Abstraction Layer/gpio/gpio.o
-                0x000005e8                GPIO_write
+                0x00000610      0x10e Microcontroller Abstraction Layer/gpio/gpio.o
+                0x00000610                GPIO_write
  .text.GPIO_toggle
-                0x000006f6       0x7e Microcontroller Abstraction Layer/gpio/gpio.o
-                0x000006f6                GPIO_toggle
+                0x0000071e       0x7e Microcontroller Abstraction Layer/gpio/gpio.o
+                0x0000071e                GPIO_toggle
  .text.__vector_10
-                0x00000774       0x52 Microcontroller Abstraction Layer/Timer/timer.o
-                0x00000774                __vector_10
+                0x0000079c       0x52 Microcontroller Abstraction Layer/Timer/timer.o
+                0x0000079c                __vector_10
  .text.__vector_11
-                0x000007c6       0x52 Microcontroller Abstraction Layer/Timer/timer.o
-                0x000007c6                __vector_11
+                0x000007ee       0x52 Microcontroller Abstraction Layer/Timer/timer.o
+                0x000007ee                __vector_11
  .text.__vector_7
-                0x00000818       0x52 Microcontroller Abstraction Layer/Timer/timer.o
-                0x00000818                __vector_7
+                0x00000840       0x52 Microcontroller Abstraction Layer/Timer/timer.o
+                0x00000840                __vector_7
  .text.__vector_9
-                0x0000086a       0x52 Microcontroller Abstraction Layer/Timer/timer.o
-                0x0000086a                __vector_9
+                0x00000892       0x52 Microcontroller Abstraction Layer/Timer/timer.o
+                0x00000892                __vector_9
  .text.__vector_4
-                0x000008bc       0x52 Microcontroller Abstraction Layer/Timer/timer.o
-                0x000008bc                __vector_4
+                0x000008e4       0x52 Microcontroller Abstraction Layer/Timer/timer.o
+                0x000008e4                __vector_4
  .text.__vector_5
-                0x0000090e       0x52 Microcontroller Abstraction Layer/Timer/timer.o
-                0x0000090e                __vector_5
+                0x00000936       0x52 Microcontroller Abstraction Layer/Timer/timer.o
+                0x00000936                __vector_5
  .text.TIMER_setCallback
-                0x00000960        0xa Microcontroller Abstraction Layer/Timer/timer.o
-                0x00000960                TIMER_setCallback
+                0x00000988        0xa Microcontroller Abstraction Layer/Timer/timer.o
+                0x00000988                TIMER_setCallback
  .text.TIMER_init
-                0x0000096a       0xe6 Microcontroller Abstraction Layer/Timer/timer.o
-                0x0000096a                TIMER_init
+                0x00000992       0xe6 Microcontroller Abstraction Layer/Timer/timer.o
+                0x00000992                TIMER_init
  .text.TIMER_reset
-                0x00000a50       0x34 Microcontroller Abstraction Layer/Timer/timer.o
-                0x00000a50                TIMER_reset
-                0x00000a84                . = ALIGN (0x2)
+                0x00000a78       0x34 Microcontroller Abstraction Layer/Timer/timer.o
+                0x00000a78                TIMER_reset
+                0x00000aac                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000a84        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000a84                _exit
-                0x00000a84                exit
+ .fini9         0x00000aac        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000aac                _exit
+                0x00000aac                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -407,11 +403,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000a84        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000aac        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000a88                _etext = .
+                0x00000ab0                _etext = .
 
-.data           0x00800060       0x12 load address 0x00000a88
+.data           0x00800060        0xa load address 0x00000ab0
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -424,39 +420,35 @@ END GROUP
  *(.gnu.linkonce.d*)
  *(.rodata)
  .rodata        0x00800062        0x8 Application Layer/Application.o
- .rodata        0x0080006a        0x8 Hardware Abstraction Layer/led.o
  *(.rodata*)
  *(.gnu.linkonce.r*)
-                0x00800072                . = ALIGN (0x2)
-                0x00800072                _edata = .
-                0x00800072                PROVIDE (__data_end, .)
+                0x0080006a                . = ALIGN (0x2)
+                0x0080006a                _edata = .
+                0x0080006a                PROVIDE (__data_end, .)
 
-.bss            0x00800072        0x6
-                0x00800072                PROVIDE (__bss_start, .)
+.bss            0x0080006a        0x5
+                0x0080006a                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.g_interruptCounter
-                0x00800072        0x1 Application Layer/Application.o
-                0x00800072                g_interruptCounter
- .bss.g_interruptCounterLed
-                0x00800073        0x1 Hardware Abstraction Layer/led.o
-                0x00800073                g_interruptCounterLed
+                0x0080006a        0x1 Application Layer/Application.o
+                0x0080006a                g_interruptCounter
  .bss.CallBackPtr
-                0x00800074        0x2 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
-                0x00800074                CallBackPtr
+                0x0080006b        0x2 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+                0x0080006b                CallBackPtr
  .bss.CallBackPtr1
-                0x00800076        0x2 Microcontroller Abstraction Layer/Timer/timer.o
-                0x00800076                CallBackPtr1
+                0x0080006d        0x2 Microcontroller Abstraction Layer/Timer/timer.o
+                0x0080006d                CallBackPtr1
  *(COMMON)
-                0x00800078                PROVIDE (__bss_end, .)
-                0x00000a88                __data_load_start = LOADADDR (.data)
-                0x00000a9a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0080006f                PROVIDE (__bss_end, .)
+                0x00000ab0                __data_load_start = LOADADDR (.data)
+                0x00000aba                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800078        0x0
+.noinit         0x0080006f        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800078                _end = .
+                0x0080006f                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -526,86 +518,86 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x1b8
+.debug_aranges  0x00000000      0x1a8
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x58 Application Layer/Application.o
  .debug_aranges
-                0x00000058       0x48 Hardware Abstraction Layer/led.o
+                0x00000058       0x38 Hardware Abstraction Layer/led.o
  .debug_aranges
-                0x000000a0       0x20 main.o
+                0x00000090       0x20 main.o
  .debug_aranges
-                0x000000c0       0x48 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+                0x000000b0       0x48 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
  .debug_aranges
-                0x00000108       0x50 Microcontroller Abstraction Layer/gpio/gpio.o
+                0x000000f8       0x50 Microcontroller Abstraction Layer/gpio/gpio.o
  .debug_aranges
-                0x00000158       0x60 Microcontroller Abstraction Layer/Timer/timer.o
+                0x00000148       0x60 Microcontroller Abstraction Layer/Timer/timer.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x1903
+.debug_info     0x00000000     0x1740
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_info    0x000004e6      0x84f Application Layer/Application.o
- .debug_info    0x00000d35      0x413 Hardware Abstraction Layer/led.o
- .debug_info    0x00001148       0xad main.o
- .debug_info    0x000011f5      0x1e2 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
- .debug_info    0x000013d7      0x265 Microcontroller Abstraction Layer/gpio/gpio.o
- .debug_info    0x0000163c      0x2c7 Microcontroller Abstraction Layer/Timer/timer.o
+ .debug_info    0x000004e6      0x874 Application Layer/Application.o
+ .debug_info    0x00000d5a      0x233 Hardware Abstraction Layer/led.o
+ .debug_info    0x00000f8d       0xad main.o
+ .debug_info    0x0000103a      0x1da Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+ .debug_info    0x00001214      0x265 Microcontroller Abstraction Layer/gpio/gpio.o
+ .debug_info    0x00001479      0x2c7 Microcontroller Abstraction Layer/Timer/timer.o
 
-.debug_abbrev   0x00000000      0xa78
+.debug_abbrev   0x00000000      0xa10
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_abbrev  0x000004a3      0x171 Application Layer/Application.o
- .debug_abbrev  0x00000614      0x147 Hardware Abstraction Layer/led.o
- .debug_abbrev  0x0000075b       0x65 main.o
- .debug_abbrev  0x000007c0       0xde Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
- .debug_abbrev  0x0000089e       0xef Microcontroller Abstraction Layer/gpio/gpio.o
- .debug_abbrev  0x0000098d       0xeb Microcontroller Abstraction Layer/Timer/timer.o
+ .debug_abbrev  0x000004a3      0x180 Application Layer/Application.o
+ .debug_abbrev  0x00000623       0xd0 Hardware Abstraction Layer/led.o
+ .debug_abbrev  0x000006f3       0x65 main.o
+ .debug_abbrev  0x00000758       0xde Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+ .debug_abbrev  0x00000836       0xef Microcontroller Abstraction Layer/gpio/gpio.o
+ .debug_abbrev  0x00000925       0xeb Microcontroller Abstraction Layer/Timer/timer.o
 
-.debug_line     0x00000000      0xf52
+.debug_line     0x00000000     0x1024
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_line    0x00000116      0x421 Application Layer/Application.o
- .debug_line    0x00000537      0x207 Hardware Abstraction Layer/led.o
- .debug_line    0x0000073e       0x73 main.o
- .debug_line    0x000007b1      0x231 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
- .debug_line    0x000009e2      0x28e Microcontroller Abstraction Layer/gpio/gpio.o
- .debug_line    0x00000c70      0x2e2 Microcontroller Abstraction Layer/Timer/timer.o
+ .debug_line    0x00000116      0x5ad Application Layer/Application.o
+ .debug_line    0x000006c3      0x14d Hardware Abstraction Layer/led.o
+ .debug_line    0x00000810       0x73 main.o
+ .debug_line    0x00000883      0x231 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+ .debug_line    0x00000ab4      0x28e Microcontroller Abstraction Layer/gpio/gpio.o
+ .debug_line    0x00000d42      0x2e2 Microcontroller Abstraction Layer/Timer/timer.o
 
-.debug_frame    0x00000000      0x58c
+.debug_frame    0x00000000      0x560
  *(.debug_frame)
- .debug_frame   0x00000000       0xb4 Application Layer/Application.o
- .debug_frame   0x000000b4       0x90 Hardware Abstraction Layer/led.o
- .debug_frame   0x00000144       0x24 main.o
- .debug_frame   0x00000168      0x14c Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
- .debug_frame   0x000002b4       0x84 Microcontroller Abstraction Layer/gpio/gpio.o
- .debug_frame   0x00000338      0x254 Microcontroller Abstraction Layer/Timer/timer.o
+ .debug_frame   0x00000000       0xc4 Application Layer/Application.o
+ .debug_frame   0x000000c4       0x54 Hardware Abstraction Layer/led.o
+ .debug_frame   0x00000118       0x24 main.o
+ .debug_frame   0x0000013c      0x14c Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+ .debug_frame   0x00000288       0x84 Microcontroller Abstraction Layer/gpio/gpio.o
+ .debug_frame   0x0000030c      0x254 Microcontroller Abstraction Layer/Timer/timer.o
 
-.debug_str      0x00000000      0x8b3
+.debug_str      0x00000000      0x893
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_str     0x00000196      0x48f Application Layer/Application.o
-                                0x4d3 (size before relaxing)
- .debug_str     0x00000625       0x94 Hardware Abstraction Layer/led.o
-                                0x36b (size before relaxing)
- .debug_str     0x000006b9       0x11 main.o
+ .debug_str     0x00000196      0x493 Application Layer/Application.o
+                                0x4c7 (size before relaxing)
+ .debug_str     0x00000629       0x70 Hardware Abstraction Layer/led.o
+                                0x216 (size before relaxing)
+ .debug_str     0x00000699       0x11 main.o
                                 0x188 (size before relaxing)
- .debug_str     0x000006ca       0xb4 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+ .debug_str     0x000006aa       0xb4 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
                                 0x2d8 (size before relaxing)
- .debug_str     0x0000077e       0xa5 Microcontroller Abstraction Layer/gpio/gpio.o
+ .debug_str     0x0000075e       0xa5 Microcontroller Abstraction Layer/gpio/gpio.o
                                 0x250 (size before relaxing)
- .debug_str     0x00000823       0x90 Microcontroller Abstraction Layer/Timer/timer.o
+ .debug_str     0x00000803       0x90 Microcontroller Abstraction Layer/Timer/timer.o
                                 0x31d (size before relaxing)
 
-.debug_loc      0x00000000     0x10e2
+.debug_loc      0x00000000     0x11bd
  *(.debug_loc)
- .debug_loc     0x00000000       0x8f Application Layer/Application.o
- .debug_loc     0x0000008f      0x1d6 Hardware Abstraction Layer/led.o
- .debug_loc     0x00000265      0x31c Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
- .debug_loc     0x00000581      0x624 Microcontroller Abstraction Layer/gpio/gpio.o
- .debug_loc     0x00000ba5      0x53d Microcontroller Abstraction Layer/Timer/timer.o
+ .debug_loc     0x00000000      0x1e0 Application Layer/Application.o
+ .debug_loc     0x000001e0      0x160 Hardware Abstraction Layer/led.o
+ .debug_loc     0x00000340      0x31c Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+ .debug_loc     0x0000065c      0x624 Microcontroller Abstraction Layer/gpio/gpio.o
+ .debug_loc     0x00000c80      0x53d Microcontroller Abstraction Layer/Timer/timer.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -625,14 +617,14 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x158
+.debug_ranges   0x00000000      0x148
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x48 Application Layer/Application.o
- .debug_ranges  0x00000048       0x38 Hardware Abstraction Layer/led.o
- .debug_ranges  0x00000080       0x10 main.o
- .debug_ranges  0x00000090       0x38 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
- .debug_ranges  0x000000c8       0x40 Microcontroller Abstraction Layer/gpio/gpio.o
- .debug_ranges  0x00000108       0x50 Microcontroller Abstraction Layer/Timer/timer.o
+ .debug_ranges  0x00000048       0x28 Hardware Abstraction Layer/led.o
+ .debug_ranges  0x00000070       0x10 main.o
+ .debug_ranges  0x00000080       0x38 Microcontroller Abstraction Layer/External_Interrupts/External_interrupt.o
+ .debug_ranges  0x000000b8       0x40 Microcontroller Abstraction Layer/gpio/gpio.o
+ .debug_ranges  0x000000f8       0x50 Microcontroller Abstraction Layer/Timer/timer.o
 
 .debug_macro
  *(.debug_macro)

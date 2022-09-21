@@ -9,7 +9,7 @@
 /************************************************************************/
 /*   Global pointer to function                                                                    */
 /************************************************************************/
- volatile void (*CallBackPtr) (void) = NULL ;	//it should be volatile since it is adjusted by ISR which is activated by hardware so we disable optimization
+  void (*CallBackPtr) (void) = NULL ;	//it should be volatile since it is adjusted by ISR which is activated by hardware so we disable optimization
 ISR(INT0_vect)
 {
 	if(CallBackPtr != NULL)

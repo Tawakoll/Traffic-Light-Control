@@ -3,48 +3,48 @@ TrafficLightsProject.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000a88  00000000  00000000  00000094  2**1
+  0 .text         00000ab0  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000012  00800060  00000a88  00000b1c  2**0
+  1 .data         0000000a  00800060  00000ab0  00000b44  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000006  00800072  00800072  00000b2e  2**0
+  2 .bss          00000005  0080006a  0080006a  00000b4e  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  00000b2e  2**0
+  3 .comment      00000030  00000000  00000000  00000b4e  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000b60  2**2
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000b80  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 000001b8  00000000  00000000  00000b9c  2**0
+  5 .debug_aranges 000001a8  00000000  00000000  00000bbc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00001903  00000000  00000000  00000d54  2**0
+  6 .debug_info   00001740  00000000  00000000  00000d64  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000a78  00000000  00000000  00002657  2**0
+  7 .debug_abbrev 00000a10  00000000  00000000  000024a4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000f52  00000000  00000000  000030cf  2**0
+  8 .debug_line   00001024  00000000  00000000  00002eb4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  0000058c  00000000  00000000  00004024  2**2
+  9 .debug_frame  00000560  00000000  00000000  00003ed8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000008b3  00000000  00000000  000045b0  2**0
+ 10 .debug_str    00000893  00000000  00000000  00004438  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    000010e2  00000000  00000000  00004e63  2**0
+ 11 .debug_loc    000011bd  00000000  00000000  00004ccb  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000158  00000000  00000000  00005f45  2**0
+ 12 .debug_ranges 00000148  00000000  00000000  00005e88  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
-   4:	0c 94 af 01 	jmp	0x35e	; 0x35e <__vector_1>
-   8:	0c 94 d8 01 	jmp	0x3b0	; 0x3b0 <__vector_2>
-   c:	0c 94 01 02 	jmp	0x402	; 0x402 <__vector_3>
-  10:	0c 94 5e 04 	jmp	0x8bc	; 0x8bc <__vector_4>
-  14:	0c 94 87 04 	jmp	0x90e	; 0x90e <__vector_5>
+   4:	0c 94 c3 01 	jmp	0x386	; 0x386 <__vector_1>
+   8:	0c 94 ec 01 	jmp	0x3d8	; 0x3d8 <__vector_2>
+   c:	0c 94 15 02 	jmp	0x42a	; 0x42a <__vector_3>
+  10:	0c 94 72 04 	jmp	0x8e4	; 0x8e4 <__vector_4>
+  14:	0c 94 9b 04 	jmp	0x936	; 0x936 <__vector_5>
   18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  1c:	0c 94 0c 04 	jmp	0x818	; 0x818 <__vector_7>
+  1c:	0c 94 20 04 	jmp	0x840	; 0x840 <__vector_7>
   20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  24:	0c 94 35 04 	jmp	0x86a	; 0x86a <__vector_9>
-  28:	0c 94 ba 03 	jmp	0x774	; 0x774 <__vector_10>
-  2c:	0c 94 e3 03 	jmp	0x7c6	; 0x7c6 <__vector_11>
+  24:	0c 94 49 04 	jmp	0x892	; 0x892 <__vector_9>
+  28:	0c 94 ce 03 	jmp	0x79c	; 0x79c <__vector_10>
+  2c:	0c 94 f7 03 	jmp	0x7ee	; 0x7ee <__vector_11>
   30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
   34:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
   38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
@@ -67,18 +67,18 @@ Disassembly of section .text:
   60:	10 e0       	ldi	r17, 0x00	; 0
   62:	a0 e6       	ldi	r26, 0x60	; 96
   64:	b0 e0       	ldi	r27, 0x00	; 0
-  66:	e8 e8       	ldi	r30, 0x88	; 136
+  66:	e0 eb       	ldi	r30, 0xB0	; 176
   68:	fa e0       	ldi	r31, 0x0A	; 10
   6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
   6c:	05 90       	lpm	r0, Z+
   6e:	0d 92       	st	X+, r0
-  70:	a2 37       	cpi	r26, 0x72	; 114
+  70:	aa 36       	cpi	r26, 0x6A	; 106
   72:	b1 07       	cpc	r27, r17
   74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
 
 00000076 <__do_clear_bss>:
   76:	20 e0       	ldi	r18, 0x00	; 0
-  78:	a2 e7       	ldi	r26, 0x72	; 114
+  78:	aa e6       	ldi	r26, 0x6A	; 106
   7a:	b0 e0       	ldi	r27, 0x00	; 0
   7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
 
@@ -86,151 +86,151 @@ Disassembly of section .text:
   7e:	1d 92       	st	X+, r1
 
 00000080 <.do_clear_bss_start>:
-  80:	a8 37       	cpi	r26, 0x78	; 120
+  80:	af 36       	cpi	r26, 0x6F	; 111
   82:	b2 07       	cpc	r27, r18
   84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
-  86:	0e 94 a8 01 	call	0x350	; 0x350 <main>
-  8a:	0c 94 42 05 	jmp	0xa84	; 0xa84 <_exit>
+  86:	0e 94 bc 01 	call	0x378	; 0x378 <main>
+  8a:	0c 94 56 05 	jmp	0xaac	; 0xaac <_exit>
 
 0000008e <__bad_interrupt>:
   8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 00000092 <APP_InterruptProcessing>:
-en_mode_t trafficMode=CARS;// Initialize a traffic mode into cars first
-en_carsLightState_t carLedState= GREEN;
-void APP_InterruptProcessing(void){
+	en_mode_t trafficMode=CARS;// Initialize a traffic mode into cars first
+	en_carsLightState_t carLedState= GREEN;
+	void APP_InterruptProcessing(void){
 
-	//pedestrianMode();
-	trafficMode=PEDESTRIAN;
+		//pedestrianMode();
+		trafficMode=PEDESTRIAN;
   92:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <trafficMode>
   96:	08 95       	ret
 
 00000098 <timerProcessing>:
-}
-void timerProcessing(void)
-{
+	}
+	void timerProcessing(void)
+	{
 
-	
-	g_interruptCounter++;
-  98:	80 91 72 00 	lds	r24, 0x0072	; 0x800072 <__data_end>
+		
+		g_interruptCounter++;
+  98:	80 91 6a 00 	lds	r24, 0x006A	; 0x80006a <__data_end>
   9c:	8f 5f       	subi	r24, 0xFF	; 255
-  9e:	80 93 72 00 	sts	0x0072, r24	; 0x800072 <__data_end>
+  9e:	80 93 6a 00 	sts	0x006A, r24	; 0x80006a <__data_end>
   a2:	08 95       	ret
 
 000000a4 <AllLedsOFF>:
-	
+		
 
-}
+	}
 
-void AllLedsOFF(void)
-{	LED_off(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
+	void AllLedsOFF(void)
+	{	LED_off(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
   a4:	60 e0       	ldi	r22, 0x00	; 0
   a6:	81 e4       	ldi	r24, 0x41	; 65
-  a8:	0e 94 67 01 	call	0x2ce	; 0x2ce <LED_off>
-	LED_off(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
+  a8:	0e 94 af 01 	call	0x35e	; 0x35e <LED_off>
+		LED_off(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
   ac:	61 e0       	ldi	r22, 0x01	; 1
   ae:	81 e4       	ldi	r24, 0x41	; 65
-  b0:	0e 94 67 01 	call	0x2ce	; 0x2ce <LED_off>
-	LED_off(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
+  b0:	0e 94 af 01 	call	0x35e	; 0x35e <LED_off>
+		LED_off(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
   b4:	62 e0       	ldi	r22, 0x02	; 2
   b6:	81 e4       	ldi	r24, 0x41	; 65
-  b8:	0e 94 67 01 	call	0x2ce	; 0x2ce <LED_off>
-	
-	LED_off(CARS_PORT,CARS_GREEN_LED);
+  b8:	0e 94 af 01 	call	0x35e	; 0x35e <LED_off>
+		
+		LED_off(CARS_PORT,CARS_GREEN_LED);
   bc:	60 e0       	ldi	r22, 0x00	; 0
   be:	82 e4       	ldi	r24, 0x42	; 66
-  c0:	0e 94 67 01 	call	0x2ce	; 0x2ce <LED_off>
-	LED_off(CARS_PORT,CARS_RED_LED);
+  c0:	0e 94 af 01 	call	0x35e	; 0x35e <LED_off>
+		LED_off(CARS_PORT,CARS_RED_LED);
   c4:	61 e0       	ldi	r22, 0x01	; 1
   c6:	82 e4       	ldi	r24, 0x42	; 66
-  c8:	0e 94 67 01 	call	0x2ce	; 0x2ce <LED_off>
-	LED_off(CARS_PORT,CARS_YELOW_LED);
+  c8:	0e 94 af 01 	call	0x35e	; 0x35e <LED_off>
+		LED_off(CARS_PORT,CARS_YELOW_LED);
   cc:	62 e0       	ldi	r22, 0x02	; 2
   ce:	82 e4       	ldi	r24, 0x42	; 66
-  d0:	0e 94 67 01 	call	0x2ce	; 0x2ce <LED_off>
+  d0:	0e 94 af 01 	call	0x35e	; 0x35e <LED_off>
   d4:	08 95       	ret
 
 000000d6 <APP_init>:
-}
+	}
 
-void APP_init(void)//Initialize all application functions that are needed to be initialized one time only
-{
+	void APP_init(void)//Initialize all application functions that are needed to be initialized one time only
+	{
   d6:	cf 93       	push	r28
   d8:	df 93       	push	r29
   da:	00 d0       	rcall	.+0      	; 0xdc <APP_init+0x6>
   dc:	cd b7       	in	r28, 0x3d	; 61
   de:	de b7       	in	r29, 0x3e	; 62
-	
-	//Enable global interrupt bit in SREG
-	sei();
+		
+		//Enable global interrupt bit in SREG
+		sei();
   e0:	78 94       	sei
-	//enable global interrupts or by SREG|=(1<<7);
-	//Initialize the external interrupt , give values to the configuration struct
-	ExInterrupt_ConfigStruct_t externalInterruptConfig = {INT_0,RISING};
+		//enable global interrupts or by SREG|=(1<<7);
+		//Initialize the external interrupt , give values to the configuration struct
+		ExInterrupt_ConfigStruct_t externalInterruptConfig = {INT_0,RISING};
   e2:	19 82       	std	Y+1, r1	; 0x01
   e4:	81 e0       	ldi	r24, 0x01	; 1
   e6:	8a 83       	std	Y+2, r24	; 0x02
-	
-	//pass to the init function the configuration struct we just initialized
-	ExternalInterrupt_init(&externalInterruptConfig);
+		
+		//pass to the init function the configuration struct we just initialized
+		ExternalInterrupt_init(&externalInterruptConfig);
   e8:	ce 01       	movw	r24, r28
   ea:	01 96       	adiw	r24, 0x01	; 1
-  ec:	0e 94 2a 02 	call	0x454	; 0x454 <ExternalInterrupt_init>
-	
-	//set call back function by passing the processing function name which is the address of the function
-	ExternalInterrupt_setCallBack(APP_InterruptProcessing);
+  ec:	0e 94 3e 02 	call	0x47c	; 0x47c <ExternalInterrupt_init>
+		
+		//set call back function by passing the processing function name which is the address of the function
+		ExternalInterrupt_setCallBack(APP_InterruptProcessing);
   f0:	89 e4       	ldi	r24, 0x49	; 73
   f2:	90 e0       	ldi	r25, 0x00	; 0
-  f4:	0e 94 68 02 	call	0x4d0	; 0x4d0 <ExternalInterrupt_setCallBack>
-	
-	//Initialize all application LED'S and initialize int0 PD2 pin to input pin
-	GPIO_init(PIN_2,PORT_D,INPUT);
+  f4:	0e 94 7c 02 	call	0x4f8	; 0x4f8 <ExternalInterrupt_setCallBack>
+		
+		//Initialize all application LED'S and initialize int0 PD2 pin to input pin
+		GPIO_init(PIN_2,PORT_D,INPUT);
   f8:	40 e0       	ldi	r20, 0x00	; 0
   fa:	64 e4       	ldi	r22, 0x44	; 68
   fc:	82 e0       	ldi	r24, 0x02	; 2
-  fe:	0e 94 6d 02 	call	0x4da	; 0x4da <GPIO_init>
-	
-	LED_init(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
+  fe:	0e 94 81 02 	call	0x502	; 0x502 <GPIO_init>
+		
+		LED_init(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
  102:	60 e0       	ldi	r22, 0x00	; 0
  104:	81 e4       	ldi	r24, 0x41	; 65
- 106:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LED_init>
-	LED_init(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
+ 106:	0e 94 a1 01 	call	0x342	; 0x342 <LED_init>
+		LED_init(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
  10a:	61 e0       	ldi	r22, 0x01	; 1
  10c:	81 e4       	ldi	r24, 0x41	; 65
- 10e:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LED_init>
-	LED_init(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
+ 10e:	0e 94 a1 01 	call	0x342	; 0x342 <LED_init>
+		LED_init(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
  112:	62 e0       	ldi	r22, 0x02	; 2
  114:	81 e4       	ldi	r24, 0x41	; 65
- 116:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LED_init>
-	
-	LED_init(CARS_PORT,CARS_GREEN_LED);
+ 116:	0e 94 a1 01 	call	0x342	; 0x342 <LED_init>
+		
+		LED_init(CARS_PORT,CARS_GREEN_LED);
  11a:	60 e0       	ldi	r22, 0x00	; 0
  11c:	82 e4       	ldi	r24, 0x42	; 66
- 11e:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LED_init>
-	LED_init(CARS_PORT,CARS_RED_LED);
+ 11e:	0e 94 a1 01 	call	0x342	; 0x342 <LED_init>
+		LED_init(CARS_PORT,CARS_RED_LED);
  122:	61 e0       	ldi	r22, 0x01	; 1
  124:	82 e4       	ldi	r24, 0x42	; 66
- 126:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LED_init>
-	LED_init(CARS_PORT,CARS_YELOW_LED);
+ 126:	0e 94 a1 01 	call	0x342	; 0x342 <LED_init>
+		LED_init(CARS_PORT,CARS_YELOW_LED);
  12a:	62 e0       	ldi	r22, 0x02	; 2
  12c:	82 e4       	ldi	r24, 0x42	; 66
- 12e:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LED_init>
-	
+ 12e:	0e 94 a1 01 	call	0x342	; 0x342 <LED_init>
+		
 
-}
+	}
  132:	0f 90       	pop	r0
  134:	0f 90       	pop	r0
  136:	df 91       	pop	r29
  138:	cf 91       	pop	r28
  13a:	08 95       	ret
 
-0000013c <delayFiveSeconds>:
+0000013c <delayHalfSecond>:
 
 
-}
+	}
 
-void delayFiveSeconds(void)
-{
+	void delayHalfSecond(void)
+	{
  13c:	cf 93       	push	r28
  13e:	df 93       	push	r29
  140:	cd b7       	in	r28, 0x3d	; 61
@@ -241,17 +241,17 @@ void delayFiveSeconds(void)
  14a:	de bf       	out	0x3e, r29	; 62
  14c:	0f be       	out	0x3f, r0	; 63
  14e:	cd bf       	out	0x3d, r28	; 61
-	// I implement this 5 second delay using timer1 since it's 16 bit and it's
-	//better to have lowest amount of interrupts , for example if we use max prescaler = 1024
-	// and we need to count to 4883 which is required for 5 sec interrupt 8 bit timers 0,2
-	// will have a big number of interrupts to make it to 5 seconds which is not the best
-	
-	sei();
+		// I implement this 5 second delay using timer1 since it's 16 bit and it's
+		//better to have lowest amount of interrupts , for example if we use max prescaler = 1024
+		// and we need to count to 4883 which is required for 5 sec interrupt 8 bit timers 0,2
+		// will have a big number of interrupts to make it to 5 seconds which is not the best
+		
+		sei();
  150:	78 94       	sei
-	
-	// timer prescaler will be 1024 so we reach 5 seconds or 5000 ms in 4883 counts in OCRn
-	//(output compare register , n: for any timer)
-	st_timerConfig_t timerConfiguration ={0,4883,N_1024,timer1,CTC,ENABLE};
+		
+		// timer prescaler will be 1024 so we reach 5 seconds or 5000 ms in 489 counts in OCRn and loop 10 times on this to reach 5seconds
+		//(output compare register , n: for any timer)
+		st_timerConfig_t timerConfiguration ={0,489,N_1024,timer1,CTC,ENABLE};
  152:	88 e0       	ldi	r24, 0x08	; 8
  154:	e2 e6       	ldi	r30, 0x62	; 98
  156:	f0 e0       	ldi	r31, 0x00	; 0
@@ -260,32 +260,32 @@ void delayFiveSeconds(void)
  15c:	01 90       	ld	r0, Z+
  15e:	0d 92       	st	X+, r0
  160:	8a 95       	dec	r24
- 162:	e1 f7       	brne	.-8      	; 0x15c <delayFiveSeconds+0x20>
-	TIMER_setCallback(timerProcessing);
+ 162:	e1 f7       	brne	.-8      	; 0x15c <delayHalfSecond+0x20>
+		TIMER_setCallback(timerProcessing);
  164:	8c e4       	ldi	r24, 0x4C	; 76
  166:	90 e0       	ldi	r25, 0x00	; 0
- 168:	0e 94 b0 04 	call	0x960	; 0x960 <TIMER_setCallback>
-	TIMER_init(&timerConfiguration); // send the init function the config struct we defined above
+ 168:	0e 94 c4 04 	call	0x988	; 0x988 <TIMER_setCallback>
+		TIMER_init(&timerConfiguration); // send the init function the config struct we defined above
  16c:	ce 01       	movw	r24, r28
  16e:	01 96       	adiw	r24, 0x01	; 1
- 170:	0e 94 b5 04 	call	0x96a	; 0x96a <TIMER_init>
-	//timer TCNTn Register start counting right after we select the prescaler bits
-	//which happen last thing in the TIMER_init function
-	while(g_interruptCounter != 1 )
- 174:	80 91 72 00 	lds	r24, 0x0072	; 0x800072 <__data_end>
+ 170:	0e 94 c9 04 	call	0x992	; 0x992 <TIMER_init>
+		//timer TCNTn Register start counting right after we select the prescaler bits
+		//which happen last thing in the TIMER_init function
+		while(g_interruptCounter != 1 )
+ 174:	80 91 6a 00 	lds	r24, 0x006A	; 0x80006a <__data_end>
  178:	81 30       	cpi	r24, 0x01	; 1
- 17a:	e1 f7       	brne	.-8      	; 0x174 <delayFiveSeconds+0x38>
-	{
-		// waiting for interrupt to occur hence waiting the desired 5 seconds
+ 17a:	e1 f7       	brne	.-8      	; 0x174 <delayHalfSecond+0x38>
+		{
+			// waiting for interrupt to occur hence waiting the desired 5 seconds
 
+		}
+		g_interruptCounter=0;
+ 17c:	10 92 6a 00 	sts	0x006A, r1	; 0x80006a <__data_end>
+
+		TIMER_reset(timer1);
+ 180:	0e 94 3c 05 	call	0xa78	; 0xa78 <TIMER_reset>
+		
 	}
-	g_interruptCounter=0;
- 17c:	10 92 72 00 	sts	0x0072, r1	; 0x800072 <__data_end>
-
-	TIMER_reset(timer1);
- 180:	0e 94 28 05 	call	0xa50	; 0xa50 <TIMER_reset>
-	
-}
  184:	28 96       	adiw	r28, 0x08	; 8
  186:	0f b6       	in	r0, 0x3f	; 63
  188:	f8 94       	cli
@@ -298,1735 +298,1868 @@ void delayFiveSeconds(void)
 
 00000196 <pedestrianMode>:
 
-void pedestrianMode(void)
-{
-
-	
-	AllLedsOFF();
- 196:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
-	if(carLedState==RED)
- 19a:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
- 19e:	81 11       	cpse	r24, r1
- 1a0:	0b c0       	rjmp	.+22     	; 0x1b8 <pedestrianMode+0x22>
-	{
-		LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
- 1a2:	60 e0       	ldi	r22, 0x00	; 0
- 1a4:	81 e4       	ldi	r24, 0x41	; 65
- 1a6:	0e 94 60 01 	call	0x2c0	; 0x2c0 <LED_on>
-		LED_on(CARS_PORT,CARS_RED_LED);
- 1aa:	61 e0       	ldi	r22, 0x01	; 1
- 1ac:	82 e4       	ldi	r24, 0x42	; 66
- 1ae:	0e 94 60 01 	call	0x2c0	; 0x2c0 <LED_on>
-		delayFiveSeconds();
- 1b2:	0e 94 9e 00 	call	0x13c	; 0x13c <delayFiveSeconds>
- 1b6:	1d c0       	rjmp	.+58     	; 0x1f2 <pedestrianMode+0x5c>
+		
 	}
-	else if(carLedState==GREEN || carLedState==YELLOW)
- 1b8:	81 50       	subi	r24, 0x01	; 1
- 1ba:	82 30       	cpi	r24, 0x02	; 2
- 1bc:	d0 f4       	brcc	.+52     	; 0x1f2 <pedestrianMode+0x5c>
-	{
-		LED_on(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
- 1be:	61 e0       	ldi	r22, 0x01	; 1
- 1c0:	81 e4       	ldi	r24, 0x41	; 65
- 1c2:	0e 94 60 01 	call	0x2c0	; 0x2c0 <LED_on>
-		LED_blink_halfSecond(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
- 1c6:	62 e0       	ldi	r22, 0x02	; 2
- 1c8:	81 e4       	ldi	r24, 0x41	; 65
- 1ca:	0e 94 9b 01 	call	0x336	; 0x336 <LED_blink_halfSecond>
 
-		LED_blink_halfSecond(CARS_PORT,CARS_YELOW_LED);
- 1ce:	62 e0       	ldi	r22, 0x02	; 2
- 1d0:	82 e4       	ldi	r24, 0x42	; 66
- 1d2:	0e 94 9b 01 	call	0x336	; 0x336 <LED_blink_halfSecond>
-		delayFiveSeconds();
- 1d6:	0e 94 9e 00 	call	0x13c	; 0x13c <delayFiveSeconds>
+	void pedestrianMode(void)
+	{
+ 196:	cf 93       	push	r28
+		uint8_t i=0;
+		
 		AllLedsOFF();
- 1da:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
-
-		LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
- 1de:	60 e0       	ldi	r22, 0x00	; 0
- 1e0:	81 e4       	ldi	r24, 0x41	; 65
- 1e2:	0e 94 60 01 	call	0x2c0	; 0x2c0 <LED_on>
-		LED_on(CARS_PORT,CARS_RED_LED);
- 1e6:	61 e0       	ldi	r22, 0x01	; 1
- 1e8:	82 e4       	ldi	r24, 0x42	; 66
- 1ea:	0e 94 60 01 	call	0x2c0	; 0x2c0 <LED_on>
-		delayFiveSeconds();
- 1ee:	0e 94 9e 00 	call	0x13c	; 0x13c <delayFiveSeconds>
-	}
-	AllLedsOFF();
- 1f2:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
-	LED_blink_halfSecond(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
- 1f6:	62 e0       	ldi	r22, 0x02	; 2
- 1f8:	81 e4       	ldi	r24, 0x41	; 65
- 1fa:	0e 94 9b 01 	call	0x336	; 0x336 <LED_blink_halfSecond>
-	LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
- 1fe:	60 e0       	ldi	r22, 0x00	; 0
- 200:	81 e4       	ldi	r24, 0x41	; 65
- 202:	0e 94 60 01 	call	0x2c0	; 0x2c0 <LED_on>
-	LED_blink_halfSecond(CARS_PORT,CARS_YELOW_LED);
- 206:	62 e0       	ldi	r22, 0x02	; 2
- 208:	82 e4       	ldi	r24, 0x42	; 66
- 20a:	0e 94 9b 01 	call	0x336	; 0x336 <LED_blink_halfSecond>
-	delayFiveSeconds();
- 20e:	0e 94 9e 00 	call	0x13c	; 0x13c <delayFiveSeconds>
-	trafficMode=CARS;
- 212:	81 e0       	ldi	r24, 0x01	; 1
- 214:	80 93 61 00 	sts	0x0061, r24	; 0x800061 <trafficMode>
-	reti();
- 218:	18 95       	reti
- 21a:	08 95       	ret
-
-0000021c <carsMode>:
-	//cli();
-
-}
-void carsMode(void)
-{
-	AllLedsOFF();
- 21c:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
-	
-	LED_on(CARS_PORT,CARS_GREEN_LED);
- 220:	60 e0       	ldi	r22, 0x00	; 0
- 222:	82 e4       	ldi	r24, 0x42	; 66
- 224:	0e 94 60 01 	call	0x2c0	; 0x2c0 <LED_on>
-	LED_on(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
- 228:	61 e0       	ldi	r22, 0x01	; 1
- 22a:	81 e4       	ldi	r24, 0x41	; 65
- 22c:	0e 94 60 01 	call	0x2c0	; 0x2c0 <LED_on>
-	carLedState= GREEN;
- 230:	81 e0       	ldi	r24, 0x01	; 1
- 232:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
-	if(trafficMode==PEDESTRIAN)
- 236:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
- 23a:	88 23       	and	r24, r24
- 23c:	39 f1       	breq	.+78     	; 0x28c <carsMode+0x70>
-	{
-		return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already runing so the program implements the pedestrian scenario in the next iteration
-		// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
-	}
-	delayFiveSeconds();
- 23e:	0e 94 9e 00 	call	0x13c	; 0x13c <delayFiveSeconds>
-	if(trafficMode==PEDESTRIAN)
- 242:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
- 246:	88 23       	and	r24, r24
- 248:	09 f1       	breq	.+66     	; 0x28c <carsMode+0x70>
-	{
-		return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already runing so the program implements the pedestrian scenario in the next iteration
-		// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
-	}
-	
-	LED_blink_halfSecond(CARS_PORT,CARS_YELOW_LED);
- 24a:	62 e0       	ldi	r22, 0x02	; 2
- 24c:	82 e4       	ldi	r24, 0x42	; 66
- 24e:	0e 94 9b 01 	call	0x336	; 0x336 <LED_blink_halfSecond>
-	LED_blink_halfSecond(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
- 252:	62 e0       	ldi	r22, 0x02	; 2
- 254:	81 e4       	ldi	r24, 0x41	; 65
- 256:	0e 94 9b 01 	call	0x336	; 0x336 <LED_blink_halfSecond>
-	carLedState=YELLOW;
- 25a:	82 e0       	ldi	r24, 0x02	; 2
- 25c:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
-	delayFiveSeconds();
- 260:	0e 94 9e 00 	call	0x13c	; 0x13c <delayFiveSeconds>
-
-	
-	AllLedsOFF();
- 264:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
-	if(trafficMode==PEDESTRIAN)
- 268:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
- 26c:	88 23       	and	r24, r24
- 26e:	71 f0       	breq	.+28     	; 0x28c <carsMode+0x70>
-	{
-		return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already runing so the program implements the pedestrian scenario in the next iteration
-		// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
-	}
-	
-	carLedState=RED;
- 270:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
-	LED_on(CARS_PORT,CARS_RED_LED);
- 274:	61 e0       	ldi	r22, 0x01	; 1
- 276:	82 e4       	ldi	r24, 0x42	; 66
- 278:	0e 94 60 01 	call	0x2c0	; 0x2c0 <LED_on>
-	LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
- 27c:	60 e0       	ldi	r22, 0x00	; 0
- 27e:	81 e4       	ldi	r24, 0x41	; 65
- 280:	0e 94 60 01 	call	0x2c0	; 0x2c0 <LED_on>
-	delayFiveSeconds();
- 284:	0e 94 9e 00 	call	0x13c	; 0x13c <delayFiveSeconds>
-
-	AllLedsOFF();
- 288:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
- 28c:	08 95       	ret
-
-0000028e <APP_flow>:
-}
-void APP_flow(void)
-{
-	APPLICATION_LOOP
-	{
-		switch(trafficMode)
- 28e:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
- 292:	88 23       	and	r24, r24
- 294:	29 f0       	breq	.+10     	; 0x2a0 <APP_flow+0x12>
- 296:	81 30       	cpi	r24, 0x01	; 1
- 298:	d1 f7       	brne	.-12     	; 0x28e <APP_flow>
+ 198:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
+		if(carLedState==RED)
+ 19c:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 1a0:	88 23       	and	r24, r24
+ 1a2:	69 f0       	breq	.+26     	; 0x1be <pedestrianMode+0x28>
+ 1a4:	10 c0       	rjmp	.+32     	; 0x1c6 <pedestrianMode+0x30>
 		{
-			case CARS:
-			carsMode();
- 29a:	0e 94 0e 01 	call	0x21c	; 0x21c <carsMode>
-			//in cars mode car green is on & pedestrian green on for 5 seconds then yellow blink on then all off
-			break;
- 29e:	f7 cf       	rjmp	.-18     	; 0x28e <APP_flow>
-			
-			
-			
-			case PEDESTRIAN :
-			
-			pedestrianMode();
- 2a0:	0e 94 cb 00 	call	0x196	; 0x196 <pedestrianMode>
-			break;
- 2a4:	f4 cf       	rjmp	.-24     	; 0x28e <APP_flow>
+			for( i=0;i<10;i++)
+			{
+				LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
+ 1a6:	60 e0       	ldi	r22, 0x00	; 0
+ 1a8:	81 e4       	ldi	r24, 0x41	; 65
+ 1aa:	0e 94 a8 01 	call	0x350	; 0x350 <LED_on>
+				LED_on(CARS_PORT,CARS_RED_LED);
+ 1ae:	61 e0       	ldi	r22, 0x01	; 1
+ 1b0:	82 e4       	ldi	r24, 0x42	; 66
+ 1b2:	0e 94 a8 01 	call	0x350	; 0x350 <LED_on>
+				
+				delayHalfSecond();
+ 1b6:	0e 94 9e 00 	call	0x13c	; 0x13c <delayHalfSecond>
+		uint8_t i=0;
+		
+		AllLedsOFF();
+		if(carLedState==RED)
+		{
+			for( i=0;i<10;i++)
+ 1ba:	cf 5f       	subi	r28, 0xFF	; 255
+ 1bc:	01 c0       	rjmp	.+2      	; 0x1c0 <pedestrianMode+0x2a>
+ 1be:	c0 e0       	ldi	r28, 0x00	; 0
+ 1c0:	ca 30       	cpi	r28, 0x0A	; 10
+ 1c2:	88 f3       	brcs	.-30     	; 0x1a6 <pedestrianMode+0x10>
+ 1c4:	28 c0       	rjmp	.+80     	; 0x216 <pedestrianMode+0x80>
+				LED_on(CARS_PORT,CARS_RED_LED);
+				
+				delayHalfSecond();
+			}
+		}
+		else if(carLedState==GREEN || carLedState==YELLOW)
+ 1c6:	81 50       	subi	r24, 0x01	; 1
+ 1c8:	82 30       	cpi	r24, 0x02	; 2
+ 1ca:	28 f5       	brcc	.+74     	; 0x216 <pedestrianMode+0x80>
+ 1cc:	10 c0       	rjmp	.+32     	; 0x1ee <pedestrianMode+0x58>
+		{
+			for( i=0;i<10;i++)
+			{
+				LED_on(PEDESTRIAN_PORT,PEDESTRIAN_RED_LED);
+ 1ce:	61 e0       	ldi	r22, 0x01	; 1
+ 1d0:	81 e4       	ldi	r24, 0x41	; 65
+ 1d2:	0e 94 a8 01 	call	0x350	; 0x350 <LED_on>
+				LED_blink(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
+ 1d6:	62 e0       	ldi	r22, 0x02	; 2
+ 1d8:	81 e4       	ldi	r24, 0x41	; 65
+ 1da:	0e 94 b6 01 	call	0x36c	; 0x36c <LED_blink>
 
-000002a6 <Led_timerProcessing>:
-}
-void Led_timerProcessing(void)
-{
+				LED_blink(CARS_PORT,CARS_YELOW_LED);
+ 1de:	62 e0       	ldi	r22, 0x02	; 2
+ 1e0:	82 e4       	ldi	r24, 0x42	; 66
+ 1e2:	0e 94 b6 01 	call	0x36c	; 0x36c <LED_blink>
+				delayHalfSecond();
+ 1e6:	0e 94 9e 00 	call	0x13c	; 0x13c <delayHalfSecond>
+				delayHalfSecond();
+			}
+		}
+		else if(carLedState==GREEN || carLedState==YELLOW)
+		{
+			for( i=0;i<10;i++)
+ 1ea:	cf 5f       	subi	r28, 0xFF	; 255
+ 1ec:	01 c0       	rjmp	.+2      	; 0x1f0 <pedestrianMode+0x5a>
+ 1ee:	c0 e0       	ldi	r28, 0x00	; 0
+ 1f0:	ca 30       	cpi	r28, 0x0A	; 10
+ 1f2:	68 f3       	brcs	.-38     	; 0x1ce <pedestrianMode+0x38>
+				LED_blink(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
 
+				LED_blink(CARS_PORT,CARS_YELOW_LED);
+				delayHalfSecond();
+			}
+			AllLedsOFF();
+ 1f4:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
+			for( i=0;i<10;i++)
+ 1f8:	c0 e0       	ldi	r28, 0x00	; 0
+ 1fa:	0b c0       	rjmp	.+22     	; 0x212 <pedestrianMode+0x7c>
+			{
+				LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
+ 1fc:	60 e0       	ldi	r22, 0x00	; 0
+ 1fe:	81 e4       	ldi	r24, 0x41	; 65
+ 200:	0e 94 a8 01 	call	0x350	; 0x350 <LED_on>
+				LED_on(CARS_PORT,CARS_RED_LED);
+ 204:	61 e0       	ldi	r22, 0x01	; 1
+ 206:	82 e4       	ldi	r24, 0x42	; 66
+ 208:	0e 94 a8 01 	call	0x350	; 0x350 <LED_on>
+				delayHalfSecond();
+ 20c:	0e 94 9e 00 	call	0x13c	; 0x13c <delayHalfSecond>
+
+				LED_blink(CARS_PORT,CARS_YELOW_LED);
+				delayHalfSecond();
+			}
+			AllLedsOFF();
+			for( i=0;i<10;i++)
+ 210:	cf 5f       	subi	r28, 0xFF	; 255
+ 212:	ca 30       	cpi	r28, 0x0A	; 10
+ 214:	98 f3       	brcs	.-26     	; 0x1fc <pedestrianMode+0x66>
+				delayHalfSecond();
+				
+			}
+		}
+		
+		AllLedsOFF();
+ 216:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
+		
+		for( i=0;i<10;i++)
+ 21a:	c0 e0       	ldi	r28, 0x00	; 0
+ 21c:	0f c0       	rjmp	.+30     	; 0x23c <pedestrianMode+0xa6>
+		{
+			LED_blink(PEDESTRIAN_PORT,PEDESTRIAN_YELLOW_LED);
+ 21e:	62 e0       	ldi	r22, 0x02	; 2
+ 220:	81 e4       	ldi	r24, 0x41	; 65
+ 222:	0e 94 b6 01 	call	0x36c	; 0x36c <LED_blink>
+			LED_on(PEDESTRIAN_PORT,PEDESTRIAN_GREEN_LED);
+ 226:	60 e0       	ldi	r22, 0x00	; 0
+ 228:	81 e4       	ldi	r24, 0x41	; 65
+ 22a:	0e 94 a8 01 	call	0x350	; 0x350 <LED_on>
+			LED_blink(CARS_PORT,CARS_YELOW_LED);
+ 22e:	62 e0       	ldi	r22, 0x02	; 2
+ 230:	82 e4       	ldi	r24, 0x42	; 66
+ 232:	0e 94 b6 01 	call	0x36c	; 0x36c <LED_blink>
+							delayHalfSecond();
+ 236:	0e 94 9e 00 	call	0x13c	; 0x13c <delayHalfSecond>
+			}
+		}
+		
+		AllLedsOFF();
+		
+		for( i=0;i<10;i++)
+ 23a:	cf 5f       	subi	r28, 0xFF	; 255
+ 23c:	ca 30       	cpi	r28, 0x0A	; 10
+ 23e:	78 f3       	brcs	.-34     	; 0x21e <pedestrianMode+0x88>
+			LED_blink(CARS_PORT,CARS_YELOW_LED);
+							delayHalfSecond();
+
+		}
+
+		trafficMode=CARS;
+ 240:	81 e0       	ldi	r24, 0x01	; 1
+ 242:	80 93 61 00 	sts	0x0061, r24	; 0x800061 <trafficMode>
+		
+		//cli();
+
+	}
+ 246:	cf 91       	pop	r28
+ 248:	08 95       	ret
+
+0000024a <carsMode>:
+	void carsMode(void) //normal mode
+	{
+ 24a:	cf 93       	push	r28
+		AllLedsOFF();
+ 24c:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
+		uint8_t i=0; //loop index
+
+		carLedState= GREEN;
+ 250:	81 e0       	ldi	r24, 0x01	; 1
+ 252:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+		for(i=0;i<10;i++ )
+ 256:	c0 e0       	ldi	r28, 0x00	; 0
+ 258:	0c c0       	rjmp	.+24     	; 0x272 <carsMode+0x28>
+		{
+			if(trafficMode==PEDESTRIAN)
+ 25a:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
+ 25e:	88 23       	and	r24, r24
+ 260:	09 f4       	brne	.+2      	; 0x264 <carsMode+0x1a>
+ 262:	61 c0       	rjmp	.+194    	; 0x326 <carsMode+0xdc>
+			{
+				return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already running so the program implements the pedestrian scenario in the next iteration
+				// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+			}
+			
+			LED_on(CARS_PORT,CARS_GREEN_LED);
+ 264:	60 e0       	ldi	r22, 0x00	; 0
+ 266:	82 e4       	ldi	r24, 0x42	; 66
+ 268:	0e 94 a8 01 	call	0x350	; 0x350 <LED_on>
+			delayHalfSecond();
+ 26c:	0e 94 9e 00 	call	0x13c	; 0x13c <delayHalfSecond>
+	{
+		AllLedsOFF();
+		uint8_t i=0; //loop index
+
+		carLedState= GREEN;
+		for(i=0;i<10;i++ )
+ 270:	cf 5f       	subi	r28, 0xFF	; 255
+ 272:	ca 30       	cpi	r28, 0x0A	; 10
+ 274:	90 f3       	brcs	.-28     	; 0x25a <carsMode+0x10>
+			
+			LED_on(CARS_PORT,CARS_GREEN_LED);
+			delayHalfSecond();
+		}
+		
+		if(trafficMode==PEDESTRIAN)
+ 276:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
+ 27a:	88 23       	and	r24, r24
+ 27c:	09 f4       	brne	.+2      	; 0x280 <carsMode+0x36>
+ 27e:	53 c0       	rjmp	.+166    	; 0x326 <carsMode+0xdc>
+		{
+			return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already running so the program implements the pedestrian scenario in the next iteration
+			// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+		}
+		
+		carLedState=YELLOW;
+ 280:	82 e0       	ldi	r24, 0x02	; 2
+ 282:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+		for( i=0;i<10;i++)
+ 286:	c0 e0       	ldi	r28, 0x00	; 0
+ 288:	0c c0       	rjmp	.+24     	; 0x2a2 <carsMode+0x58>
+		{
+			if(trafficMode==PEDESTRIAN)
+ 28a:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
+ 28e:	88 23       	and	r24, r24
+ 290:	09 f4       	brne	.+2      	; 0x294 <carsMode+0x4a>
+ 292:	49 c0       	rjmp	.+146    	; 0x326 <carsMode+0xdc>
+			{
+				return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already running so the program implements the pedestrian scenario in the next iteration
+				// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+			}
+			
+			LED_blink(CARS_PORT,CARS_YELOW_LED);
+ 294:	62 e0       	ldi	r22, 0x02	; 2
+ 296:	82 e4       	ldi	r24, 0x42	; 66
+ 298:	0e 94 b6 01 	call	0x36c	; 0x36c <LED_blink>
+			delayHalfSecond();
+ 29c:	0e 94 9e 00 	call	0x13c	; 0x13c <delayHalfSecond>
+			return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already running so the program implements the pedestrian scenario in the next iteration
+			// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+		}
+		
+		carLedState=YELLOW;
+		for( i=0;i<10;i++)
+ 2a0:	cf 5f       	subi	r28, 0xFF	; 255
+ 2a2:	ca 30       	cpi	r28, 0x0A	; 10
+ 2a4:	90 f3       	brcs	.-28     	; 0x28a <carsMode+0x40>
+			
+			LED_blink(CARS_PORT,CARS_YELOW_LED);
+			delayHalfSecond();
+		}
+		
+		AllLedsOFF();
+ 2a6:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
+
+		
+		carLedState=RED;
+ 2aa:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+		
+
+		for( i=0;i<10;i++)
+ 2ae:	c0 e0       	ldi	r28, 0x00	; 0
+ 2b0:	0b c0       	rjmp	.+22     	; 0x2c8 <carsMode+0x7e>
+		{
+			if(trafficMode==PEDESTRIAN)
+ 2b2:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
+ 2b6:	88 23       	and	r24, r24
+ 2b8:	b1 f1       	breq	.+108    	; 0x326 <carsMode+0xdc>
+			{
+				return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already running so the program implements the pedestrian scenario in the next iteration
+				// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+			}
+			
+			LED_on(CARS_PORT,CARS_RED_LED);
+ 2ba:	61 e0       	ldi	r22, 0x01	; 1
+ 2bc:	82 e4       	ldi	r24, 0x42	; 66
+ 2be:	0e 94 a8 01 	call	0x350	; 0x350 <LED_on>
+			delayHalfSecond();
+ 2c2:	0e 94 9e 00 	call	0x13c	; 0x13c <delayHalfSecond>
+
+		
+		carLedState=RED;
+		
+
+		for( i=0;i<10;i++)
+ 2c6:	cf 5f       	subi	r28, 0xFF	; 255
+ 2c8:	ca 30       	cpi	r28, 0x0A	; 10
+ 2ca:	98 f3       	brcs	.-26     	; 0x2b2 <carsMode+0x68>
+			}
+			
+			LED_on(CARS_PORT,CARS_RED_LED);
+			delayHalfSecond();
+		}
+		AllLedsOFF();
+ 2cc:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
+		
+
+		if(trafficMode==PEDESTRIAN)
+ 2d0:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
+ 2d4:	88 23       	and	r24, r24
+ 2d6:	39 f1       	breq	.+78     	; 0x326 <carsMode+0xdc>
+		{
+			return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already running so the program implements the pedestrian scenario in the next iteration
+			// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+		}
+		carLedState=YELLOW;
+ 2d8:	82 e0       	ldi	r24, 0x02	; 2
+ 2da:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+		
+		for( i=0;i<10;i++)
+ 2de:	c0 e0       	ldi	r28, 0x00	; 0
+ 2e0:	0b c0       	rjmp	.+22     	; 0x2f8 <carsMode+0xae>
+		{
+			if(trafficMode==PEDESTRIAN)
+ 2e2:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
+ 2e6:	88 23       	and	r24, r24
+ 2e8:	f1 f0       	breq	.+60     	; 0x326 <carsMode+0xdc>
+			{
+				return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already running so the program implements the pedestrian scenario in the next iteration
+				// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+			}
+			
+			LED_blink(CARS_PORT,CARS_YELOW_LED);
+ 2ea:	62 e0       	ldi	r22, 0x02	; 2
+ 2ec:	82 e4       	ldi	r24, 0x42	; 66
+ 2ee:	0e 94 b6 01 	call	0x36c	; 0x36c <LED_blink>
+			delayHalfSecond();
+ 2f2:	0e 94 9e 00 	call	0x13c	; 0x13c <delayHalfSecond>
+			return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already running so the program implements the pedestrian scenario in the next iteration
+			// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+		}
+		carLedState=YELLOW;
+		
+		for( i=0;i<10;i++)
+ 2f6:	cf 5f       	subi	r28, 0xFF	; 255
+ 2f8:	ca 30       	cpi	r28, 0x0A	; 10
+ 2fa:	98 f3       	brcs	.-26     	; 0x2e2 <carsMode+0x98>
+			delayHalfSecond();
+			
+
+		}
+		
+		AllLedsOFF();
+ 2fc:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
+
+		
+		carLedState=RED;
+ 300:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+		
+
+		for(i=0;i<10;i++)
+ 304:	c0 e0       	ldi	r28, 0x00	; 0
+ 306:	0b c0       	rjmp	.+22     	; 0x31e <carsMode+0xd4>
+		{
+			if(trafficMode==PEDESTRIAN)
+ 308:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
+ 30c:	88 23       	and	r24, r24
+ 30e:	59 f0       	breq	.+22     	; 0x326 <carsMode+0xdc>
+			{
+				return; //this is done because the interrupt int0 interrupts the flow of the program and gives value to the trafficMode but the switch case of 'CARS' is already running so the program implements the pedestrian scenario in the next iteration
+				// since we have 2 constraints to keep the ISR very short and we want to enter the pedestrian mode very soon after we press the interrupt this is the best solution i could come to to keep asking if the traffic mode changed to pedestrian and exit the car mode
+			}
+			
+			LED_on(CARS_PORT,CARS_RED_LED);
+ 310:	61 e0       	ldi	r22, 0x01	; 1
+ 312:	82 e4       	ldi	r24, 0x42	; 66
+ 314:	0e 94 a8 01 	call	0x350	; 0x350 <LED_on>
+			delayHalfSecond();
+ 318:	0e 94 9e 00 	call	0x13c	; 0x13c <delayHalfSecond>
+
+		
+		carLedState=RED;
+		
+
+		for(i=0;i<10;i++)
+ 31c:	cf 5f       	subi	r28, 0xFF	; 255
+ 31e:	ca 30       	cpi	r28, 0x0A	; 10
+ 320:	98 f3       	brcs	.-26     	; 0x308 <carsMode+0xbe>
+			
+			LED_on(CARS_PORT,CARS_RED_LED);
+			delayHalfSecond();
+			
+		}
+		AllLedsOFF();
+ 322:	0e 94 52 00 	call	0xa4	; 0xa4 <AllLedsOFF>
 	
-	g_interruptCounterLed++;
- 2a6:	80 91 73 00 	lds	r24, 0x0073	; 0x800073 <g_interruptCounterLed>
- 2aa:	8f 5f       	subi	r24, 0xFF	; 255
- 2ac:	80 93 73 00 	sts	0x0073, r24	; 0x800073 <g_interruptCounterLed>
- 2b0:	08 95       	ret
+ 326:	cf 91       	pop	r28
+ 328:	08 95       	ret
 
-000002b2 <LED_init>:
+0000032a <APP_flow>:
+	}
+	void APP_flow(void)
+	{
+		APPLICATION_LOOP
+		{
+			switch(trafficMode)
+ 32a:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <trafficMode>
+ 32e:	88 23       	and	r24, r24
+ 330:	29 f0       	breq	.+10     	; 0x33c <APP_flow+0x12>
+ 332:	81 30       	cpi	r24, 0x01	; 1
+ 334:	d1 f7       	brne	.-12     	; 0x32a <APP_flow>
+			{
+				case CARS:
+				carsMode();
+ 336:	0e 94 25 01 	call	0x24a	; 0x24a <carsMode>
+				//in cars mode car green is on & pedestrian green on for 5 seconds then yellow blink on then all off
+				break;
+ 33a:	f7 cf       	rjmp	.-18     	; 0x32a <APP_flow>
+				
+				
+				
+				case PEDESTRIAN :
+				
+				pedestrianMode();
+ 33c:	0e 94 cb 00 	call	0x196	; 0x196 <pedestrianMode>
+				break;
+ 340:	f4 cf       	rjmp	.-24     	; 0x32a <APP_flow>
+
+00000342 <LED_init>:
 
 uint8_t g_interruptCounterLed=0;
 
 /*******************    functions implementations  *****************/
 void LED_init(uint8_t ledPort, uint8_t ledPin)
 {
- 2b2:	98 2f       	mov	r25, r24
- 2b4:	86 2f       	mov	r24, r22
+ 342:	98 2f       	mov	r25, r24
+ 344:	86 2f       	mov	r24, r22
 	GPIO_init(ledPin,ledPort,OUTPUT);
- 2b6:	41 e0       	ldi	r20, 0x01	; 1
- 2b8:	69 2f       	mov	r22, r25
- 2ba:	0e 94 6d 02 	call	0x4da	; 0x4da <GPIO_init>
- 2be:	08 95       	ret
+ 346:	41 e0       	ldi	r20, 0x01	; 1
+ 348:	69 2f       	mov	r22, r25
+ 34a:	0e 94 81 02 	call	0x502	; 0x502 <GPIO_init>
+ 34e:	08 95       	ret
 
-000002c0 <LED_on>:
+00000350 <LED_on>:
 }
 
 void LED_on(uint8_t ledPort, uint8_t ledPin)
 {
- 2c0:	98 2f       	mov	r25, r24
- 2c2:	86 2f       	mov	r24, r22
+ 350:	98 2f       	mov	r25, r24
+ 352:	86 2f       	mov	r24, r22
 	GPIO_write(ledPin,ledPort,HIGH);
- 2c4:	41 e0       	ldi	r20, 0x01	; 1
- 2c6:	69 2f       	mov	r22, r25
- 2c8:	0e 94 f4 02 	call	0x5e8	; 0x5e8 <GPIO_write>
- 2cc:	08 95       	ret
+ 354:	41 e0       	ldi	r20, 0x01	; 1
+ 356:	69 2f       	mov	r22, r25
+ 358:	0e 94 08 03 	call	0x610	; 0x610 <GPIO_write>
+ 35c:	08 95       	ret
 
-000002ce <LED_off>:
+0000035e <LED_off>:
 }
 void LED_off(uint8_t ledPort, uint8_t ledPin)
 {
- 2ce:	98 2f       	mov	r25, r24
- 2d0:	86 2f       	mov	r24, r22
+ 35e:	98 2f       	mov	r25, r24
+ 360:	86 2f       	mov	r24, r22
 	GPIO_write(ledPin,ledPort,LOW);
- 2d2:	40 e0       	ldi	r20, 0x00	; 0
- 2d4:	69 2f       	mov	r22, r25
- 2d6:	0e 94 f4 02 	call	0x5e8	; 0x5e8 <GPIO_write>
- 2da:	08 95       	ret
+ 362:	40 e0       	ldi	r20, 0x00	; 0
+ 364:	69 2f       	mov	r22, r25
+ 366:	0e 94 08 03 	call	0x610	; 0x610 <GPIO_write>
+ 36a:	08 95       	ret
 
-000002dc <delayHalfSecond>:
-		delayHalfSecond();
+0000036c <LED_blink>:
+}
+void LED_blink(uint8_t ledPort, uint8_t ledPin)
+{
+ 36c:	98 2f       	mov	r25, r24
+ 36e:	86 2f       	mov	r24, r22
+	
+	
 		GPIO_toggle(ledPin,ledPort);
-	//_delay_ms(blinkTime); //replace later with timer delay function 
-}
-void delayHalfSecond(void)
-{
- 2dc:	cf 93       	push	r28
- 2de:	df 93       	push	r29
- 2e0:	cd b7       	in	r28, 0x3d	; 61
- 2e2:	de b7       	in	r29, 0x3e	; 62
- 2e4:	28 97       	sbiw	r28, 0x08	; 8
- 2e6:	0f b6       	in	r0, 0x3f	; 63
- 2e8:	f8 94       	cli
- 2ea:	de bf       	out	0x3e, r29	; 62
- 2ec:	0f be       	out	0x3f, r0	; 63
- 2ee:	cd bf       	out	0x3d, r28	; 61
-	// I implement this 5 second delay using timer1 since it's 16 bit and it's
-	//better to have lowest amount of interrupts , for example if we use max prescaler = 1024
-	// and we need to count to 4883 which is required for 5 sec interrupt 8 bit timers 0,2
-	// will have a big number of interrupts to make it to 5 seconds which is not the best
-	
-	sei();
- 2f0:	78 94       	sei
-	
-	// timer prescaler will be 1024 so we reach 5 seconds or 5000 ms in 4883 counts in OCRn
-	//(output compare register , n: for any timer)
-	st_timerConfig_t timerConfiguration ={0,489,N_1024,timer1,CTC,ENABLE};
- 2f2:	88 e0       	ldi	r24, 0x08	; 8
- 2f4:	ea e6       	ldi	r30, 0x6A	; 106
- 2f6:	f0 e0       	ldi	r31, 0x00	; 0
- 2f8:	de 01       	movw	r26, r28
- 2fa:	11 96       	adiw	r26, 0x01	; 1
- 2fc:	01 90       	ld	r0, Z+
- 2fe:	0d 92       	st	X+, r0
- 300:	8a 95       	dec	r24
- 302:	e1 f7       	brne	.-8      	; 0x2fc <delayHalfSecond+0x20>
-	TIMER_setCallback(Led_timerProcessing);
- 304:	83 e5       	ldi	r24, 0x53	; 83
- 306:	91 e0       	ldi	r25, 0x01	; 1
- 308:	0e 94 b0 04 	call	0x960	; 0x960 <TIMER_setCallback>
-	TIMER_init(&timerConfiguration); // send the init function the config struct we defined above
- 30c:	ce 01       	movw	r24, r28
- 30e:	01 96       	adiw	r24, 0x01	; 1
- 310:	0e 94 b5 04 	call	0x96a	; 0x96a <TIMER_init>
-	//timer TCNTn Register start counting right after we select the prescaler bits
-	//which happen last thing in the TIMER_init function
-	while(g_interruptCounterLed != 1 )
- 314:	80 91 73 00 	lds	r24, 0x0073	; 0x800073 <g_interruptCounterLed>
- 318:	81 30       	cpi	r24, 0x01	; 1
- 31a:	e1 f7       	brne	.-8      	; 0x314 <delayHalfSecond+0x38>
-	{
-		// waiting for interrupt to occur hence waiting the desired 5 seconds
+ 370:	69 2f       	mov	r22, r25
+ 372:	0e 94 8f 03 	call	0x71e	; 0x71e <GPIO_toggle>
+ 376:	08 95       	ret
 
-	}
-	g_interruptCounterLed=0;
- 31c:	10 92 73 00 	sts	0x0073, r1	; 0x800073 <g_interruptCounterLed>
-
-	TIMER_reset(timer1);
- 320:	0e 94 28 05 	call	0xa50	; 0xa50 <TIMER_reset>
-	
-}
- 324:	28 96       	adiw	r28, 0x08	; 8
- 326:	0f b6       	in	r0, 0x3f	; 63
- 328:	f8 94       	cli
- 32a:	de bf       	out	0x3e, r29	; 62
- 32c:	0f be       	out	0x3f, r0	; 63
- 32e:	cd bf       	out	0x3d, r28	; 61
- 330:	df 91       	pop	r29
- 332:	cf 91       	pop	r28
- 334:	08 95       	ret
-
-00000336 <LED_blink_halfSecond>:
-void LED_off(uint8_t ledPort, uint8_t ledPin)
-{
-	GPIO_write(ledPin,ledPort,LOW);
-}
-void LED_blink_halfSecond(uint8_t ledPort, uint8_t ledPin)
-{
- 336:	cf 93       	push	r28
- 338:	df 93       	push	r29
- 33a:	d8 2f       	mov	r29, r24
- 33c:	c6 2f       	mov	r28, r22
-		delayHalfSecond();
- 33e:	0e 94 6e 01 	call	0x2dc	; 0x2dc <delayHalfSecond>
-		GPIO_toggle(ledPin,ledPort);
- 342:	6d 2f       	mov	r22, r29
- 344:	8c 2f       	mov	r24, r28
- 346:	0e 94 7b 03 	call	0x6f6	; 0x6f6 <GPIO_toggle>
-	//_delay_ms(blinkTime); //replace later with timer delay function 
-}
- 34a:	df 91       	pop	r29
- 34c:	cf 91       	pop	r28
- 34e:	08 95       	ret
-
-00000350 <main>:
+00000378 <main>:
 
 int main(void)
 {
     
 	/* Replace with your application code */
 	APP_init();
- 350:	0e 94 6b 00 	call	0xd6	; 0xd6 <APP_init>
+ 378:	0e 94 6b 00 	call	0xd6	; 0xd6 <APP_init>
 
 	//APP flow includes application loop
 
 	APP_flow();
- 354:	0e 94 47 01 	call	0x28e	; 0x28e <APP_flow>
+ 37c:	0e 94 95 01 	call	0x32a	; 0x32a <APP_flow>
 	
 	
     return 0 ;
 }
- 358:	80 e0       	ldi	r24, 0x00	; 0
- 35a:	90 e0       	ldi	r25, 0x00	; 0
- 35c:	08 95       	ret
+ 380:	80 e0       	ldi	r24, 0x00	; 0
+ 382:	90 e0       	ldi	r25, 0x00	; 0
+ 384:	08 95       	ret
 
-0000035e <__vector_1>:
+00000386 <__vector_1>:
 /************************************************************************/
 /*   Global pointer to function                                                                    */
 /************************************************************************/
- volatile void (*CallBackPtr) (void) = NULL ;	//it should be volatile since it is adjusted by ISR which is activated by hardware so we disable optimization
+  void (*CallBackPtr) (void) = NULL ;	//it should be volatile since it is adjusted by ISR which is activated by hardware so we disable optimization
 ISR(INT0_vect)
 {
- 35e:	1f 92       	push	r1
- 360:	0f 92       	push	r0
- 362:	0f b6       	in	r0, 0x3f	; 63
- 364:	0f 92       	push	r0
- 366:	11 24       	eor	r1, r1
- 368:	2f 93       	push	r18
- 36a:	3f 93       	push	r19
- 36c:	4f 93       	push	r20
- 36e:	5f 93       	push	r21
- 370:	6f 93       	push	r22
- 372:	7f 93       	push	r23
- 374:	8f 93       	push	r24
- 376:	9f 93       	push	r25
- 378:	af 93       	push	r26
- 37a:	bf 93       	push	r27
- 37c:	ef 93       	push	r30
- 37e:	ff 93       	push	r31
+ 386:	1f 92       	push	r1
+ 388:	0f 92       	push	r0
+ 38a:	0f b6       	in	r0, 0x3f	; 63
+ 38c:	0f 92       	push	r0
+ 38e:	11 24       	eor	r1, r1
+ 390:	2f 93       	push	r18
+ 392:	3f 93       	push	r19
+ 394:	4f 93       	push	r20
+ 396:	5f 93       	push	r21
+ 398:	6f 93       	push	r22
+ 39a:	7f 93       	push	r23
+ 39c:	8f 93       	push	r24
+ 39e:	9f 93       	push	r25
+ 3a0:	af 93       	push	r26
+ 3a2:	bf 93       	push	r27
+ 3a4:	ef 93       	push	r30
+ 3a6:	ff 93       	push	r31
 	if(CallBackPtr != NULL)
- 380:	e0 91 74 00 	lds	r30, 0x0074	; 0x800074 <CallBackPtr>
- 384:	f0 91 75 00 	lds	r31, 0x0075	; 0x800075 <CallBackPtr+0x1>
- 388:	30 97       	sbiw	r30, 0x00	; 0
- 38a:	09 f0       	breq	.+2      	; 0x38e <__vector_1+0x30>
+ 3a8:	e0 91 6b 00 	lds	r30, 0x006B	; 0x80006b <CallBackPtr>
+ 3ac:	f0 91 6c 00 	lds	r31, 0x006C	; 0x80006c <CallBackPtr+0x1>
+ 3b0:	30 97       	sbiw	r30, 0x00	; 0
+ 3b2:	09 f0       	breq	.+2      	; 0x3b6 <__vector_1+0x30>
 	{
 		CallBackPtr();
- 38c:	09 95       	icall
+ 3b4:	09 95       	icall
 		
 	}
 }
- 38e:	ff 91       	pop	r31
- 390:	ef 91       	pop	r30
- 392:	bf 91       	pop	r27
- 394:	af 91       	pop	r26
- 396:	9f 91       	pop	r25
- 398:	8f 91       	pop	r24
- 39a:	7f 91       	pop	r23
- 39c:	6f 91       	pop	r22
- 39e:	5f 91       	pop	r21
- 3a0:	4f 91       	pop	r20
- 3a2:	3f 91       	pop	r19
- 3a4:	2f 91       	pop	r18
- 3a6:	0f 90       	pop	r0
- 3a8:	0f be       	out	0x3f, r0	; 63
- 3aa:	0f 90       	pop	r0
- 3ac:	1f 90       	pop	r1
- 3ae:	18 95       	reti
+ 3b6:	ff 91       	pop	r31
+ 3b8:	ef 91       	pop	r30
+ 3ba:	bf 91       	pop	r27
+ 3bc:	af 91       	pop	r26
+ 3be:	9f 91       	pop	r25
+ 3c0:	8f 91       	pop	r24
+ 3c2:	7f 91       	pop	r23
+ 3c4:	6f 91       	pop	r22
+ 3c6:	5f 91       	pop	r21
+ 3c8:	4f 91       	pop	r20
+ 3ca:	3f 91       	pop	r19
+ 3cc:	2f 91       	pop	r18
+ 3ce:	0f 90       	pop	r0
+ 3d0:	0f be       	out	0x3f, r0	; 63
+ 3d2:	0f 90       	pop	r0
+ 3d4:	1f 90       	pop	r1
+ 3d6:	18 95       	reti
 
-000003b0 <__vector_2>:
+000003d8 <__vector_2>:
 
 ISR(INT1_vect)
 {
- 3b0:	1f 92       	push	r1
- 3b2:	0f 92       	push	r0
- 3b4:	0f b6       	in	r0, 0x3f	; 63
- 3b6:	0f 92       	push	r0
- 3b8:	11 24       	eor	r1, r1
- 3ba:	2f 93       	push	r18
- 3bc:	3f 93       	push	r19
- 3be:	4f 93       	push	r20
- 3c0:	5f 93       	push	r21
- 3c2:	6f 93       	push	r22
- 3c4:	7f 93       	push	r23
- 3c6:	8f 93       	push	r24
- 3c8:	9f 93       	push	r25
- 3ca:	af 93       	push	r26
- 3cc:	bf 93       	push	r27
- 3ce:	ef 93       	push	r30
- 3d0:	ff 93       	push	r31
+ 3d8:	1f 92       	push	r1
+ 3da:	0f 92       	push	r0
+ 3dc:	0f b6       	in	r0, 0x3f	; 63
+ 3de:	0f 92       	push	r0
+ 3e0:	11 24       	eor	r1, r1
+ 3e2:	2f 93       	push	r18
+ 3e4:	3f 93       	push	r19
+ 3e6:	4f 93       	push	r20
+ 3e8:	5f 93       	push	r21
+ 3ea:	6f 93       	push	r22
+ 3ec:	7f 93       	push	r23
+ 3ee:	8f 93       	push	r24
+ 3f0:	9f 93       	push	r25
+ 3f2:	af 93       	push	r26
+ 3f4:	bf 93       	push	r27
+ 3f6:	ef 93       	push	r30
+ 3f8:	ff 93       	push	r31
 	if(CallBackPtr != NULL)
- 3d2:	e0 91 74 00 	lds	r30, 0x0074	; 0x800074 <CallBackPtr>
- 3d6:	f0 91 75 00 	lds	r31, 0x0075	; 0x800075 <CallBackPtr+0x1>
- 3da:	30 97       	sbiw	r30, 0x00	; 0
- 3dc:	09 f0       	breq	.+2      	; 0x3e0 <__vector_2+0x30>
+ 3fa:	e0 91 6b 00 	lds	r30, 0x006B	; 0x80006b <CallBackPtr>
+ 3fe:	f0 91 6c 00 	lds	r31, 0x006C	; 0x80006c <CallBackPtr+0x1>
+ 402:	30 97       	sbiw	r30, 0x00	; 0
+ 404:	09 f0       	breq	.+2      	; 0x408 <__EEPROM_REGION_LENGTH__+0x8>
 	{
 		CallBackPtr();
- 3de:	09 95       	icall
+ 406:	09 95       	icall
 		
 	}
 }
- 3e0:	ff 91       	pop	r31
- 3e2:	ef 91       	pop	r30
- 3e4:	bf 91       	pop	r27
- 3e6:	af 91       	pop	r26
- 3e8:	9f 91       	pop	r25
- 3ea:	8f 91       	pop	r24
- 3ec:	7f 91       	pop	r23
- 3ee:	6f 91       	pop	r22
- 3f0:	5f 91       	pop	r21
- 3f2:	4f 91       	pop	r20
- 3f4:	3f 91       	pop	r19
- 3f6:	2f 91       	pop	r18
- 3f8:	0f 90       	pop	r0
- 3fa:	0f be       	out	0x3f, r0	; 63
- 3fc:	0f 90       	pop	r0
- 3fe:	1f 90       	pop	r1
- 400:	18 95       	reti
+ 408:	ff 91       	pop	r31
+ 40a:	ef 91       	pop	r30
+ 40c:	bf 91       	pop	r27
+ 40e:	af 91       	pop	r26
+ 410:	9f 91       	pop	r25
+ 412:	8f 91       	pop	r24
+ 414:	7f 91       	pop	r23
+ 416:	6f 91       	pop	r22
+ 418:	5f 91       	pop	r21
+ 41a:	4f 91       	pop	r20
+ 41c:	3f 91       	pop	r19
+ 41e:	2f 91       	pop	r18
+ 420:	0f 90       	pop	r0
+ 422:	0f be       	out	0x3f, r0	; 63
+ 424:	0f 90       	pop	r0
+ 426:	1f 90       	pop	r1
+ 428:	18 95       	reti
 
-00000402 <__vector_3>:
+0000042a <__vector_3>:
 
 ISR(INT2_vect)
 {
- 402:	1f 92       	push	r1
- 404:	0f 92       	push	r0
- 406:	0f b6       	in	r0, 0x3f	; 63
- 408:	0f 92       	push	r0
- 40a:	11 24       	eor	r1, r1
- 40c:	2f 93       	push	r18
- 40e:	3f 93       	push	r19
- 410:	4f 93       	push	r20
- 412:	5f 93       	push	r21
- 414:	6f 93       	push	r22
- 416:	7f 93       	push	r23
- 418:	8f 93       	push	r24
- 41a:	9f 93       	push	r25
- 41c:	af 93       	push	r26
- 41e:	bf 93       	push	r27
- 420:	ef 93       	push	r30
- 422:	ff 93       	push	r31
+ 42a:	1f 92       	push	r1
+ 42c:	0f 92       	push	r0
+ 42e:	0f b6       	in	r0, 0x3f	; 63
+ 430:	0f 92       	push	r0
+ 432:	11 24       	eor	r1, r1
+ 434:	2f 93       	push	r18
+ 436:	3f 93       	push	r19
+ 438:	4f 93       	push	r20
+ 43a:	5f 93       	push	r21
+ 43c:	6f 93       	push	r22
+ 43e:	7f 93       	push	r23
+ 440:	8f 93       	push	r24
+ 442:	9f 93       	push	r25
+ 444:	af 93       	push	r26
+ 446:	bf 93       	push	r27
+ 448:	ef 93       	push	r30
+ 44a:	ff 93       	push	r31
 	if(CallBackPtr != NULL)
- 424:	e0 91 74 00 	lds	r30, 0x0074	; 0x800074 <CallBackPtr>
- 428:	f0 91 75 00 	lds	r31, 0x0075	; 0x800075 <CallBackPtr+0x1>
- 42c:	30 97       	sbiw	r30, 0x00	; 0
- 42e:	09 f0       	breq	.+2      	; 0x432 <__vector_3+0x30>
+ 44c:	e0 91 6b 00 	lds	r30, 0x006B	; 0x80006b <CallBackPtr>
+ 450:	f0 91 6c 00 	lds	r31, 0x006C	; 0x80006c <CallBackPtr+0x1>
+ 454:	30 97       	sbiw	r30, 0x00	; 0
+ 456:	09 f0       	breq	.+2      	; 0x45a <__vector_3+0x30>
 	{
 		CallBackPtr();
- 430:	09 95       	icall
+ 458:	09 95       	icall
 		
 	}
 }
- 432:	ff 91       	pop	r31
- 434:	ef 91       	pop	r30
- 436:	bf 91       	pop	r27
- 438:	af 91       	pop	r26
- 43a:	9f 91       	pop	r25
- 43c:	8f 91       	pop	r24
- 43e:	7f 91       	pop	r23
- 440:	6f 91       	pop	r22
- 442:	5f 91       	pop	r21
- 444:	4f 91       	pop	r20
- 446:	3f 91       	pop	r19
- 448:	2f 91       	pop	r18
- 44a:	0f 90       	pop	r0
- 44c:	0f be       	out	0x3f, r0	; 63
- 44e:	0f 90       	pop	r0
- 450:	1f 90       	pop	r1
- 452:	18 95       	reti
+ 45a:	ff 91       	pop	r31
+ 45c:	ef 91       	pop	r30
+ 45e:	bf 91       	pop	r27
+ 460:	af 91       	pop	r26
+ 462:	9f 91       	pop	r25
+ 464:	8f 91       	pop	r24
+ 466:	7f 91       	pop	r23
+ 468:	6f 91       	pop	r22
+ 46a:	5f 91       	pop	r21
+ 46c:	4f 91       	pop	r20
+ 46e:	3f 91       	pop	r19
+ 470:	2f 91       	pop	r18
+ 472:	0f 90       	pop	r0
+ 474:	0f be       	out	0x3f, r0	; 63
+ 476:	0f 90       	pop	r0
+ 478:	1f 90       	pop	r1
+ 47a:	18 95       	reti
 
-00000454 <ExternalInterrupt_init>:
+0000047c <ExternalInterrupt_init>:
 
 void ExternalInterrupt_init(ExInterrupt_ConfigStruct_t *configStruct)
 {
- 454:	fc 01       	movw	r30, r24
+ 47c:	fc 01       	movw	r30, r24
 	switch(configStruct->extInt)
- 456:	90 81       	ld	r25, Z
- 458:	91 30       	cpi	r25, 0x01	; 1
- 45a:	d1 f0       	breq	.+52     	; 0x490 <ExternalInterrupt_init+0x3c>
- 45c:	18 f0       	brcs	.+6      	; 0x464 <ExternalInterrupt_init+0x10>
- 45e:	92 30       	cpi	r25, 0x02	; 2
- 460:	69 f1       	breq	.+90     	; 0x4bc <ExternalInterrupt_init+0x68>
- 462:	08 95       	ret
+ 47e:	90 81       	ld	r25, Z
+ 480:	91 30       	cpi	r25, 0x01	; 1
+ 482:	d1 f0       	breq	.+52     	; 0x4b8 <ExternalInterrupt_init+0x3c>
+ 484:	18 f0       	brcs	.+6      	; 0x48c <ExternalInterrupt_init+0x10>
+ 486:	92 30       	cpi	r25, 0x02	; 2
+ 488:	69 f1       	breq	.+90     	; 0x4e4 <ExternalInterrupt_init+0x68>
+ 48a:	08 95       	ret
 	{
 		case INT_0 :
 		if(configStruct->edge==RISING)
- 464:	81 81       	ldd	r24, Z+1	; 0x01
- 466:	81 30       	cpi	r24, 0x01	; 1
- 468:	21 f4       	brne	.+8      	; 0x472 <ExternalInterrupt_init+0x1e>
+ 48c:	81 81       	ldd	r24, Z+1	; 0x01
+ 48e:	81 30       	cpi	r24, 0x01	; 1
+ 490:	21 f4       	brne	.+8      	; 0x49a <ExternalInterrupt_init+0x1e>
 		{
 			MCUCR |= (1<<ISC01) | (1<<ISC00) ;//Set bits isc01 & isc00 for to select rising edge
- 46a:	85 b7       	in	r24, 0x35	; 53
- 46c:	83 60       	ori	r24, 0x03	; 3
- 46e:	85 bf       	out	0x35, r24	; 53
- 470:	0b c0       	rjmp	.+22     	; 0x488 <ExternalInterrupt_init+0x34>
+ 492:	85 b7       	in	r24, 0x35	; 53
+ 494:	83 60       	ori	r24, 0x03	; 3
+ 496:	85 bf       	out	0x35, r24	; 53
+ 498:	0b c0       	rjmp	.+22     	; 0x4b0 <ExternalInterrupt_init+0x34>
 		}
 		else if(configStruct->edge==FALLING)
- 472:	81 11       	cpse	r24, r1
- 474:	04 c0       	rjmp	.+8      	; 0x47e <ExternalInterrupt_init+0x2a>
+ 49a:	81 11       	cpse	r24, r1
+ 49c:	04 c0       	rjmp	.+8      	; 0x4a6 <ExternalInterrupt_init+0x2a>
 		{
 			MCUCR |= (1<<ISC01); //Set bit isc01 for to select falling edge
- 476:	85 b7       	in	r24, 0x35	; 53
- 478:	82 60       	ori	r24, 0x02	; 2
- 47a:	85 bf       	out	0x35, r24	; 53
- 47c:	05 c0       	rjmp	.+10     	; 0x488 <ExternalInterrupt_init+0x34>
+ 49e:	85 b7       	in	r24, 0x35	; 53
+ 4a0:	82 60       	ori	r24, 0x02	; 2
+ 4a2:	85 bf       	out	0x35, r24	; 53
+ 4a4:	05 c0       	rjmp	.+10     	; 0x4b0 <ExternalInterrupt_init+0x34>
 		}
 		
 		
 		else if(configStruct->edge==ANYCHANGE)
- 47e:	82 30       	cpi	r24, 0x02	; 2
- 480:	19 f4       	brne	.+6      	; 0x488 <ExternalInterrupt_init+0x34>
+ 4a6:	82 30       	cpi	r24, 0x02	; 2
+ 4a8:	19 f4       	brne	.+6      	; 0x4b0 <ExternalInterrupt_init+0x34>
 		{
 			MCUCR |= (1<<ISC00); //Set bit isc00 for to select int0 on any logical change
- 482:	85 b7       	in	r24, 0x35	; 53
- 484:	81 60       	ori	r24, 0x01	; 1
- 486:	85 bf       	out	0x35, r24	; 53
+ 4aa:	85 b7       	in	r24, 0x35	; 53
+ 4ac:	81 60       	ori	r24, 0x01	; 1
+ 4ae:	85 bf       	out	0x35, r24	; 53
 		else
 		{
 			//error handling
 		}
 		
 		GICR |= (1<<INT0); //ENABLE external interrupt 0 in GICR register
- 488:	8b b7       	in	r24, 0x3b	; 59
- 48a:	80 64       	ori	r24, 0x40	; 64
- 48c:	8b bf       	out	0x3b, r24	; 59
+ 4b0:	8b b7       	in	r24, 0x3b	; 59
+ 4b2:	80 64       	ori	r24, 0x40	; 64
+ 4b4:	8b bf       	out	0x3b, r24	; 59
 		
 		break ;
- 48e:	08 95       	ret
+ 4b6:	08 95       	ret
 		
 		case INT_1 :
 		
 		if(configStruct->edge==RISING)
- 490:	81 81       	ldd	r24, Z+1	; 0x01
- 492:	81 30       	cpi	r24, 0x01	; 1
- 494:	21 f4       	brne	.+8      	; 0x49e <ExternalInterrupt_init+0x4a>
+ 4b8:	81 81       	ldd	r24, Z+1	; 0x01
+ 4ba:	81 30       	cpi	r24, 0x01	; 1
+ 4bc:	21 f4       	brne	.+8      	; 0x4c6 <ExternalInterrupt_init+0x4a>
 		{
 			MCUCR |= (1<<ISC11) | (1<<ISC10) ;//Set bits isc11 & isc10  to select RISING edge
- 496:	85 b7       	in	r24, 0x35	; 53
- 498:	8c 60       	ori	r24, 0x0C	; 12
- 49a:	85 bf       	out	0x35, r24	; 53
- 49c:	0b c0       	rjmp	.+22     	; 0x4b4 <ExternalInterrupt_init+0x60>
+ 4be:	85 b7       	in	r24, 0x35	; 53
+ 4c0:	8c 60       	ori	r24, 0x0C	; 12
+ 4c2:	85 bf       	out	0x35, r24	; 53
+ 4c4:	0b c0       	rjmp	.+22     	; 0x4dc <ExternalInterrupt_init+0x60>
 		}
 		else if(configStruct->edge==FALLING)
- 49e:	81 11       	cpse	r24, r1
- 4a0:	04 c0       	rjmp	.+8      	; 0x4aa <ExternalInterrupt_init+0x56>
+ 4c6:	81 11       	cpse	r24, r1
+ 4c8:	04 c0       	rjmp	.+8      	; 0x4d2 <ExternalInterrupt_init+0x56>
 		{
 			MCUCR |= (1<<ISC11); //Set bit isc11  to select falling edge
- 4a2:	85 b7       	in	r24, 0x35	; 53
- 4a4:	88 60       	ori	r24, 0x08	; 8
- 4a6:	85 bf       	out	0x35, r24	; 53
- 4a8:	05 c0       	rjmp	.+10     	; 0x4b4 <ExternalInterrupt_init+0x60>
+ 4ca:	85 b7       	in	r24, 0x35	; 53
+ 4cc:	88 60       	ori	r24, 0x08	; 8
+ 4ce:	85 bf       	out	0x35, r24	; 53
+ 4d0:	05 c0       	rjmp	.+10     	; 0x4dc <ExternalInterrupt_init+0x60>
 		}
 		
 		
 		else if(configStruct->edge==ANYCHANGE)
- 4aa:	82 30       	cpi	r24, 0x02	; 2
- 4ac:	19 f4       	brne	.+6      	; 0x4b4 <ExternalInterrupt_init+0x60>
+ 4d2:	82 30       	cpi	r24, 0x02	; 2
+ 4d4:	19 f4       	brne	.+6      	; 0x4dc <ExternalInterrupt_init+0x60>
 		{
 			MCUCR |= (1<<ISC10); //Set bit isc10  to select int0 on any logical change
- 4ae:	85 b7       	in	r24, 0x35	; 53
- 4b0:	84 60       	ori	r24, 0x04	; 4
- 4b2:	85 bf       	out	0x35, r24	; 53
+ 4d6:	85 b7       	in	r24, 0x35	; 53
+ 4d8:	84 60       	ori	r24, 0x04	; 4
+ 4da:	85 bf       	out	0x35, r24	; 53
 		else
 		{
 			//error handling
 		}
 		
 		GICR |= (1<<INT1); //ENABLE external interrupt 1 in GICR register
- 4b4:	8b b7       	in	r24, 0x3b	; 59
- 4b6:	80 68       	ori	r24, 0x80	; 128
- 4b8:	8b bf       	out	0x3b, r24	; 59
+ 4dc:	8b b7       	in	r24, 0x3b	; 59
+ 4de:	80 68       	ori	r24, 0x80	; 128
+ 4e0:	8b bf       	out	0x3b, r24	; 59
 
 		
 		break ;
- 4ba:	08 95       	ret
+ 4e2:	08 95       	ret
 		
 		case INT_2 :
 		
 		if(configStruct->edge==RISING)
- 4bc:	81 81       	ldd	r24, Z+1	; 0x01
- 4be:	81 30       	cpi	r24, 0x01	; 1
- 4c0:	19 f4       	brne	.+6      	; 0x4c8 <ExternalInterrupt_init+0x74>
+ 4e4:	81 81       	ldd	r24, Z+1	; 0x01
+ 4e6:	81 30       	cpi	r24, 0x01	; 1
+ 4e8:	19 f4       	brne	.+6      	; 0x4f0 <ExternalInterrupt_init+0x74>
 		{
 			MCUCSR |= (1<<ISC2) ;//Set bit ISC2  to select RISING edge
- 4c2:	84 b7       	in	r24, 0x34	; 52
- 4c4:	80 64       	ori	r24, 0x40	; 64
- 4c6:	84 bf       	out	0x34, r24	; 52
+ 4ea:	84 b7       	in	r24, 0x34	; 52
+ 4ec:	80 64       	ori	r24, 0x40	; 64
+ 4ee:	84 bf       	out	0x34, r24	; 52
 		else
 		{
 			//error handling
 		}
 		
 		GICR |= (1<<INT2); //ENABLE external interrupt 0 in GICR register
- 4c8:	8b b7       	in	r24, 0x3b	; 59
- 4ca:	80 62       	ori	r24, 0x20	; 32
- 4cc:	8b bf       	out	0x3b, r24	; 59
- 4ce:	08 95       	ret
+ 4f0:	8b b7       	in	r24, 0x3b	; 59
+ 4f2:	80 62       	ori	r24, 0x20	; 32
+ 4f4:	8b bf       	out	0x3b, r24	; 59
+ 4f6:	08 95       	ret
 
-000004d0 <ExternalInterrupt_setCallBack>:
+000004f8 <ExternalInterrupt_setCallBack>:
 	
 	
 }
 void ExternalInterrupt_setCallBack( void (*FuncPtr) (void))
 {
 	CallBackPtr=FuncPtr;
- 4d0:	90 93 75 00 	sts	0x0075, r25	; 0x800075 <CallBackPtr+0x1>
- 4d4:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <CallBackPtr>
- 4d8:	08 95       	ret
+ 4f8:	90 93 6c 00 	sts	0x006C, r25	; 0x80006c <CallBackPtr+0x1>
+ 4fc:	80 93 6b 00 	sts	0x006B, r24	; 0x80006b <CallBackPtr>
+ 500:	08 95       	ret
 
-000004da <GPIO_init>:
+00000502 <GPIO_init>:
 
 // function definitions
 
 void GPIO_init(uint8_t pinNumber, uint8_t portNumber, uint8_t direction) // Initialize GPIO pin direction
 {
 	switch(portNumber)
- 4da:	62 34       	cpi	r22, 0x42	; 66
- 4dc:	51 f1       	breq	.+84     	; 0x532 <GPIO_init+0x58>
- 4de:	18 f4       	brcc	.+6      	; 0x4e6 <GPIO_init+0xc>
- 4e0:	61 34       	cpi	r22, 0x41	; 65
- 4e2:	41 f0       	breq	.+16     	; 0x4f4 <GPIO_init+0x1a>
- 4e4:	08 95       	ret
- 4e6:	63 34       	cpi	r22, 0x43	; 67
- 4e8:	09 f4       	brne	.+2      	; 0x4ec <GPIO_init+0x12>
- 4ea:	42 c0       	rjmp	.+132    	; 0x570 <GPIO_init+0x96>
- 4ec:	64 34       	cpi	r22, 0x44	; 68
- 4ee:	09 f4       	brne	.+2      	; 0x4f2 <GPIO_init+0x18>
- 4f0:	5d c0       	rjmp	.+186    	; 0x5ac <GPIO_init+0xd2>
- 4f2:	08 95       	ret
+ 502:	62 34       	cpi	r22, 0x42	; 66
+ 504:	51 f1       	breq	.+84     	; 0x55a <GPIO_init+0x58>
+ 506:	18 f4       	brcc	.+6      	; 0x50e <GPIO_init+0xc>
+ 508:	61 34       	cpi	r22, 0x41	; 65
+ 50a:	41 f0       	breq	.+16     	; 0x51c <GPIO_init+0x1a>
+ 50c:	08 95       	ret
+ 50e:	63 34       	cpi	r22, 0x43	; 67
+ 510:	09 f4       	brne	.+2      	; 0x514 <GPIO_init+0x12>
+ 512:	42 c0       	rjmp	.+132    	; 0x598 <GPIO_init+0x96>
+ 514:	64 34       	cpi	r22, 0x44	; 68
+ 516:	09 f4       	brne	.+2      	; 0x51a <GPIO_init+0x18>
+ 518:	5d c0       	rjmp	.+186    	; 0x5d4 <GPIO_init+0xd2>
+ 51a:	08 95       	ret
 	{
 		case PORT_A:
 		if(direction == INPUT)
- 4f4:	41 11       	cpse	r20, r1
- 4f6:	0d c0       	rjmp	.+26     	; 0x512 <GPIO_init+0x38>
+ 51c:	41 11       	cpse	r20, r1
+ 51e:	0d c0       	rjmp	.+26     	; 0x53a <GPIO_init+0x38>
 		{
 			DDRA &= (1 << pinNumber); // input
- 4f8:	4a b3       	in	r20, 0x1a	; 26
- 4fa:	21 e0       	ldi	r18, 0x01	; 1
- 4fc:	30 e0       	ldi	r19, 0x00	; 0
- 4fe:	b9 01       	movw	r22, r18
- 500:	02 c0       	rjmp	.+4      	; 0x506 <GPIO_init+0x2c>
- 502:	66 0f       	add	r22, r22
- 504:	77 1f       	adc	r23, r23
- 506:	8a 95       	dec	r24
- 508:	e2 f7       	brpl	.-8      	; 0x502 <GPIO_init+0x28>
- 50a:	cb 01       	movw	r24, r22
- 50c:	84 23       	and	r24, r20
- 50e:	8a bb       	out	0x1a, r24	; 26
- 510:	08 95       	ret
+ 520:	4a b3       	in	r20, 0x1a	; 26
+ 522:	21 e0       	ldi	r18, 0x01	; 1
+ 524:	30 e0       	ldi	r19, 0x00	; 0
+ 526:	b9 01       	movw	r22, r18
+ 528:	02 c0       	rjmp	.+4      	; 0x52e <GPIO_init+0x2c>
+ 52a:	66 0f       	add	r22, r22
+ 52c:	77 1f       	adc	r23, r23
+ 52e:	8a 95       	dec	r24
+ 530:	e2 f7       	brpl	.-8      	; 0x52a <GPIO_init+0x28>
+ 532:	cb 01       	movw	r24, r22
+ 534:	84 23       	and	r24, r20
+ 536:	8a bb       	out	0x1a, r24	; 26
+ 538:	08 95       	ret
 		}
 		else if(direction == OUTPUT)
- 512:	41 30       	cpi	r20, 0x01	; 1
- 514:	09 f0       	breq	.+2      	; 0x518 <GPIO_init+0x3e>
- 516:	67 c0       	rjmp	.+206    	; 0x5e6 <GPIO_init+0x10c>
+ 53a:	41 30       	cpi	r20, 0x01	; 1
+ 53c:	09 f0       	breq	.+2      	; 0x540 <GPIO_init+0x3e>
+ 53e:	67 c0       	rjmp	.+206    	; 0x60e <GPIO_init+0x10c>
 		{
 			DDRA |= (1 << pinNumber); // Output
- 518:	4a b3       	in	r20, 0x1a	; 26
- 51a:	21 e0       	ldi	r18, 0x01	; 1
- 51c:	30 e0       	ldi	r19, 0x00	; 0
- 51e:	b9 01       	movw	r22, r18
- 520:	02 c0       	rjmp	.+4      	; 0x526 <GPIO_init+0x4c>
- 522:	66 0f       	add	r22, r22
- 524:	77 1f       	adc	r23, r23
- 526:	8a 95       	dec	r24
- 528:	e2 f7       	brpl	.-8      	; 0x522 <GPIO_init+0x48>
- 52a:	cb 01       	movw	r24, r22
- 52c:	84 2b       	or	r24, r20
- 52e:	8a bb       	out	0x1a, r24	; 26
- 530:	08 95       	ret
+ 540:	4a b3       	in	r20, 0x1a	; 26
+ 542:	21 e0       	ldi	r18, 0x01	; 1
+ 544:	30 e0       	ldi	r19, 0x00	; 0
+ 546:	b9 01       	movw	r22, r18
+ 548:	02 c0       	rjmp	.+4      	; 0x54e <GPIO_init+0x4c>
+ 54a:	66 0f       	add	r22, r22
+ 54c:	77 1f       	adc	r23, r23
+ 54e:	8a 95       	dec	r24
+ 550:	e2 f7       	brpl	.-8      	; 0x54a <GPIO_init+0x48>
+ 552:	cb 01       	movw	r24, r22
+ 554:	84 2b       	or	r24, r20
+ 556:	8a bb       	out	0x1a, r24	; 26
+ 558:	08 95       	ret
 			//Error handling
 		}
 		break;
 		
 		case PORT_B:
 		if(direction == INPUT)
- 532:	41 11       	cpse	r20, r1
- 534:	0d c0       	rjmp	.+26     	; 0x550 <GPIO_init+0x76>
+ 55a:	41 11       	cpse	r20, r1
+ 55c:	0d c0       	rjmp	.+26     	; 0x578 <GPIO_init+0x76>
 		{
 			DDRB &= (1 << pinNumber); // input
- 536:	47 b3       	in	r20, 0x17	; 23
- 538:	21 e0       	ldi	r18, 0x01	; 1
- 53a:	30 e0       	ldi	r19, 0x00	; 0
- 53c:	b9 01       	movw	r22, r18
- 53e:	02 c0       	rjmp	.+4      	; 0x544 <GPIO_init+0x6a>
- 540:	66 0f       	add	r22, r22
- 542:	77 1f       	adc	r23, r23
- 544:	8a 95       	dec	r24
- 546:	e2 f7       	brpl	.-8      	; 0x540 <GPIO_init+0x66>
- 548:	cb 01       	movw	r24, r22
- 54a:	84 23       	and	r24, r20
- 54c:	87 bb       	out	0x17, r24	; 23
- 54e:	08 95       	ret
+ 55e:	47 b3       	in	r20, 0x17	; 23
+ 560:	21 e0       	ldi	r18, 0x01	; 1
+ 562:	30 e0       	ldi	r19, 0x00	; 0
+ 564:	b9 01       	movw	r22, r18
+ 566:	02 c0       	rjmp	.+4      	; 0x56c <GPIO_init+0x6a>
+ 568:	66 0f       	add	r22, r22
+ 56a:	77 1f       	adc	r23, r23
+ 56c:	8a 95       	dec	r24
+ 56e:	e2 f7       	brpl	.-8      	; 0x568 <GPIO_init+0x66>
+ 570:	cb 01       	movw	r24, r22
+ 572:	84 23       	and	r24, r20
+ 574:	87 bb       	out	0x17, r24	; 23
+ 576:	08 95       	ret
 		}
 		else if(direction == OUTPUT)
- 550:	41 30       	cpi	r20, 0x01	; 1
- 552:	09 f0       	breq	.+2      	; 0x556 <GPIO_init+0x7c>
- 554:	48 c0       	rjmp	.+144    	; 0x5e6 <GPIO_init+0x10c>
+ 578:	41 30       	cpi	r20, 0x01	; 1
+ 57a:	09 f0       	breq	.+2      	; 0x57e <GPIO_init+0x7c>
+ 57c:	48 c0       	rjmp	.+144    	; 0x60e <GPIO_init+0x10c>
 		{
 			DDRB |= (1 << pinNumber); // Output
- 556:	47 b3       	in	r20, 0x17	; 23
- 558:	21 e0       	ldi	r18, 0x01	; 1
- 55a:	30 e0       	ldi	r19, 0x00	; 0
- 55c:	b9 01       	movw	r22, r18
- 55e:	02 c0       	rjmp	.+4      	; 0x564 <GPIO_init+0x8a>
- 560:	66 0f       	add	r22, r22
- 562:	77 1f       	adc	r23, r23
- 564:	8a 95       	dec	r24
- 566:	e2 f7       	brpl	.-8      	; 0x560 <GPIO_init+0x86>
- 568:	cb 01       	movw	r24, r22
- 56a:	84 2b       	or	r24, r20
- 56c:	87 bb       	out	0x17, r24	; 23
- 56e:	08 95       	ret
+ 57e:	47 b3       	in	r20, 0x17	; 23
+ 580:	21 e0       	ldi	r18, 0x01	; 1
+ 582:	30 e0       	ldi	r19, 0x00	; 0
+ 584:	b9 01       	movw	r22, r18
+ 586:	02 c0       	rjmp	.+4      	; 0x58c <GPIO_init+0x8a>
+ 588:	66 0f       	add	r22, r22
+ 58a:	77 1f       	adc	r23, r23
+ 58c:	8a 95       	dec	r24
+ 58e:	e2 f7       	brpl	.-8      	; 0x588 <GPIO_init+0x86>
+ 590:	cb 01       	movw	r24, r22
+ 592:	84 2b       	or	r24, r20
+ 594:	87 bb       	out	0x17, r24	; 23
+ 596:	08 95       	ret
 		
 		
 		break;
 		
 		case PORT_C:
 		if(direction == INPUT)
- 570:	41 11       	cpse	r20, r1
- 572:	0d c0       	rjmp	.+26     	; 0x58e <GPIO_init+0xb4>
+ 598:	41 11       	cpse	r20, r1
+ 59a:	0d c0       	rjmp	.+26     	; 0x5b6 <GPIO_init+0xb4>
 		{
 			DDRC &= (1 << pinNumber); // input
- 574:	44 b3       	in	r20, 0x14	; 20
- 576:	21 e0       	ldi	r18, 0x01	; 1
- 578:	30 e0       	ldi	r19, 0x00	; 0
- 57a:	b9 01       	movw	r22, r18
- 57c:	02 c0       	rjmp	.+4      	; 0x582 <GPIO_init+0xa8>
- 57e:	66 0f       	add	r22, r22
- 580:	77 1f       	adc	r23, r23
- 582:	8a 95       	dec	r24
- 584:	e2 f7       	brpl	.-8      	; 0x57e <GPIO_init+0xa4>
- 586:	cb 01       	movw	r24, r22
- 588:	84 23       	and	r24, r20
- 58a:	84 bb       	out	0x14, r24	; 20
- 58c:	08 95       	ret
+ 59c:	44 b3       	in	r20, 0x14	; 20
+ 59e:	21 e0       	ldi	r18, 0x01	; 1
+ 5a0:	30 e0       	ldi	r19, 0x00	; 0
+ 5a2:	b9 01       	movw	r22, r18
+ 5a4:	02 c0       	rjmp	.+4      	; 0x5aa <GPIO_init+0xa8>
+ 5a6:	66 0f       	add	r22, r22
+ 5a8:	77 1f       	adc	r23, r23
+ 5aa:	8a 95       	dec	r24
+ 5ac:	e2 f7       	brpl	.-8      	; 0x5a6 <GPIO_init+0xa4>
+ 5ae:	cb 01       	movw	r24, r22
+ 5b0:	84 23       	and	r24, r20
+ 5b2:	84 bb       	out	0x14, r24	; 20
+ 5b4:	08 95       	ret
 		}
 		else if(direction == OUTPUT)
- 58e:	41 30       	cpi	r20, 0x01	; 1
- 590:	51 f5       	brne	.+84     	; 0x5e6 <GPIO_init+0x10c>
+ 5b6:	41 30       	cpi	r20, 0x01	; 1
+ 5b8:	51 f5       	brne	.+84     	; 0x60e <GPIO_init+0x10c>
 		{
 			DDRC |= (1 << pinNumber); // Output
- 592:	44 b3       	in	r20, 0x14	; 20
- 594:	21 e0       	ldi	r18, 0x01	; 1
- 596:	30 e0       	ldi	r19, 0x00	; 0
- 598:	b9 01       	movw	r22, r18
- 59a:	02 c0       	rjmp	.+4      	; 0x5a0 <GPIO_init+0xc6>
- 59c:	66 0f       	add	r22, r22
- 59e:	77 1f       	adc	r23, r23
- 5a0:	8a 95       	dec	r24
- 5a2:	e2 f7       	brpl	.-8      	; 0x59c <GPIO_init+0xc2>
- 5a4:	cb 01       	movw	r24, r22
- 5a6:	84 2b       	or	r24, r20
- 5a8:	84 bb       	out	0x14, r24	; 20
- 5aa:	08 95       	ret
+ 5ba:	44 b3       	in	r20, 0x14	; 20
+ 5bc:	21 e0       	ldi	r18, 0x01	; 1
+ 5be:	30 e0       	ldi	r19, 0x00	; 0
+ 5c0:	b9 01       	movw	r22, r18
+ 5c2:	02 c0       	rjmp	.+4      	; 0x5c8 <GPIO_init+0xc6>
+ 5c4:	66 0f       	add	r22, r22
+ 5c6:	77 1f       	adc	r23, r23
+ 5c8:	8a 95       	dec	r24
+ 5ca:	e2 f7       	brpl	.-8      	; 0x5c4 <GPIO_init+0xc2>
+ 5cc:	cb 01       	movw	r24, r22
+ 5ce:	84 2b       	or	r24, r20
+ 5d0:	84 bb       	out	0x14, r24	; 20
+ 5d2:	08 95       	ret
 		
 		
 		break;
 		
 		case PORT_D:
 		if(direction == INPUT)
- 5ac:	41 11       	cpse	r20, r1
- 5ae:	0d c0       	rjmp	.+26     	; 0x5ca <GPIO_init+0xf0>
+ 5d4:	41 11       	cpse	r20, r1
+ 5d6:	0d c0       	rjmp	.+26     	; 0x5f2 <GPIO_init+0xf0>
 		{
 			DDRD &= (1 << pinNumber); // input
- 5b0:	41 b3       	in	r20, 0x11	; 17
- 5b2:	21 e0       	ldi	r18, 0x01	; 1
- 5b4:	30 e0       	ldi	r19, 0x00	; 0
- 5b6:	b9 01       	movw	r22, r18
- 5b8:	02 c0       	rjmp	.+4      	; 0x5be <GPIO_init+0xe4>
- 5ba:	66 0f       	add	r22, r22
- 5bc:	77 1f       	adc	r23, r23
- 5be:	8a 95       	dec	r24
- 5c0:	e2 f7       	brpl	.-8      	; 0x5ba <GPIO_init+0xe0>
- 5c2:	cb 01       	movw	r24, r22
- 5c4:	84 23       	and	r24, r20
- 5c6:	81 bb       	out	0x11, r24	; 17
- 5c8:	08 95       	ret
+ 5d8:	41 b3       	in	r20, 0x11	; 17
+ 5da:	21 e0       	ldi	r18, 0x01	; 1
+ 5dc:	30 e0       	ldi	r19, 0x00	; 0
+ 5de:	b9 01       	movw	r22, r18
+ 5e0:	02 c0       	rjmp	.+4      	; 0x5e6 <GPIO_init+0xe4>
+ 5e2:	66 0f       	add	r22, r22
+ 5e4:	77 1f       	adc	r23, r23
+ 5e6:	8a 95       	dec	r24
+ 5e8:	e2 f7       	brpl	.-8      	; 0x5e2 <GPIO_init+0xe0>
+ 5ea:	cb 01       	movw	r24, r22
+ 5ec:	84 23       	and	r24, r20
+ 5ee:	81 bb       	out	0x11, r24	; 17
+ 5f0:	08 95       	ret
 		}
 		else if(direction == OUTPUT)
- 5ca:	41 30       	cpi	r20, 0x01	; 1
- 5cc:	61 f4       	brne	.+24     	; 0x5e6 <GPIO_init+0x10c>
+ 5f2:	41 30       	cpi	r20, 0x01	; 1
+ 5f4:	61 f4       	brne	.+24     	; 0x60e <GPIO_init+0x10c>
 		{
 			DDRD |= (1 << pinNumber); // Output
- 5ce:	41 b3       	in	r20, 0x11	; 17
- 5d0:	21 e0       	ldi	r18, 0x01	; 1
- 5d2:	30 e0       	ldi	r19, 0x00	; 0
- 5d4:	b9 01       	movw	r22, r18
- 5d6:	02 c0       	rjmp	.+4      	; 0x5dc <GPIO_init+0x102>
- 5d8:	66 0f       	add	r22, r22
- 5da:	77 1f       	adc	r23, r23
- 5dc:	8a 95       	dec	r24
- 5de:	e2 f7       	brpl	.-8      	; 0x5d8 <GPIO_init+0xfe>
- 5e0:	cb 01       	movw	r24, r22
- 5e2:	84 2b       	or	r24, r20
- 5e4:	81 bb       	out	0x11, r24	; 17
- 5e6:	08 95       	ret
+ 5f6:	41 b3       	in	r20, 0x11	; 17
+ 5f8:	21 e0       	ldi	r18, 0x01	; 1
+ 5fa:	30 e0       	ldi	r19, 0x00	; 0
+ 5fc:	b9 01       	movw	r22, r18
+ 5fe:	02 c0       	rjmp	.+4      	; 0x604 <GPIO_init+0x102>
+ 600:	66 0f       	add	r22, r22
+ 602:	77 1f       	adc	r23, r23
+ 604:	8a 95       	dec	r24
+ 606:	e2 f7       	brpl	.-8      	; 0x600 <GPIO_init+0xfe>
+ 608:	cb 01       	movw	r24, r22
+ 60a:	84 2b       	or	r24, r20
+ 60c:	81 bb       	out	0x11, r24	; 17
+ 60e:	08 95       	ret
 
-000005e8 <GPIO_write>:
+00000610 <GPIO_write>:
 		
 	}
 }
 void GPIO_write(uint8_t pinNumber, uint8_t portNumber, uint8_t value) // Write data to GPIO
 {
 	switch(portNumber)
- 5e8:	62 34       	cpi	r22, 0x42	; 66
- 5ea:	51 f1       	breq	.+84     	; 0x640 <GPIO_write+0x58>
- 5ec:	18 f4       	brcc	.+6      	; 0x5f4 <GPIO_write+0xc>
- 5ee:	61 34       	cpi	r22, 0x41	; 65
- 5f0:	41 f0       	breq	.+16     	; 0x602 <GPIO_write+0x1a>
- 5f2:	08 95       	ret
- 5f4:	63 34       	cpi	r22, 0x43	; 67
- 5f6:	09 f4       	brne	.+2      	; 0x5fa <GPIO_write+0x12>
- 5f8:	42 c0       	rjmp	.+132    	; 0x67e <GPIO_write+0x96>
- 5fa:	64 34       	cpi	r22, 0x44	; 68
- 5fc:	09 f4       	brne	.+2      	; 0x600 <GPIO_write+0x18>
- 5fe:	5d c0       	rjmp	.+186    	; 0x6ba <GPIO_write+0xd2>
- 600:	08 95       	ret
+ 610:	62 34       	cpi	r22, 0x42	; 66
+ 612:	51 f1       	breq	.+84     	; 0x668 <GPIO_write+0x58>
+ 614:	18 f4       	brcc	.+6      	; 0x61c <GPIO_write+0xc>
+ 616:	61 34       	cpi	r22, 0x41	; 65
+ 618:	41 f0       	breq	.+16     	; 0x62a <GPIO_write+0x1a>
+ 61a:	08 95       	ret
+ 61c:	63 34       	cpi	r22, 0x43	; 67
+ 61e:	09 f4       	brne	.+2      	; 0x622 <GPIO_write+0x12>
+ 620:	42 c0       	rjmp	.+132    	; 0x6a6 <GPIO_write+0x96>
+ 622:	64 34       	cpi	r22, 0x44	; 68
+ 624:	09 f4       	brne	.+2      	; 0x628 <GPIO_write+0x18>
+ 626:	5d c0       	rjmp	.+186    	; 0x6e2 <GPIO_write+0xd2>
+ 628:	08 95       	ret
 	{
 		case PORT_A:
 		if(value == LOW)
- 602:	41 11       	cpse	r20, r1
- 604:	0d c0       	rjmp	.+26     	; 0x620 <GPIO_write+0x38>
+ 62a:	41 11       	cpse	r20, r1
+ 62c:	0d c0       	rjmp	.+26     	; 0x648 <GPIO_write+0x38>
 		{
 			PORTA &= (1 << pinNumber); // LOW
- 606:	4b b3       	in	r20, 0x1b	; 27
- 608:	21 e0       	ldi	r18, 0x01	; 1
- 60a:	30 e0       	ldi	r19, 0x00	; 0
- 60c:	b9 01       	movw	r22, r18
- 60e:	02 c0       	rjmp	.+4      	; 0x614 <GPIO_write+0x2c>
- 610:	66 0f       	add	r22, r22
- 612:	77 1f       	adc	r23, r23
- 614:	8a 95       	dec	r24
- 616:	e2 f7       	brpl	.-8      	; 0x610 <GPIO_write+0x28>
- 618:	cb 01       	movw	r24, r22
- 61a:	84 23       	and	r24, r20
- 61c:	8b bb       	out	0x1b, r24	; 27
- 61e:	08 95       	ret
+ 62e:	4b b3       	in	r20, 0x1b	; 27
+ 630:	21 e0       	ldi	r18, 0x01	; 1
+ 632:	30 e0       	ldi	r19, 0x00	; 0
+ 634:	b9 01       	movw	r22, r18
+ 636:	02 c0       	rjmp	.+4      	; 0x63c <GPIO_write+0x2c>
+ 638:	66 0f       	add	r22, r22
+ 63a:	77 1f       	adc	r23, r23
+ 63c:	8a 95       	dec	r24
+ 63e:	e2 f7       	brpl	.-8      	; 0x638 <GPIO_write+0x28>
+ 640:	cb 01       	movw	r24, r22
+ 642:	84 23       	and	r24, r20
+ 644:	8b bb       	out	0x1b, r24	; 27
+ 646:	08 95       	ret
 		}
 		else if(value == HIGH)
- 620:	41 30       	cpi	r20, 0x01	; 1
- 622:	09 f0       	breq	.+2      	; 0x626 <GPIO_write+0x3e>
- 624:	67 c0       	rjmp	.+206    	; 0x6f4 <GPIO_write+0x10c>
+ 648:	41 30       	cpi	r20, 0x01	; 1
+ 64a:	09 f0       	breq	.+2      	; 0x64e <GPIO_write+0x3e>
+ 64c:	67 c0       	rjmp	.+206    	; 0x71c <GPIO_write+0x10c>
 		{
 			PORTA |= (1 << pinNumber); // HIGH
- 626:	4b b3       	in	r20, 0x1b	; 27
- 628:	21 e0       	ldi	r18, 0x01	; 1
- 62a:	30 e0       	ldi	r19, 0x00	; 0
- 62c:	b9 01       	movw	r22, r18
- 62e:	02 c0       	rjmp	.+4      	; 0x634 <GPIO_write+0x4c>
- 630:	66 0f       	add	r22, r22
- 632:	77 1f       	adc	r23, r23
- 634:	8a 95       	dec	r24
- 636:	e2 f7       	brpl	.-8      	; 0x630 <GPIO_write+0x48>
- 638:	cb 01       	movw	r24, r22
- 63a:	84 2b       	or	r24, r20
- 63c:	8b bb       	out	0x1b, r24	; 27
- 63e:	08 95       	ret
+ 64e:	4b b3       	in	r20, 0x1b	; 27
+ 650:	21 e0       	ldi	r18, 0x01	; 1
+ 652:	30 e0       	ldi	r19, 0x00	; 0
+ 654:	b9 01       	movw	r22, r18
+ 656:	02 c0       	rjmp	.+4      	; 0x65c <GPIO_write+0x4c>
+ 658:	66 0f       	add	r22, r22
+ 65a:	77 1f       	adc	r23, r23
+ 65c:	8a 95       	dec	r24
+ 65e:	e2 f7       	brpl	.-8      	; 0x658 <GPIO_write+0x48>
+ 660:	cb 01       	movw	r24, r22
+ 662:	84 2b       	or	r24, r20
+ 664:	8b bb       	out	0x1b, r24	; 27
+ 666:	08 95       	ret
 			//Error handling
 		}
 		break;
 		
 		case PORT_B:
 		if(value == LOW)
- 640:	41 11       	cpse	r20, r1
- 642:	0d c0       	rjmp	.+26     	; 0x65e <GPIO_write+0x76>
+ 668:	41 11       	cpse	r20, r1
+ 66a:	0d c0       	rjmp	.+26     	; 0x686 <GPIO_write+0x76>
 		{
 			PORTB &= (1 << pinNumber); // LOW
- 644:	48 b3       	in	r20, 0x18	; 24
- 646:	21 e0       	ldi	r18, 0x01	; 1
- 648:	30 e0       	ldi	r19, 0x00	; 0
- 64a:	b9 01       	movw	r22, r18
- 64c:	02 c0       	rjmp	.+4      	; 0x652 <GPIO_write+0x6a>
- 64e:	66 0f       	add	r22, r22
- 650:	77 1f       	adc	r23, r23
- 652:	8a 95       	dec	r24
- 654:	e2 f7       	brpl	.-8      	; 0x64e <GPIO_write+0x66>
- 656:	cb 01       	movw	r24, r22
- 658:	84 23       	and	r24, r20
- 65a:	88 bb       	out	0x18, r24	; 24
- 65c:	08 95       	ret
+ 66c:	48 b3       	in	r20, 0x18	; 24
+ 66e:	21 e0       	ldi	r18, 0x01	; 1
+ 670:	30 e0       	ldi	r19, 0x00	; 0
+ 672:	b9 01       	movw	r22, r18
+ 674:	02 c0       	rjmp	.+4      	; 0x67a <GPIO_write+0x6a>
+ 676:	66 0f       	add	r22, r22
+ 678:	77 1f       	adc	r23, r23
+ 67a:	8a 95       	dec	r24
+ 67c:	e2 f7       	brpl	.-8      	; 0x676 <GPIO_write+0x66>
+ 67e:	cb 01       	movw	r24, r22
+ 680:	84 23       	and	r24, r20
+ 682:	88 bb       	out	0x18, r24	; 24
+ 684:	08 95       	ret
 		}
 		else if(value == HIGH)
- 65e:	41 30       	cpi	r20, 0x01	; 1
- 660:	09 f0       	breq	.+2      	; 0x664 <GPIO_write+0x7c>
- 662:	48 c0       	rjmp	.+144    	; 0x6f4 <GPIO_write+0x10c>
+ 686:	41 30       	cpi	r20, 0x01	; 1
+ 688:	09 f0       	breq	.+2      	; 0x68c <GPIO_write+0x7c>
+ 68a:	48 c0       	rjmp	.+144    	; 0x71c <GPIO_write+0x10c>
 		{
 			PORTB |= (1 << pinNumber); // HIGH
- 664:	48 b3       	in	r20, 0x18	; 24
- 666:	21 e0       	ldi	r18, 0x01	; 1
- 668:	30 e0       	ldi	r19, 0x00	; 0
- 66a:	b9 01       	movw	r22, r18
- 66c:	02 c0       	rjmp	.+4      	; 0x672 <GPIO_write+0x8a>
- 66e:	66 0f       	add	r22, r22
- 670:	77 1f       	adc	r23, r23
- 672:	8a 95       	dec	r24
- 674:	e2 f7       	brpl	.-8      	; 0x66e <GPIO_write+0x86>
- 676:	cb 01       	movw	r24, r22
- 678:	84 2b       	or	r24, r20
- 67a:	88 bb       	out	0x18, r24	; 24
- 67c:	08 95       	ret
+ 68c:	48 b3       	in	r20, 0x18	; 24
+ 68e:	21 e0       	ldi	r18, 0x01	; 1
+ 690:	30 e0       	ldi	r19, 0x00	; 0
+ 692:	b9 01       	movw	r22, r18
+ 694:	02 c0       	rjmp	.+4      	; 0x69a <GPIO_write+0x8a>
+ 696:	66 0f       	add	r22, r22
+ 698:	77 1f       	adc	r23, r23
+ 69a:	8a 95       	dec	r24
+ 69c:	e2 f7       	brpl	.-8      	; 0x696 <GPIO_write+0x86>
+ 69e:	cb 01       	movw	r24, r22
+ 6a0:	84 2b       	or	r24, r20
+ 6a2:	88 bb       	out	0x18, r24	; 24
+ 6a4:	08 95       	ret
 		
 		
 		break;
 		
 		case PORT_C:
 		if(value == LOW)
- 67e:	41 11       	cpse	r20, r1
- 680:	0d c0       	rjmp	.+26     	; 0x69c <GPIO_write+0xb4>
+ 6a6:	41 11       	cpse	r20, r1
+ 6a8:	0d c0       	rjmp	.+26     	; 0x6c4 <GPIO_write+0xb4>
 		{
 			PORTC &= (1 << pinNumber); // LOW
- 682:	45 b3       	in	r20, 0x15	; 21
- 684:	21 e0       	ldi	r18, 0x01	; 1
- 686:	30 e0       	ldi	r19, 0x00	; 0
- 688:	b9 01       	movw	r22, r18
- 68a:	02 c0       	rjmp	.+4      	; 0x690 <GPIO_write+0xa8>
- 68c:	66 0f       	add	r22, r22
- 68e:	77 1f       	adc	r23, r23
- 690:	8a 95       	dec	r24
- 692:	e2 f7       	brpl	.-8      	; 0x68c <GPIO_write+0xa4>
- 694:	cb 01       	movw	r24, r22
- 696:	84 23       	and	r24, r20
- 698:	85 bb       	out	0x15, r24	; 21
- 69a:	08 95       	ret
+ 6aa:	45 b3       	in	r20, 0x15	; 21
+ 6ac:	21 e0       	ldi	r18, 0x01	; 1
+ 6ae:	30 e0       	ldi	r19, 0x00	; 0
+ 6b0:	b9 01       	movw	r22, r18
+ 6b2:	02 c0       	rjmp	.+4      	; 0x6b8 <GPIO_write+0xa8>
+ 6b4:	66 0f       	add	r22, r22
+ 6b6:	77 1f       	adc	r23, r23
+ 6b8:	8a 95       	dec	r24
+ 6ba:	e2 f7       	brpl	.-8      	; 0x6b4 <GPIO_write+0xa4>
+ 6bc:	cb 01       	movw	r24, r22
+ 6be:	84 23       	and	r24, r20
+ 6c0:	85 bb       	out	0x15, r24	; 21
+ 6c2:	08 95       	ret
 		}
 		else if(value == HIGH)
- 69c:	41 30       	cpi	r20, 0x01	; 1
- 69e:	51 f5       	brne	.+84     	; 0x6f4 <GPIO_write+0x10c>
+ 6c4:	41 30       	cpi	r20, 0x01	; 1
+ 6c6:	51 f5       	brne	.+84     	; 0x71c <GPIO_write+0x10c>
 		{
 			PORTC |= (1 << pinNumber); // HIGH
- 6a0:	45 b3       	in	r20, 0x15	; 21
- 6a2:	21 e0       	ldi	r18, 0x01	; 1
- 6a4:	30 e0       	ldi	r19, 0x00	; 0
- 6a6:	b9 01       	movw	r22, r18
- 6a8:	02 c0       	rjmp	.+4      	; 0x6ae <GPIO_write+0xc6>
- 6aa:	66 0f       	add	r22, r22
- 6ac:	77 1f       	adc	r23, r23
- 6ae:	8a 95       	dec	r24
- 6b0:	e2 f7       	brpl	.-8      	; 0x6aa <GPIO_write+0xc2>
- 6b2:	cb 01       	movw	r24, r22
- 6b4:	84 2b       	or	r24, r20
- 6b6:	85 bb       	out	0x15, r24	; 21
- 6b8:	08 95       	ret
+ 6c8:	45 b3       	in	r20, 0x15	; 21
+ 6ca:	21 e0       	ldi	r18, 0x01	; 1
+ 6cc:	30 e0       	ldi	r19, 0x00	; 0
+ 6ce:	b9 01       	movw	r22, r18
+ 6d0:	02 c0       	rjmp	.+4      	; 0x6d6 <GPIO_write+0xc6>
+ 6d2:	66 0f       	add	r22, r22
+ 6d4:	77 1f       	adc	r23, r23
+ 6d6:	8a 95       	dec	r24
+ 6d8:	e2 f7       	brpl	.-8      	; 0x6d2 <GPIO_write+0xc2>
+ 6da:	cb 01       	movw	r24, r22
+ 6dc:	84 2b       	or	r24, r20
+ 6de:	85 bb       	out	0x15, r24	; 21
+ 6e0:	08 95       	ret
 		
 		
 		break;
 		
 		case PORT_D:
 		if(value == LOW)
- 6ba:	41 11       	cpse	r20, r1
- 6bc:	0d c0       	rjmp	.+26     	; 0x6d8 <GPIO_write+0xf0>
+ 6e2:	41 11       	cpse	r20, r1
+ 6e4:	0d c0       	rjmp	.+26     	; 0x700 <GPIO_write+0xf0>
 		{
 			PORTD &= (1 << pinNumber); // LOW
- 6be:	42 b3       	in	r20, 0x12	; 18
- 6c0:	21 e0       	ldi	r18, 0x01	; 1
- 6c2:	30 e0       	ldi	r19, 0x00	; 0
- 6c4:	b9 01       	movw	r22, r18
- 6c6:	02 c0       	rjmp	.+4      	; 0x6cc <GPIO_write+0xe4>
- 6c8:	66 0f       	add	r22, r22
- 6ca:	77 1f       	adc	r23, r23
- 6cc:	8a 95       	dec	r24
- 6ce:	e2 f7       	brpl	.-8      	; 0x6c8 <GPIO_write+0xe0>
- 6d0:	cb 01       	movw	r24, r22
- 6d2:	84 23       	and	r24, r20
- 6d4:	82 bb       	out	0x12, r24	; 18
- 6d6:	08 95       	ret
+ 6e6:	42 b3       	in	r20, 0x12	; 18
+ 6e8:	21 e0       	ldi	r18, 0x01	; 1
+ 6ea:	30 e0       	ldi	r19, 0x00	; 0
+ 6ec:	b9 01       	movw	r22, r18
+ 6ee:	02 c0       	rjmp	.+4      	; 0x6f4 <GPIO_write+0xe4>
+ 6f0:	66 0f       	add	r22, r22
+ 6f2:	77 1f       	adc	r23, r23
+ 6f4:	8a 95       	dec	r24
+ 6f6:	e2 f7       	brpl	.-8      	; 0x6f0 <GPIO_write+0xe0>
+ 6f8:	cb 01       	movw	r24, r22
+ 6fa:	84 23       	and	r24, r20
+ 6fc:	82 bb       	out	0x12, r24	; 18
+ 6fe:	08 95       	ret
 		}
 		else if(value == HIGH)
- 6d8:	41 30       	cpi	r20, 0x01	; 1
- 6da:	61 f4       	brne	.+24     	; 0x6f4 <GPIO_write+0x10c>
+ 700:	41 30       	cpi	r20, 0x01	; 1
+ 702:	61 f4       	brne	.+24     	; 0x71c <GPIO_write+0x10c>
 		{
 			PORTD |= (1 << pinNumber); // HIGH
- 6dc:	42 b3       	in	r20, 0x12	; 18
- 6de:	21 e0       	ldi	r18, 0x01	; 1
- 6e0:	30 e0       	ldi	r19, 0x00	; 0
- 6e2:	b9 01       	movw	r22, r18
- 6e4:	02 c0       	rjmp	.+4      	; 0x6ea <GPIO_write+0x102>
- 6e6:	66 0f       	add	r22, r22
- 6e8:	77 1f       	adc	r23, r23
- 6ea:	8a 95       	dec	r24
- 6ec:	e2 f7       	brpl	.-8      	; 0x6e6 <GPIO_write+0xfe>
- 6ee:	cb 01       	movw	r24, r22
- 6f0:	84 2b       	or	r24, r20
- 6f2:	82 bb       	out	0x12, r24	; 18
- 6f4:	08 95       	ret
+ 704:	42 b3       	in	r20, 0x12	; 18
+ 706:	21 e0       	ldi	r18, 0x01	; 1
+ 708:	30 e0       	ldi	r19, 0x00	; 0
+ 70a:	b9 01       	movw	r22, r18
+ 70c:	02 c0       	rjmp	.+4      	; 0x712 <GPIO_write+0x102>
+ 70e:	66 0f       	add	r22, r22
+ 710:	77 1f       	adc	r23, r23
+ 712:	8a 95       	dec	r24
+ 714:	e2 f7       	brpl	.-8      	; 0x70e <GPIO_write+0xfe>
+ 716:	cb 01       	movw	r24, r22
+ 718:	84 2b       	or	r24, r20
+ 71a:	82 bb       	out	0x12, r24	; 18
+ 71c:	08 95       	ret
 
-000006f6 <GPIO_toggle>:
+0000071e <GPIO_toggle>:
 		
 	}
 }
 void GPIO_toggle(uint8_t pinNumber, uint8_t portNumber) // toggle GPIO
 {
 	switch(portNumber)
- 6f6:	62 34       	cpi	r22, 0x42	; 66
- 6f8:	b1 f0       	breq	.+44     	; 0x726 <GPIO_toggle+0x30>
- 6fa:	18 f4       	brcc	.+6      	; 0x702 <GPIO_toggle+0xc>
- 6fc:	61 34       	cpi	r22, 0x41	; 65
- 6fe:	31 f0       	breq	.+12     	; 0x70c <GPIO_toggle+0x16>
- 700:	08 95       	ret
- 702:	63 34       	cpi	r22, 0x43	; 67
- 704:	e9 f0       	breq	.+58     	; 0x740 <GPIO_toggle+0x4a>
- 706:	64 34       	cpi	r22, 0x44	; 68
- 708:	41 f1       	breq	.+80     	; 0x75a <GPIO_toggle+0x64>
- 70a:	08 95       	ret
+ 71e:	62 34       	cpi	r22, 0x42	; 66
+ 720:	b1 f0       	breq	.+44     	; 0x74e <GPIO_toggle+0x30>
+ 722:	18 f4       	brcc	.+6      	; 0x72a <GPIO_toggle+0xc>
+ 724:	61 34       	cpi	r22, 0x41	; 65
+ 726:	31 f0       	breq	.+12     	; 0x734 <GPIO_toggle+0x16>
+ 728:	08 95       	ret
+ 72a:	63 34       	cpi	r22, 0x43	; 67
+ 72c:	e9 f0       	breq	.+58     	; 0x768 <GPIO_toggle+0x4a>
+ 72e:	64 34       	cpi	r22, 0x44	; 68
+ 730:	41 f1       	breq	.+80     	; 0x782 <GPIO_toggle+0x64>
+ 732:	08 95       	ret
 	{
 		case PORT_A:
 		PORTA ^= (1 << pinNumber); // toggle pin
- 70c:	4b b3       	in	r20, 0x1b	; 27
- 70e:	21 e0       	ldi	r18, 0x01	; 1
- 710:	30 e0       	ldi	r19, 0x00	; 0
- 712:	b9 01       	movw	r22, r18
- 714:	02 c0       	rjmp	.+4      	; 0x71a <GPIO_toggle+0x24>
- 716:	66 0f       	add	r22, r22
- 718:	77 1f       	adc	r23, r23
- 71a:	8a 95       	dec	r24
- 71c:	e2 f7       	brpl	.-8      	; 0x716 <GPIO_toggle+0x20>
- 71e:	cb 01       	movw	r24, r22
- 720:	84 27       	eor	r24, r20
- 722:	8b bb       	out	0x1b, r24	; 27
+ 734:	4b b3       	in	r20, 0x1b	; 27
+ 736:	21 e0       	ldi	r18, 0x01	; 1
+ 738:	30 e0       	ldi	r19, 0x00	; 0
+ 73a:	b9 01       	movw	r22, r18
+ 73c:	02 c0       	rjmp	.+4      	; 0x742 <GPIO_toggle+0x24>
+ 73e:	66 0f       	add	r22, r22
+ 740:	77 1f       	adc	r23, r23
+ 742:	8a 95       	dec	r24
+ 744:	e2 f7       	brpl	.-8      	; 0x73e <GPIO_toggle+0x20>
+ 746:	cb 01       	movw	r24, r22
+ 748:	84 27       	eor	r24, r20
+ 74a:	8b bb       	out	0x1b, r24	; 27
 
 		
 		break;
- 724:	08 95       	ret
+ 74c:	08 95       	ret
 		
 		case PORT_B:
 		
 		PORTB ^= (1 << pinNumber); // toggle pin
- 726:	48 b3       	in	r20, 0x18	; 24
- 728:	21 e0       	ldi	r18, 0x01	; 1
- 72a:	30 e0       	ldi	r19, 0x00	; 0
- 72c:	b9 01       	movw	r22, r18
- 72e:	02 c0       	rjmp	.+4      	; 0x734 <GPIO_toggle+0x3e>
- 730:	66 0f       	add	r22, r22
- 732:	77 1f       	adc	r23, r23
- 734:	8a 95       	dec	r24
- 736:	e2 f7       	brpl	.-8      	; 0x730 <GPIO_toggle+0x3a>
- 738:	cb 01       	movw	r24, r22
- 73a:	84 27       	eor	r24, r20
- 73c:	88 bb       	out	0x18, r24	; 24
+ 74e:	48 b3       	in	r20, 0x18	; 24
+ 750:	21 e0       	ldi	r18, 0x01	; 1
+ 752:	30 e0       	ldi	r19, 0x00	; 0
+ 754:	b9 01       	movw	r22, r18
+ 756:	02 c0       	rjmp	.+4      	; 0x75c <GPIO_toggle+0x3e>
+ 758:	66 0f       	add	r22, r22
+ 75a:	77 1f       	adc	r23, r23
+ 75c:	8a 95       	dec	r24
+ 75e:	e2 f7       	brpl	.-8      	; 0x758 <GPIO_toggle+0x3a>
+ 760:	cb 01       	movw	r24, r22
+ 762:	84 27       	eor	r24, r20
+ 764:	88 bb       	out	0x18, r24	; 24
 		
 		break;
- 73e:	08 95       	ret
+ 766:	08 95       	ret
 		
 		case PORT_C:
 		
 		PORTC ^= (1 << pinNumber); // toggle pin
- 740:	45 b3       	in	r20, 0x15	; 21
- 742:	21 e0       	ldi	r18, 0x01	; 1
- 744:	30 e0       	ldi	r19, 0x00	; 0
- 746:	b9 01       	movw	r22, r18
- 748:	02 c0       	rjmp	.+4      	; 0x74e <GPIO_toggle+0x58>
- 74a:	66 0f       	add	r22, r22
- 74c:	77 1f       	adc	r23, r23
- 74e:	8a 95       	dec	r24
- 750:	e2 f7       	brpl	.-8      	; 0x74a <GPIO_toggle+0x54>
- 752:	cb 01       	movw	r24, r22
- 754:	84 27       	eor	r24, r20
- 756:	85 bb       	out	0x15, r24	; 21
+ 768:	45 b3       	in	r20, 0x15	; 21
+ 76a:	21 e0       	ldi	r18, 0x01	; 1
+ 76c:	30 e0       	ldi	r19, 0x00	; 0
+ 76e:	b9 01       	movw	r22, r18
+ 770:	02 c0       	rjmp	.+4      	; 0x776 <GPIO_toggle+0x58>
+ 772:	66 0f       	add	r22, r22
+ 774:	77 1f       	adc	r23, r23
+ 776:	8a 95       	dec	r24
+ 778:	e2 f7       	brpl	.-8      	; 0x772 <GPIO_toggle+0x54>
+ 77a:	cb 01       	movw	r24, r22
+ 77c:	84 27       	eor	r24, r20
+ 77e:	85 bb       	out	0x15, r24	; 21
 		
 		
 		
 		break;
- 758:	08 95       	ret
+ 780:	08 95       	ret
 		
 		case PORT_D:
 		
 		PORTD ^= (1 << pinNumber); // toggle pin
- 75a:	42 b3       	in	r20, 0x12	; 18
- 75c:	21 e0       	ldi	r18, 0x01	; 1
- 75e:	30 e0       	ldi	r19, 0x00	; 0
- 760:	b9 01       	movw	r22, r18
- 762:	02 c0       	rjmp	.+4      	; 0x768 <GPIO_toggle+0x72>
- 764:	66 0f       	add	r22, r22
- 766:	77 1f       	adc	r23, r23
- 768:	8a 95       	dec	r24
- 76a:	e2 f7       	brpl	.-8      	; 0x764 <GPIO_toggle+0x6e>
- 76c:	cb 01       	movw	r24, r22
- 76e:	84 27       	eor	r24, r20
- 770:	82 bb       	out	0x12, r24	; 18
- 772:	08 95       	ret
+ 782:	42 b3       	in	r20, 0x12	; 18
+ 784:	21 e0       	ldi	r18, 0x01	; 1
+ 786:	30 e0       	ldi	r19, 0x00	; 0
+ 788:	b9 01       	movw	r22, r18
+ 78a:	02 c0       	rjmp	.+4      	; 0x790 <GPIO_toggle+0x72>
+ 78c:	66 0f       	add	r22, r22
+ 78e:	77 1f       	adc	r23, r23
+ 790:	8a 95       	dec	r24
+ 792:	e2 f7       	brpl	.-8      	; 0x78c <GPIO_toggle+0x6e>
+ 794:	cb 01       	movw	r24, r22
+ 796:	84 27       	eor	r24, r20
+ 798:	82 bb       	out	0x12, r24	; 18
+ 79a:	08 95       	ret
 
-00000774 <__vector_10>:
+0000079c <__vector_10>:
 //call back pointer is assigned the address of the callback function which will be called in the app (higher layer generally)
   void (*CallBackPtr1) (void) = NULL;
 
 //interrupt service routines to be called when interrupt flag is raised
 ISR(TIMER0_COMP_vect)
 {
- 774:	1f 92       	push	r1
- 776:	0f 92       	push	r0
- 778:	0f b6       	in	r0, 0x3f	; 63
- 77a:	0f 92       	push	r0
- 77c:	11 24       	eor	r1, r1
- 77e:	2f 93       	push	r18
- 780:	3f 93       	push	r19
- 782:	4f 93       	push	r20
- 784:	5f 93       	push	r21
- 786:	6f 93       	push	r22
- 788:	7f 93       	push	r23
- 78a:	8f 93       	push	r24
- 78c:	9f 93       	push	r25
- 78e:	af 93       	push	r26
- 790:	bf 93       	push	r27
- 792:	ef 93       	push	r30
- 794:	ff 93       	push	r31
+ 79c:	1f 92       	push	r1
+ 79e:	0f 92       	push	r0
+ 7a0:	0f b6       	in	r0, 0x3f	; 63
+ 7a2:	0f 92       	push	r0
+ 7a4:	11 24       	eor	r1, r1
+ 7a6:	2f 93       	push	r18
+ 7a8:	3f 93       	push	r19
+ 7aa:	4f 93       	push	r20
+ 7ac:	5f 93       	push	r21
+ 7ae:	6f 93       	push	r22
+ 7b0:	7f 93       	push	r23
+ 7b2:	8f 93       	push	r24
+ 7b4:	9f 93       	push	r25
+ 7b6:	af 93       	push	r26
+ 7b8:	bf 93       	push	r27
+ 7ba:	ef 93       	push	r30
+ 7bc:	ff 93       	push	r31
 	if(CallBackPtr1 != NULL)
- 796:	e0 91 76 00 	lds	r30, 0x0076	; 0x800076 <CallBackPtr1>
- 79a:	f0 91 77 00 	lds	r31, 0x0077	; 0x800077 <CallBackPtr1+0x1>
- 79e:	30 97       	sbiw	r30, 0x00	; 0
- 7a0:	09 f0       	breq	.+2      	; 0x7a4 <__vector_10+0x30>
+ 7be:	e0 91 6d 00 	lds	r30, 0x006D	; 0x80006d <CallBackPtr1>
+ 7c2:	f0 91 6e 00 	lds	r31, 0x006E	; 0x80006e <CallBackPtr1+0x1>
+ 7c6:	30 97       	sbiw	r30, 0x00	; 0
+ 7c8:	09 f0       	breq	.+2      	; 0x7cc <__vector_10+0x30>
 	{
 		CallBackPtr1();
- 7a2:	09 95       	icall
+ 7ca:	09 95       	icall
 	}
 }
- 7a4:	ff 91       	pop	r31
- 7a6:	ef 91       	pop	r30
- 7a8:	bf 91       	pop	r27
- 7aa:	af 91       	pop	r26
- 7ac:	9f 91       	pop	r25
- 7ae:	8f 91       	pop	r24
- 7b0:	7f 91       	pop	r23
- 7b2:	6f 91       	pop	r22
- 7b4:	5f 91       	pop	r21
- 7b6:	4f 91       	pop	r20
- 7b8:	3f 91       	pop	r19
- 7ba:	2f 91       	pop	r18
- 7bc:	0f 90       	pop	r0
- 7be:	0f be       	out	0x3f, r0	; 63
- 7c0:	0f 90       	pop	r0
- 7c2:	1f 90       	pop	r1
- 7c4:	18 95       	reti
+ 7cc:	ff 91       	pop	r31
+ 7ce:	ef 91       	pop	r30
+ 7d0:	bf 91       	pop	r27
+ 7d2:	af 91       	pop	r26
+ 7d4:	9f 91       	pop	r25
+ 7d6:	8f 91       	pop	r24
+ 7d8:	7f 91       	pop	r23
+ 7da:	6f 91       	pop	r22
+ 7dc:	5f 91       	pop	r21
+ 7de:	4f 91       	pop	r20
+ 7e0:	3f 91       	pop	r19
+ 7e2:	2f 91       	pop	r18
+ 7e4:	0f 90       	pop	r0
+ 7e6:	0f be       	out	0x3f, r0	; 63
+ 7e8:	0f 90       	pop	r0
+ 7ea:	1f 90       	pop	r1
+ 7ec:	18 95       	reti
 
-000007c6 <__vector_11>:
+000007ee <__vector_11>:
 ISR(TIMER0_OVF_vect)
 {
- 7c6:	1f 92       	push	r1
- 7c8:	0f 92       	push	r0
- 7ca:	0f b6       	in	r0, 0x3f	; 63
- 7cc:	0f 92       	push	r0
- 7ce:	11 24       	eor	r1, r1
- 7d0:	2f 93       	push	r18
- 7d2:	3f 93       	push	r19
- 7d4:	4f 93       	push	r20
- 7d6:	5f 93       	push	r21
- 7d8:	6f 93       	push	r22
- 7da:	7f 93       	push	r23
- 7dc:	8f 93       	push	r24
- 7de:	9f 93       	push	r25
- 7e0:	af 93       	push	r26
- 7e2:	bf 93       	push	r27
- 7e4:	ef 93       	push	r30
- 7e6:	ff 93       	push	r31
+ 7ee:	1f 92       	push	r1
+ 7f0:	0f 92       	push	r0
+ 7f2:	0f b6       	in	r0, 0x3f	; 63
+ 7f4:	0f 92       	push	r0
+ 7f6:	11 24       	eor	r1, r1
+ 7f8:	2f 93       	push	r18
+ 7fa:	3f 93       	push	r19
+ 7fc:	4f 93       	push	r20
+ 7fe:	5f 93       	push	r21
+ 800:	6f 93       	push	r22
+ 802:	7f 93       	push	r23
+ 804:	8f 93       	push	r24
+ 806:	9f 93       	push	r25
+ 808:	af 93       	push	r26
+ 80a:	bf 93       	push	r27
+ 80c:	ef 93       	push	r30
+ 80e:	ff 93       	push	r31
 	if(CallBackPtr1 != NULL)
- 7e8:	e0 91 76 00 	lds	r30, 0x0076	; 0x800076 <CallBackPtr1>
- 7ec:	f0 91 77 00 	lds	r31, 0x0077	; 0x800077 <CallBackPtr1+0x1>
- 7f0:	30 97       	sbiw	r30, 0x00	; 0
- 7f2:	09 f0       	breq	.+2      	; 0x7f6 <__vector_11+0x30>
+ 810:	e0 91 6d 00 	lds	r30, 0x006D	; 0x80006d <CallBackPtr1>
+ 814:	f0 91 6e 00 	lds	r31, 0x006E	; 0x80006e <CallBackPtr1+0x1>
+ 818:	30 97       	sbiw	r30, 0x00	; 0
+ 81a:	09 f0       	breq	.+2      	; 0x81e <__DATA_REGION_LENGTH__+0x1e>
 	{
 		CallBackPtr1();
- 7f4:	09 95       	icall
+ 81c:	09 95       	icall
 	}
 	
 }
- 7f6:	ff 91       	pop	r31
- 7f8:	ef 91       	pop	r30
- 7fa:	bf 91       	pop	r27
- 7fc:	af 91       	pop	r26
- 7fe:	9f 91       	pop	r25
- 800:	8f 91       	pop	r24
- 802:	7f 91       	pop	r23
- 804:	6f 91       	pop	r22
- 806:	5f 91       	pop	r21
- 808:	4f 91       	pop	r20
- 80a:	3f 91       	pop	r19
- 80c:	2f 91       	pop	r18
- 80e:	0f 90       	pop	r0
- 810:	0f be       	out	0x3f, r0	; 63
- 812:	0f 90       	pop	r0
- 814:	1f 90       	pop	r1
- 816:	18 95       	reti
+ 81e:	ff 91       	pop	r31
+ 820:	ef 91       	pop	r30
+ 822:	bf 91       	pop	r27
+ 824:	af 91       	pop	r26
+ 826:	9f 91       	pop	r25
+ 828:	8f 91       	pop	r24
+ 82a:	7f 91       	pop	r23
+ 82c:	6f 91       	pop	r22
+ 82e:	5f 91       	pop	r21
+ 830:	4f 91       	pop	r20
+ 832:	3f 91       	pop	r19
+ 834:	2f 91       	pop	r18
+ 836:	0f 90       	pop	r0
+ 838:	0f be       	out	0x3f, r0	; 63
+ 83a:	0f 90       	pop	r0
+ 83c:	1f 90       	pop	r1
+ 83e:	18 95       	reti
 
-00000818 <__vector_7>:
+00000840 <__vector_7>:
 
 ISR(TIMER1_COMPA_vect)
 {
- 818:	1f 92       	push	r1
- 81a:	0f 92       	push	r0
- 81c:	0f b6       	in	r0, 0x3f	; 63
- 81e:	0f 92       	push	r0
- 820:	11 24       	eor	r1, r1
- 822:	2f 93       	push	r18
- 824:	3f 93       	push	r19
- 826:	4f 93       	push	r20
- 828:	5f 93       	push	r21
- 82a:	6f 93       	push	r22
- 82c:	7f 93       	push	r23
- 82e:	8f 93       	push	r24
- 830:	9f 93       	push	r25
- 832:	af 93       	push	r26
- 834:	bf 93       	push	r27
- 836:	ef 93       	push	r30
- 838:	ff 93       	push	r31
+ 840:	1f 92       	push	r1
+ 842:	0f 92       	push	r0
+ 844:	0f b6       	in	r0, 0x3f	; 63
+ 846:	0f 92       	push	r0
+ 848:	11 24       	eor	r1, r1
+ 84a:	2f 93       	push	r18
+ 84c:	3f 93       	push	r19
+ 84e:	4f 93       	push	r20
+ 850:	5f 93       	push	r21
+ 852:	6f 93       	push	r22
+ 854:	7f 93       	push	r23
+ 856:	8f 93       	push	r24
+ 858:	9f 93       	push	r25
+ 85a:	af 93       	push	r26
+ 85c:	bf 93       	push	r27
+ 85e:	ef 93       	push	r30
+ 860:	ff 93       	push	r31
 	if(CallBackPtr1 != NULL)
- 83a:	e0 91 76 00 	lds	r30, 0x0076	; 0x800076 <CallBackPtr1>
- 83e:	f0 91 77 00 	lds	r31, 0x0077	; 0x800077 <CallBackPtr1+0x1>
- 842:	30 97       	sbiw	r30, 0x00	; 0
- 844:	09 f0       	breq	.+2      	; 0x848 <__vector_7+0x30>
+ 862:	e0 91 6d 00 	lds	r30, 0x006D	; 0x80006d <CallBackPtr1>
+ 866:	f0 91 6e 00 	lds	r31, 0x006E	; 0x80006e <CallBackPtr1+0x1>
+ 86a:	30 97       	sbiw	r30, 0x00	; 0
+ 86c:	09 f0       	breq	.+2      	; 0x870 <__stack+0x11>
 	{
 		CallBackPtr1();
- 846:	09 95       	icall
+ 86e:	09 95       	icall
 	}
 }
- 848:	ff 91       	pop	r31
- 84a:	ef 91       	pop	r30
- 84c:	bf 91       	pop	r27
- 84e:	af 91       	pop	r26
- 850:	9f 91       	pop	r25
- 852:	8f 91       	pop	r24
- 854:	7f 91       	pop	r23
- 856:	6f 91       	pop	r22
- 858:	5f 91       	pop	r21
- 85a:	4f 91       	pop	r20
- 85c:	3f 91       	pop	r19
- 85e:	2f 91       	pop	r18
- 860:	0f 90       	pop	r0
- 862:	0f be       	out	0x3f, r0	; 63
- 864:	0f 90       	pop	r0
- 866:	1f 90       	pop	r1
- 868:	18 95       	reti
+ 870:	ff 91       	pop	r31
+ 872:	ef 91       	pop	r30
+ 874:	bf 91       	pop	r27
+ 876:	af 91       	pop	r26
+ 878:	9f 91       	pop	r25
+ 87a:	8f 91       	pop	r24
+ 87c:	7f 91       	pop	r23
+ 87e:	6f 91       	pop	r22
+ 880:	5f 91       	pop	r21
+ 882:	4f 91       	pop	r20
+ 884:	3f 91       	pop	r19
+ 886:	2f 91       	pop	r18
+ 888:	0f 90       	pop	r0
+ 88a:	0f be       	out	0x3f, r0	; 63
+ 88c:	0f 90       	pop	r0
+ 88e:	1f 90       	pop	r1
+ 890:	18 95       	reti
 
-0000086a <__vector_9>:
+00000892 <__vector_9>:
 ISR(TIMER1_OVF_vect)
 {
- 86a:	1f 92       	push	r1
- 86c:	0f 92       	push	r0
- 86e:	0f b6       	in	r0, 0x3f	; 63
- 870:	0f 92       	push	r0
- 872:	11 24       	eor	r1, r1
- 874:	2f 93       	push	r18
- 876:	3f 93       	push	r19
- 878:	4f 93       	push	r20
- 87a:	5f 93       	push	r21
- 87c:	6f 93       	push	r22
- 87e:	7f 93       	push	r23
- 880:	8f 93       	push	r24
- 882:	9f 93       	push	r25
- 884:	af 93       	push	r26
- 886:	bf 93       	push	r27
- 888:	ef 93       	push	r30
- 88a:	ff 93       	push	r31
+ 892:	1f 92       	push	r1
+ 894:	0f 92       	push	r0
+ 896:	0f b6       	in	r0, 0x3f	; 63
+ 898:	0f 92       	push	r0
+ 89a:	11 24       	eor	r1, r1
+ 89c:	2f 93       	push	r18
+ 89e:	3f 93       	push	r19
+ 8a0:	4f 93       	push	r20
+ 8a2:	5f 93       	push	r21
+ 8a4:	6f 93       	push	r22
+ 8a6:	7f 93       	push	r23
+ 8a8:	8f 93       	push	r24
+ 8aa:	9f 93       	push	r25
+ 8ac:	af 93       	push	r26
+ 8ae:	bf 93       	push	r27
+ 8b0:	ef 93       	push	r30
+ 8b2:	ff 93       	push	r31
 	if(CallBackPtr1 != NULL)
- 88c:	e0 91 76 00 	lds	r30, 0x0076	; 0x800076 <CallBackPtr1>
- 890:	f0 91 77 00 	lds	r31, 0x0077	; 0x800077 <CallBackPtr1+0x1>
- 894:	30 97       	sbiw	r30, 0x00	; 0
- 896:	09 f0       	breq	.+2      	; 0x89a <__vector_9+0x30>
+ 8b4:	e0 91 6d 00 	lds	r30, 0x006D	; 0x80006d <CallBackPtr1>
+ 8b8:	f0 91 6e 00 	lds	r31, 0x006E	; 0x80006e <CallBackPtr1+0x1>
+ 8bc:	30 97       	sbiw	r30, 0x00	; 0
+ 8be:	09 f0       	breq	.+2      	; 0x8c2 <__vector_9+0x30>
 	{
 		CallBackPtr1();
- 898:	09 95       	icall
+ 8c0:	09 95       	icall
 	}
 	
 }
- 89a:	ff 91       	pop	r31
- 89c:	ef 91       	pop	r30
- 89e:	bf 91       	pop	r27
- 8a0:	af 91       	pop	r26
- 8a2:	9f 91       	pop	r25
- 8a4:	8f 91       	pop	r24
- 8a6:	7f 91       	pop	r23
- 8a8:	6f 91       	pop	r22
- 8aa:	5f 91       	pop	r21
- 8ac:	4f 91       	pop	r20
- 8ae:	3f 91       	pop	r19
- 8b0:	2f 91       	pop	r18
- 8b2:	0f 90       	pop	r0
- 8b4:	0f be       	out	0x3f, r0	; 63
- 8b6:	0f 90       	pop	r0
- 8b8:	1f 90       	pop	r1
- 8ba:	18 95       	reti
+ 8c2:	ff 91       	pop	r31
+ 8c4:	ef 91       	pop	r30
+ 8c6:	bf 91       	pop	r27
+ 8c8:	af 91       	pop	r26
+ 8ca:	9f 91       	pop	r25
+ 8cc:	8f 91       	pop	r24
+ 8ce:	7f 91       	pop	r23
+ 8d0:	6f 91       	pop	r22
+ 8d2:	5f 91       	pop	r21
+ 8d4:	4f 91       	pop	r20
+ 8d6:	3f 91       	pop	r19
+ 8d8:	2f 91       	pop	r18
+ 8da:	0f 90       	pop	r0
+ 8dc:	0f be       	out	0x3f, r0	; 63
+ 8de:	0f 90       	pop	r0
+ 8e0:	1f 90       	pop	r1
+ 8e2:	18 95       	reti
 
-000008bc <__vector_4>:
+000008e4 <__vector_4>:
 
 ISR(TIMER2_COMP_vect)
 {
- 8bc:	1f 92       	push	r1
- 8be:	0f 92       	push	r0
- 8c0:	0f b6       	in	r0, 0x3f	; 63
- 8c2:	0f 92       	push	r0
- 8c4:	11 24       	eor	r1, r1
- 8c6:	2f 93       	push	r18
- 8c8:	3f 93       	push	r19
- 8ca:	4f 93       	push	r20
- 8cc:	5f 93       	push	r21
- 8ce:	6f 93       	push	r22
- 8d0:	7f 93       	push	r23
- 8d2:	8f 93       	push	r24
- 8d4:	9f 93       	push	r25
- 8d6:	af 93       	push	r26
- 8d8:	bf 93       	push	r27
- 8da:	ef 93       	push	r30
- 8dc:	ff 93       	push	r31
+ 8e4:	1f 92       	push	r1
+ 8e6:	0f 92       	push	r0
+ 8e8:	0f b6       	in	r0, 0x3f	; 63
+ 8ea:	0f 92       	push	r0
+ 8ec:	11 24       	eor	r1, r1
+ 8ee:	2f 93       	push	r18
+ 8f0:	3f 93       	push	r19
+ 8f2:	4f 93       	push	r20
+ 8f4:	5f 93       	push	r21
+ 8f6:	6f 93       	push	r22
+ 8f8:	7f 93       	push	r23
+ 8fa:	8f 93       	push	r24
+ 8fc:	9f 93       	push	r25
+ 8fe:	af 93       	push	r26
+ 900:	bf 93       	push	r27
+ 902:	ef 93       	push	r30
+ 904:	ff 93       	push	r31
 	if(CallBackPtr1 != NULL)
- 8de:	e0 91 76 00 	lds	r30, 0x0076	; 0x800076 <CallBackPtr1>
- 8e2:	f0 91 77 00 	lds	r31, 0x0077	; 0x800077 <CallBackPtr1+0x1>
- 8e6:	30 97       	sbiw	r30, 0x00	; 0
- 8e8:	09 f0       	breq	.+2      	; 0x8ec <__vector_4+0x30>
+ 906:	e0 91 6d 00 	lds	r30, 0x006D	; 0x80006d <CallBackPtr1>
+ 90a:	f0 91 6e 00 	lds	r31, 0x006E	; 0x80006e <CallBackPtr1+0x1>
+ 90e:	30 97       	sbiw	r30, 0x00	; 0
+ 910:	09 f0       	breq	.+2      	; 0x914 <__vector_4+0x30>
 	{
 		CallBackPtr1();
- 8ea:	09 95       	icall
+ 912:	09 95       	icall
 	}
 }
- 8ec:	ff 91       	pop	r31
- 8ee:	ef 91       	pop	r30
- 8f0:	bf 91       	pop	r27
- 8f2:	af 91       	pop	r26
- 8f4:	9f 91       	pop	r25
- 8f6:	8f 91       	pop	r24
- 8f8:	7f 91       	pop	r23
- 8fa:	6f 91       	pop	r22
- 8fc:	5f 91       	pop	r21
- 8fe:	4f 91       	pop	r20
- 900:	3f 91       	pop	r19
- 902:	2f 91       	pop	r18
- 904:	0f 90       	pop	r0
- 906:	0f be       	out	0x3f, r0	; 63
- 908:	0f 90       	pop	r0
- 90a:	1f 90       	pop	r1
- 90c:	18 95       	reti
+ 914:	ff 91       	pop	r31
+ 916:	ef 91       	pop	r30
+ 918:	bf 91       	pop	r27
+ 91a:	af 91       	pop	r26
+ 91c:	9f 91       	pop	r25
+ 91e:	8f 91       	pop	r24
+ 920:	7f 91       	pop	r23
+ 922:	6f 91       	pop	r22
+ 924:	5f 91       	pop	r21
+ 926:	4f 91       	pop	r20
+ 928:	3f 91       	pop	r19
+ 92a:	2f 91       	pop	r18
+ 92c:	0f 90       	pop	r0
+ 92e:	0f be       	out	0x3f, r0	; 63
+ 930:	0f 90       	pop	r0
+ 932:	1f 90       	pop	r1
+ 934:	18 95       	reti
 
-0000090e <__vector_5>:
+00000936 <__vector_5>:
 ISR(TIMER2_OVF_vect)
 {
- 90e:	1f 92       	push	r1
- 910:	0f 92       	push	r0
- 912:	0f b6       	in	r0, 0x3f	; 63
- 914:	0f 92       	push	r0
- 916:	11 24       	eor	r1, r1
- 918:	2f 93       	push	r18
- 91a:	3f 93       	push	r19
- 91c:	4f 93       	push	r20
- 91e:	5f 93       	push	r21
- 920:	6f 93       	push	r22
- 922:	7f 93       	push	r23
- 924:	8f 93       	push	r24
- 926:	9f 93       	push	r25
- 928:	af 93       	push	r26
- 92a:	bf 93       	push	r27
- 92c:	ef 93       	push	r30
- 92e:	ff 93       	push	r31
+ 936:	1f 92       	push	r1
+ 938:	0f 92       	push	r0
+ 93a:	0f b6       	in	r0, 0x3f	; 63
+ 93c:	0f 92       	push	r0
+ 93e:	11 24       	eor	r1, r1
+ 940:	2f 93       	push	r18
+ 942:	3f 93       	push	r19
+ 944:	4f 93       	push	r20
+ 946:	5f 93       	push	r21
+ 948:	6f 93       	push	r22
+ 94a:	7f 93       	push	r23
+ 94c:	8f 93       	push	r24
+ 94e:	9f 93       	push	r25
+ 950:	af 93       	push	r26
+ 952:	bf 93       	push	r27
+ 954:	ef 93       	push	r30
+ 956:	ff 93       	push	r31
 	if(CallBackPtr1 != NULL)
- 930:	e0 91 76 00 	lds	r30, 0x0076	; 0x800076 <CallBackPtr1>
- 934:	f0 91 77 00 	lds	r31, 0x0077	; 0x800077 <CallBackPtr1+0x1>
- 938:	30 97       	sbiw	r30, 0x00	; 0
- 93a:	09 f0       	breq	.+2      	; 0x93e <__vector_5+0x30>
+ 958:	e0 91 6d 00 	lds	r30, 0x006D	; 0x80006d <CallBackPtr1>
+ 95c:	f0 91 6e 00 	lds	r31, 0x006E	; 0x80006e <CallBackPtr1+0x1>
+ 960:	30 97       	sbiw	r30, 0x00	; 0
+ 962:	09 f0       	breq	.+2      	; 0x966 <__vector_5+0x30>
 	{
 		CallBackPtr1();
- 93c:	09 95       	icall
+ 964:	09 95       	icall
 	}
 	
 }
- 93e:	ff 91       	pop	r31
- 940:	ef 91       	pop	r30
- 942:	bf 91       	pop	r27
- 944:	af 91       	pop	r26
- 946:	9f 91       	pop	r25
- 948:	8f 91       	pop	r24
- 94a:	7f 91       	pop	r23
- 94c:	6f 91       	pop	r22
- 94e:	5f 91       	pop	r21
- 950:	4f 91       	pop	r20
- 952:	3f 91       	pop	r19
- 954:	2f 91       	pop	r18
- 956:	0f 90       	pop	r0
- 958:	0f be       	out	0x3f, r0	; 63
- 95a:	0f 90       	pop	r0
- 95c:	1f 90       	pop	r1
- 95e:	18 95       	reti
+ 966:	ff 91       	pop	r31
+ 968:	ef 91       	pop	r30
+ 96a:	bf 91       	pop	r27
+ 96c:	af 91       	pop	r26
+ 96e:	9f 91       	pop	r25
+ 970:	8f 91       	pop	r24
+ 972:	7f 91       	pop	r23
+ 974:	6f 91       	pop	r22
+ 976:	5f 91       	pop	r21
+ 978:	4f 91       	pop	r20
+ 97a:	3f 91       	pop	r19
+ 97c:	2f 91       	pop	r18
+ 97e:	0f 90       	pop	r0
+ 980:	0f be       	out	0x3f, r0	; 63
+ 982:	0f 90       	pop	r0
+ 984:	1f 90       	pop	r1
+ 986:	18 95       	reti
 
-00000960 <TIMER_setCallback>:
+00000988 <TIMER_setCallback>:
 /************************************************************************/
 /*	 functions implementations						                    */
 /************************************************************************/
 void TIMER_setCallback (void (*functionPtr) (void) )
 {
 	CallBackPtr1 =functionPtr;
- 960:	90 93 77 00 	sts	0x0077, r25	; 0x800077 <CallBackPtr1+0x1>
- 964:	80 93 76 00 	sts	0x0076, r24	; 0x800076 <CallBackPtr1>
- 968:	08 95       	ret
+ 988:	90 93 6e 00 	sts	0x006E, r25	; 0x80006e <CallBackPtr1+0x1>
+ 98c:	80 93 6d 00 	sts	0x006D, r24	; 0x80006d <CallBackPtr1>
+ 990:	08 95       	ret
 
-0000096a <TIMER_init>:
+00000992 <TIMER_init>:
 	
 }
 
 void TIMER_init(st_timerConfig_t * configStruct)
 {
- 96a:	fc 01       	movw	r30, r24
+ 992:	fc 01       	movw	r30, r24
 	switch(configStruct->selectedTimer)
- 96c:	85 81       	ldd	r24, Z+5	; 0x05
- 96e:	81 30       	cpi	r24, 0x01	; 1
- 970:	29 f1       	breq	.+74     	; 0x9bc <TIMER_init+0x52>
- 972:	20 f0       	brcs	.+8      	; 0x97c <TIMER_init+0x12>
- 974:	82 30       	cpi	r24, 0x02	; 2
- 976:	09 f4       	brne	.+2      	; 0x97a <TIMER_init+0x10>
- 978:	4b c0       	rjmp	.+150    	; 0xa10 <TIMER_init+0xa6>
- 97a:	08 95       	ret
+ 994:	85 81       	ldd	r24, Z+5	; 0x05
+ 996:	81 30       	cpi	r24, 0x01	; 1
+ 998:	29 f1       	breq	.+74     	; 0x9e4 <TIMER_init+0x52>
+ 99a:	20 f0       	brcs	.+8      	; 0x9a4 <TIMER_init+0x12>
+ 99c:	82 30       	cpi	r24, 0x02	; 2
+ 99e:	09 f4       	brne	.+2      	; 0x9a2 <TIMER_init+0x10>
+ 9a0:	4b c0       	rjmp	.+150    	; 0xa38 <TIMER_init+0xa6>
+ 9a2:	08 95       	ret
 	{
 		case timer0 :
 		
 		//initialize timer counter from the config struct entered by the user
 		TCNT0 = configStruct->timerInitialValue;
- 97c:	80 81       	ld	r24, Z
- 97e:	82 bf       	out	0x32, r24	; 50
+ 9a4:	80 81       	ld	r24, Z
+ 9a6:	82 bf       	out	0x32, r24	; 50
 		
 		//set FOC0 to 1 since its non PWM mode always
 		TCCR0 |= (1<<FOC0);
- 980:	83 b7       	in	r24, 0x33	; 51
- 982:	80 68       	ori	r24, 0x80	; 128
- 984:	83 bf       	out	0x33, r24	; 51
+ 9a8:	83 b7       	in	r24, 0x33	; 51
+ 9aa:	80 68       	ori	r24, 0x80	; 128
+ 9ac:	83 bf       	out	0x33, r24	; 51
 		
 		// WGM00 is always 0(for normal and CTC modes)
 		//so  WGM01 if  1 timer is in CTC mode and if 0 normal mode
 		if(configStruct->timerMode==CTC)
- 986:	86 81       	ldd	r24, Z+6	; 0x06
- 988:	81 30       	cpi	r24, 0x01	; 1
- 98a:	49 f4       	brne	.+18     	; 0x99e <TIMER_init+0x34>
+ 9ae:	86 81       	ldd	r24, Z+6	; 0x06
+ 9b0:	81 30       	cpi	r24, 0x01	; 1
+ 9b2:	49 f4       	brne	.+18     	; 0x9c6 <TIMER_init+0x34>
 		{
 			//also we need to put compare value in OCR0 if mode is CTC
 			OCR0 = configStruct->comparelValue;
- 98c:	82 81       	ldd	r24, Z+2	; 0x02
- 98e:	8c bf       	out	0x3c, r24	; 60
+ 9b4:	82 81       	ldd	r24, Z+2	; 0x02
+ 9b6:	8c bf       	out	0x3c, r24	; 60
 			//set WGM01 For CTC mode
 			TCCR0 |= (1<<WGM01);
- 990:	83 b7       	in	r24, 0x33	; 51
- 992:	88 60       	ori	r24, 0x08	; 8
- 994:	83 bf       	out	0x33, r24	; 51
+ 9b8:	83 b7       	in	r24, 0x33	; 51
+ 9ba:	88 60       	ori	r24, 0x08	; 8
+ 9bc:	83 bf       	out	0x33, r24	; 51
 			//Enable interrupt on compare match of timer0
 			TIMSK |=(1<<OCIE0);
- 996:	89 b7       	in	r24, 0x39	; 57
- 998:	82 60       	ori	r24, 0x02	; 2
- 99a:	89 bf       	out	0x39, r24	; 57
- 99c:	08 c0       	rjmp	.+16     	; 0x9ae <TIMER_init+0x44>
+ 9be:	89 b7       	in	r24, 0x39	; 57
+ 9c0:	82 60       	ori	r24, 0x02	; 2
+ 9c2:	89 bf       	out	0x39, r24	; 57
+ 9c4:	08 c0       	rjmp	.+16     	; 0x9d6 <TIMER_init+0x44>
 		}
 		else if(configStruct->timerMode==normal)
- 99e:	81 11       	cpse	r24, r1
- 9a0:	06 c0       	rjmp	.+12     	; 0x9ae <TIMER_init+0x44>
+ 9c6:	81 11       	cpse	r24, r1
+ 9c8:	06 c0       	rjmp	.+12     	; 0x9d6 <TIMER_init+0x44>
 		{
 			TCCR0 &=~ (1<<WGM01); //set bit WGM01 to zero
- 9a2:	83 b7       	in	r24, 0x33	; 51
- 9a4:	87 7f       	andi	r24, 0xF7	; 247
- 9a6:	83 bf       	out	0x33, r24	; 51
+ 9ca:	83 b7       	in	r24, 0x33	; 51
+ 9cc:	87 7f       	andi	r24, 0xF7	; 247
+ 9ce:	83 bf       	out	0x33, r24	; 51
 			//Enable interrupt on overflow of timer0
 			TIMSK |=(1<<TOIE0);
- 9a8:	89 b7       	in	r24, 0x39	; 57
- 9aa:	81 60       	ori	r24, 0x01	; 1
- 9ac:	89 bf       	out	0x39, r24	; 57
+ 9d0:	89 b7       	in	r24, 0x39	; 57
+ 9d2:	81 60       	ori	r24, 0x01	; 1
+ 9d4:	89 bf       	out	0x39, r24	; 57
 		// that the other bits of the TCCR0 register stay the same and we 0 the bits that we want
 		// to add the prescaler value to ,,, then we do the same with the prescaler value from the
 		//config struct to make sure no more than the first 3 bits is taken from the user...
 		// and finally the prescaler value is put into the TCCR0 register by the Or operation as shown
 		
 		TCCR0 = (TCCR0 & 0xF8) | ( (configStruct->prescaler) & 0x07 );
- 9ae:	93 b7       	in	r25, 0x33	; 51
- 9b0:	84 81       	ldd	r24, Z+4	; 0x04
- 9b2:	98 7f       	andi	r25, 0xF8	; 248
- 9b4:	87 70       	andi	r24, 0x07	; 7
- 9b6:	89 2b       	or	r24, r25
- 9b8:	83 bf       	out	0x33, r24	; 51
+ 9d6:	93 b7       	in	r25, 0x33	; 51
+ 9d8:	84 81       	ldd	r24, Z+4	; 0x04
+ 9da:	98 7f       	andi	r25, 0xF8	; 248
+ 9dc:	87 70       	andi	r24, 0x07	; 7
+ 9de:	89 2b       	or	r24, r25
+ 9e0:	83 bf       	out	0x33, r24	; 51
 
 
 		break;
- 9ba:	08 95       	ret
+ 9e2:	08 95       	ret
 		
 		case timer1 :
 		//initialize timer counter from the config struct entered by the user
 		TCNT1 = configStruct->timerInitialValue;
- 9bc:	80 81       	ld	r24, Z
- 9be:	91 81       	ldd	r25, Z+1	; 0x01
- 9c0:	9d bd       	out	0x2d, r25	; 45
- 9c2:	8c bd       	out	0x2c, r24	; 44
+ 9e4:	80 81       	ld	r24, Z
+ 9e6:	91 81       	ldd	r25, Z+1	; 0x01
+ 9e8:	9d bd       	out	0x2d, r25	; 45
+ 9ea:	8c bd       	out	0x2c, r24	; 44
 		
 		//set FOC1A and FOC1B to 1 since its non PWM mode always
 		TCCR1A |= (1<<FOC1A) | (1<<FOC1B);
- 9c4:	8f b5       	in	r24, 0x2f	; 47
- 9c6:	8c 60       	ori	r24, 0x0C	; 12
- 9c8:	8f bd       	out	0x2f, r24	; 47
+ 9ec:	8f b5       	in	r24, 0x2f	; 47
+ 9ee:	8c 60       	ori	r24, 0x0C	; 12
+ 9f0:	8f bd       	out	0x2f, r24	; 47
 		
 		
 		// WGM00 is always 0 (for normal and CTC modes)
 		//so  WGM12 if  1 timer is in CTC mode and if 0 normal mode
 		if(configStruct->timerMode==CTC)
- 9ca:	86 81       	ldd	r24, Z+6	; 0x06
- 9cc:	81 30       	cpi	r24, 0x01	; 1
- 9ce:	71 f4       	brne	.+28     	; 0x9ec <TIMER_init+0x82>
+ 9f2:	86 81       	ldd	r24, Z+6	; 0x06
+ 9f4:	81 30       	cpi	r24, 0x01	; 1
+ 9f6:	71 f4       	brne	.+28     	; 0xa14 <TIMER_init+0x82>
 		{
 			//also we need to put compare value in OCR1A if mode is CTC
 			OCR1A = configStruct->comparelValue;
- 9d0:	82 81       	ldd	r24, Z+2	; 0x02
- 9d2:	93 81       	ldd	r25, Z+3	; 0x03
- 9d4:	9b bd       	out	0x2b, r25	; 43
- 9d6:	8a bd       	out	0x2a, r24	; 42
+ 9f8:	82 81       	ldd	r24, Z+2	; 0x02
+ 9fa:	93 81       	ldd	r25, Z+3	; 0x03
+ 9fc:	9b bd       	out	0x2b, r25	; 43
+ 9fe:	8a bd       	out	0x2a, r24	; 42
 			//set WGM12 For CTC mode
 			TCCR1B |= (1<<WGM12);
- 9d8:	8e b5       	in	r24, 0x2e	; 46
- 9da:	88 60       	ori	r24, 0x08	; 8
- 9dc:	8e bd       	out	0x2e, r24	; 46
+ a00:	8e b5       	in	r24, 0x2e	; 46
+ a02:	88 60       	ori	r24, 0x08	; 8
+ a04:	8e bd       	out	0x2e, r24	; 46
 			TCCR1B &=~ (1<<WGM13); //set bit WGM13 to zero
- 9de:	8e b5       	in	r24, 0x2e	; 46
- 9e0:	8f 7e       	andi	r24, 0xEF	; 239
- 9e2:	8e bd       	out	0x2e, r24	; 46
+ a06:	8e b5       	in	r24, 0x2e	; 46
+ a08:	8f 7e       	andi	r24, 0xEF	; 239
+ a0a:	8e bd       	out	0x2e, r24	; 46
 
 			//Enable interrupt on compare match of timer1
 			TIMSK |=(1<<OCIE1A);
- 9e4:	89 b7       	in	r24, 0x39	; 57
- 9e6:	80 61       	ori	r24, 0x10	; 16
- 9e8:	89 bf       	out	0x39, r24	; 57
- 9ea:	0b c0       	rjmp	.+22     	; 0xa02 <TIMER_init+0x98>
+ a0c:	89 b7       	in	r24, 0x39	; 57
+ a0e:	80 61       	ori	r24, 0x10	; 16
+ a10:	89 bf       	out	0x39, r24	; 57
+ a12:	0b c0       	rjmp	.+22     	; 0xa2a <TIMER_init+0x98>
 		}
 		else if(configStruct->timerMode==normal)
- 9ec:	81 11       	cpse	r24, r1
- 9ee:	09 c0       	rjmp	.+18     	; 0xa02 <TIMER_init+0x98>
+ a14:	81 11       	cpse	r24, r1
+ a16:	09 c0       	rjmp	.+18     	; 0xa2a <TIMER_init+0x98>
 		{
 			//set WGM12 For NORMAL mode
 			TCCR1B &=~ (1<<WGM12);//set bit WGM12 to zero
- 9f0:	8e b5       	in	r24, 0x2e	; 46
- 9f2:	87 7f       	andi	r24, 0xF7	; 247
- 9f4:	8e bd       	out	0x2e, r24	; 46
+ a18:	8e b5       	in	r24, 0x2e	; 46
+ a1a:	87 7f       	andi	r24, 0xF7	; 247
+ a1c:	8e bd       	out	0x2e, r24	; 46
 			TCCR1B &=~ (1<<WGM13); //set bit WGM13 to zero
- 9f6:	8e b5       	in	r24, 0x2e	; 46
- 9f8:	8f 7e       	andi	r24, 0xEF	; 239
- 9fa:	8e bd       	out	0x2e, r24	; 46
+ a1e:	8e b5       	in	r24, 0x2e	; 46
+ a20:	8f 7e       	andi	r24, 0xEF	; 239
+ a22:	8e bd       	out	0x2e, r24	; 46
 			//Enable interrupt on overflow of timer0
 			TIMSK |=(1<<TOIE1);
- 9fc:	89 b7       	in	r24, 0x39	; 57
- 9fe:	84 60       	ori	r24, 0x04	; 4
- a00:	89 bf       	out	0x39, r24	; 57
+ a24:	89 b7       	in	r24, 0x39	; 57
+ a26:	84 60       	ori	r24, 0x04	; 4
+ a28:	89 bf       	out	0x39, r24	; 57
 		// that the other bits of the TCCR0 register stay the same and we 0 the bits that we want
 		// to add the prescaler value to ,,, then we do the same with the prescaler value from the
 		//config struct to make sure no more than the first 3 bits is taken from the user...
 		// and finally the prescaler value is put into the TCCR0 register by the Or operation as shown
 		
 		TCCR1B = (TCCR1B & 0xF8) | ( (configStruct->prescaler) & 0x07 );
- a02:	9e b5       	in	r25, 0x2e	; 46
- a04:	84 81       	ldd	r24, Z+4	; 0x04
- a06:	98 7f       	andi	r25, 0xF8	; 248
- a08:	87 70       	andi	r24, 0x07	; 7
- a0a:	89 2b       	or	r24, r25
- a0c:	8e bd       	out	0x2e, r24	; 46
+ a2a:	9e b5       	in	r25, 0x2e	; 46
+ a2c:	84 81       	ldd	r24, Z+4	; 0x04
+ a2e:	98 7f       	andi	r25, 0xF8	; 248
+ a30:	87 70       	andi	r24, 0x07	; 7
+ a32:	89 2b       	or	r24, r25
+ a34:	8e bd       	out	0x2e, r24	; 46
 		
 		
 		
 		
 		
 		break;
- a0e:	08 95       	ret
+ a36:	08 95       	ret
 		
 		case timer2 :
 		
 		//initialize timer counter from the config struct entered by the user
 		TCNT2 = configStruct->timerInitialValue;
- a10:	80 81       	ld	r24, Z
- a12:	84 bd       	out	0x24, r24	; 36
+ a38:	80 81       	ld	r24, Z
+ a3a:	84 bd       	out	0x24, r24	; 36
 		
 		//set FOC2 to 1 since its non PWM mode always
 		TCCR2 |= (1<<FOC2);
- a14:	85 b5       	in	r24, 0x25	; 37
- a16:	80 68       	ori	r24, 0x80	; 128
- a18:	85 bd       	out	0x25, r24	; 37
+ a3c:	85 b5       	in	r24, 0x25	; 37
+ a3e:	80 68       	ori	r24, 0x80	; 128
+ a40:	85 bd       	out	0x25, r24	; 37
 		
 		// WGM20 is always 0 (for normal and CTC modes)
 		//so  WGM21 if  1 timer is in CTC mode and if 0 normal mode
 		if(configStruct->timerMode==CTC)
- a1a:	86 81       	ldd	r24, Z+6	; 0x06
- a1c:	81 30       	cpi	r24, 0x01	; 1
- a1e:	49 f4       	brne	.+18     	; 0xa32 <TIMER_init+0xc8>
+ a42:	86 81       	ldd	r24, Z+6	; 0x06
+ a44:	81 30       	cpi	r24, 0x01	; 1
+ a46:	49 f4       	brne	.+18     	; 0xa5a <TIMER_init+0xc8>
 		{
 			//also we need to put compare value in OCR2 if mode is CTC
 			OCR2 = configStruct->comparelValue;
- a20:	82 81       	ldd	r24, Z+2	; 0x02
- a22:	83 bd       	out	0x23, r24	; 35
+ a48:	82 81       	ldd	r24, Z+2	; 0x02
+ a4a:	83 bd       	out	0x23, r24	; 35
 			//set WGM21 For CTC mode
 			TCCR2 |= (1<<WGM21);
- a24:	85 b5       	in	r24, 0x25	; 37
- a26:	88 60       	ori	r24, 0x08	; 8
- a28:	85 bd       	out	0x25, r24	; 37
+ a4c:	85 b5       	in	r24, 0x25	; 37
+ a4e:	88 60       	ori	r24, 0x08	; 8
+ a50:	85 bd       	out	0x25, r24	; 37
 			//Enable interrupt on compare match of timer0
 			TIMSK |=(1<<OCIE2);
- a2a:	89 b7       	in	r24, 0x39	; 57
- a2c:	80 68       	ori	r24, 0x80	; 128
- a2e:	89 bf       	out	0x39, r24	; 57
- a30:	08 c0       	rjmp	.+16     	; 0xa42 <TIMER_init+0xd8>
+ a52:	89 b7       	in	r24, 0x39	; 57
+ a54:	80 68       	ori	r24, 0x80	; 128
+ a56:	89 bf       	out	0x39, r24	; 57
+ a58:	08 c0       	rjmp	.+16     	; 0xa6a <TIMER_init+0xd8>
 		}
 		else if(configStruct->timerMode==normal)
- a32:	81 11       	cpse	r24, r1
- a34:	06 c0       	rjmp	.+12     	; 0xa42 <TIMER_init+0xd8>
+ a5a:	81 11       	cpse	r24, r1
+ a5c:	06 c0       	rjmp	.+12     	; 0xa6a <TIMER_init+0xd8>
 		{
 			TCCR0 &=~ (1<<WGM21); //set bit WGM21 to zero
- a36:	83 b7       	in	r24, 0x33	; 51
- a38:	87 7f       	andi	r24, 0xF7	; 247
- a3a:	83 bf       	out	0x33, r24	; 51
+ a5e:	83 b7       	in	r24, 0x33	; 51
+ a60:	87 7f       	andi	r24, 0xF7	; 247
+ a62:	83 bf       	out	0x33, r24	; 51
 			//Enable interrupt on overflow of timer2
 			TIMSK |=(1<<TOIE2);
- a3c:	89 b7       	in	r24, 0x39	; 57
- a3e:	80 64       	ori	r24, 0x40	; 64
- a40:	89 bf       	out	0x39, r24	; 57
+ a64:	89 b7       	in	r24, 0x39	; 57
+ a66:	80 64       	ori	r24, 0x40	; 64
+ a68:	89 bf       	out	0x39, r24	; 57
 		// that the other bits of the TCCR0 register stay the same and we 0 the bits that we want
 		// to add the prescaler value to ,,, then we do the same with the prescaler value from the
 		//config struct to make sure no more than the first 3 bits is taken from the user...
 		// and finally the prescaler value is put into the TCCR0 register by the Or operation as shown
 		
 		TCCR2 = (TCCR2 & 0xF8) | ( (configStruct->prescaler) & 0x07 );
- a42:	95 b5       	in	r25, 0x25	; 37
- a44:	84 81       	ldd	r24, Z+4	; 0x04
- a46:	98 7f       	andi	r25, 0xF8	; 248
- a48:	87 70       	andi	r24, 0x07	; 7
- a4a:	89 2b       	or	r24, r25
- a4c:	85 bd       	out	0x25, r24	; 37
- a4e:	08 95       	ret
+ a6a:	95 b5       	in	r25, 0x25	; 37
+ a6c:	84 81       	ldd	r24, Z+4	; 0x04
+ a6e:	98 7f       	andi	r25, 0xF8	; 248
+ a70:	87 70       	andi	r24, 0x07	; 7
+ a72:	89 2b       	or	r24, r25
+ a74:	85 bd       	out	0x25, r24	; 37
+ a76:	08 95       	ret
 
-00000a50 <TIMER_reset>:
+00000a78 <TIMER_reset>:
 		
 	}
 }
 void TIMER_reset(en_timer_t selectedTimer)
 {
 	switch(selectedTimer)
- a50:	81 30       	cpi	r24, 0x01	; 1
- a52:	51 f0       	breq	.+20     	; 0xa68 <TIMER_reset+0x18>
- a54:	18 f0       	brcs	.+6      	; 0xa5c <TIMER_reset+0xc>
- a56:	82 30       	cpi	r24, 0x02	; 2
- a58:	79 f0       	breq	.+30     	; 0xa78 <TIMER_reset+0x28>
- a5a:	08 95       	ret
+ a78:	81 30       	cpi	r24, 0x01	; 1
+ a7a:	51 f0       	breq	.+20     	; 0xa90 <TIMER_reset+0x18>
+ a7c:	18 f0       	brcs	.+6      	; 0xa84 <TIMER_reset+0xc>
+ a7e:	82 30       	cpi	r24, 0x02	; 2
+ a80:	79 f0       	breq	.+30     	; 0xaa0 <TIMER_reset+0x28>
+ a82:	08 95       	ret
 	{
 		case timer0 :
 		TCCR0=0x00; //reseting the control register will reset everything and stop the timer
- a5c:	13 be       	out	0x33, r1	; 51
+ a84:	13 be       	out	0x33, r1	; 51
 		//since the prescaler bits will have 0
 		
 		// reset the compare register
 		OCR0 =0x00 ;
- a5e:	1c be       	out	0x3c, r1	; 60
+ a86:	1c be       	out	0x3c, r1	; 60
 		
 		//disable interrupt on CTC and overflow of timer0
 		TIMSK &=~(1<<TOIE0) &~(1<<OCIE0);
- a60:	89 b7       	in	r24, 0x39	; 57
- a62:	8c 7f       	andi	r24, 0xFC	; 252
- a64:	89 bf       	out	0x39, r24	; 57
+ a88:	89 b7       	in	r24, 0x39	; 57
+ a8a:	8c 7f       	andi	r24, 0xFC	; 252
+ a8c:	89 bf       	out	0x39, r24	; 57
 		
 		break;
- a66:	08 95       	ret
+ a8e:	08 95       	ret
 		
 		case timer1 :
 		
 		TCCR1A=0x00;
- a68:	1f bc       	out	0x2f, r1	; 47
+ a90:	1f bc       	out	0x2f, r1	; 47
 		TCCR1B=0x00;
- a6a:	1e bc       	out	0x2e, r1	; 46
+ a92:	1e bc       	out	0x2e, r1	; 46
 		
 		// reset the compare register
 		OCR1A = 0x00;
- a6c:	1b bc       	out	0x2b, r1	; 43
- a6e:	1a bc       	out	0x2a, r1	; 42
+ a94:	1b bc       	out	0x2b, r1	; 43
+ a96:	1a bc       	out	0x2a, r1	; 42
 		
 		//disable interrupt on Compare out A and overflow of timer1
 		TIMSK &=~(1<<OCIE1A) &~(1<<TOIE1);
- a70:	89 b7       	in	r24, 0x39	; 57
- a72:	8b 7e       	andi	r24, 0xEB	; 235
- a74:	89 bf       	out	0x39, r24	; 57
+ a98:	89 b7       	in	r24, 0x39	; 57
+ a9a:	8b 7e       	andi	r24, 0xEB	; 235
+ a9c:	89 bf       	out	0x39, r24	; 57
 		break;
- a76:	08 95       	ret
+ a9e:	08 95       	ret
 		
 		case timer2 :
 		TCCR2=0x00; //reseting the control register will reset everything and stop the timer
- a78:	15 bc       	out	0x25, r1	; 37
+ aa0:	15 bc       	out	0x25, r1	; 37
 		//since the prescaler bits will have 0
 		
 		// reset the compare register
 		OCR2 =0x00 ;
- a7a:	13 bc       	out	0x23, r1	; 35
+ aa2:	13 bc       	out	0x23, r1	; 35
 		
 		//disable interrupt on CTC and overflow of timer2
 		TIMSK &=~(1<<TOIE2) &~(1<<OCIE2);
- a7c:	89 b7       	in	r24, 0x39	; 57
- a7e:	8f 73       	andi	r24, 0x3F	; 63
- a80:	89 bf       	out	0x39, r24	; 57
- a82:	08 95       	ret
+ aa4:	89 b7       	in	r24, 0x39	; 57
+ aa6:	8f 73       	andi	r24, 0x3F	; 63
+ aa8:	89 bf       	out	0x39, r24	; 57
+ aaa:	08 95       	ret
 
-00000a84 <_exit>:
- a84:	f8 94       	cli
+00000aac <_exit>:
+ aac:	f8 94       	cli
 
-00000a86 <__stop_program>:
- a86:	ff cf       	rjmp	.-2      	; 0xa86 <__stop_program>
+00000aae <__stop_program>:
+ aae:	ff cf       	rjmp	.-2      	; 0xaae <__stop_program>
