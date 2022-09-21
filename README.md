@@ -1,4 +1,7 @@
 # Traffic-Light-Control
+![Screenshot 2022-09-21 172456](https://user-images.githubusercontent.com/81693710/191546093-b00d36f6-dc05-4ae0-81da-9855e9ea96be.png)
+
+
 This is a project done as a part of Udacity Embedded systems nano degree
 Project files includes software drivers, application flow and design and the proteus simulation for the traffic control
 
