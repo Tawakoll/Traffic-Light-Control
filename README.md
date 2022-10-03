@@ -9,10 +9,13 @@ Program runs as a normal traffic light : green , yellow blink, then red but at a
 it will activate pedestrian mode which gives priority for pedestrians to cross green light!.
 
 It contains the following drivers :
-  1- Avr full timer driver (timer0, timer1,timer2) that can work in CTC (compare mode ) or Normal overflow mode with a call back function when entering an interrupt for overflow or compare match.
-  2- An external interrupt driver which can enable int0, int1,in2 interrupts with a call back function.
-  3- GPIO driver , for this GPIO driver simply each pin is initialized at a time can add modifications to make it better later for example initializing ports at a time
+ 1. Avr full timer driver (timer0, timer1,timer2) that can work in CTC (compare mode ) or Normal overflow mode with a call back function when entering an interrupt for overflow or compare match.
+  2. An external interrupt driver which can enable int0, int1,in2 interrupts with a call back function.
+  3. GPIO driver , for this GPIO driver simply each pin is initialized at a time can add modifications to make it better later for example initializing ports at a time
   can save some time if you are capable by writing a certain decimal, hex , or binary number to the port. Same applies to reading and writing from ports.
 
 It contains application which dictates the application's flow according to the program explained above, and the main simply runs the application!
 if you have any questions please hit me up at linkedin or my email ! Thank you for reading :)
+1. James Madison
+2. James Monroe
+3. John Quincy Adams
