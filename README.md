@@ -16,6 +16,4 @@ It contains the following drivers :
 
 It contains application which dictates the application's flow according to the program explained above, and the main simply runs the application!
 if you have any questions please hit me up at linkedin or my email ! Thank you for reading :)
-1. James Madison
-2. James Monroe
-3. John Quincy Adams
+
